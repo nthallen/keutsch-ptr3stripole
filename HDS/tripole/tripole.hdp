@@ -1,0 +1,19 @@
+[DesignChecker]
+tripole_lib = $HDS_PROJECT_DIR\tripole_lib\designcheck
+[ModelSim]
+tripole_lib = $HDS_PROJECT_DIR\tripole_lib\work
+[hdl]
+tripole_lib = $HDS_PROJECT_DIR/tripole_lib/hdl
+[hdl_vm]
+tripole_lib = https://forge.abcd.harvard.edu/svn/arp-eos/trunk/HDS/tripole_lib
+[hdl_ws]
+tripole_lib = $HDS_PROJECT_DIR
+[hds]
+tripole_lib = $HDS_PROJECT_DIR/tripole_lib/hds
+[hds_settings]
+default_library = tripole_lib
+version = 2
+[library_type]
+tripole_lib = regular
+[shared]
+others = $HDS_TEAM_HOME/shared.hdp

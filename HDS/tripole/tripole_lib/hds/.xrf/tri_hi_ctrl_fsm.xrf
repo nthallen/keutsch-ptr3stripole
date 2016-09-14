@@ -1,0 +1,397 @@
+DESIGN tri_hi_ctrl
+VIEW interface
+NO_GRAPHIC 0
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 50,0 11 0 
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 372,0 18 0 
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 377,0 19 0 
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 392,0 20 0 
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 367,0 21 0 
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 397,0 22 0 
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 382,0 23 0 
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 387,0 24 0 
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 1,0 27 0 
+DESIGN tri_hi_ctrl
+VIEW interface
+GRAPHIC 1,0 28 0 
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 33,0 40 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 44
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 32,0 48 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 49
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 69 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 70
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 72 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 73
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 62,0 74 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 72,0 75 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 77
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 85 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 45,0 86 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 60,0 87 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 362,0 88 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 278,0 89 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 91
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 213,0 92 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 278,0 93 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 247,0 95 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 262,0 96 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 322,0 98 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 302,0 99 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 278,0 101 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 528,0 103 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 520,0 105 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 107
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 264,0 108 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 279,0 109 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 332,0 110 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 352,0 111 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 227,0 113 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 312,0 114 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 261,0 115 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 117
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 506,0 118 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 521,0 119 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 544,0 121 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 278,0 123 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 554,0 125 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 520,0 127 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 129
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 132 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 133
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 135 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 136
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 138 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 139
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 147 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 45,0 148 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 362,0 149 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 264,0 150 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 151
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 45,0 152 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 153
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 213,0 154 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 264,0 155 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 247,0 156 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 322,0 157 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 45,0 158 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 302,0 159 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 264,0 161 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 528,0 162 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 506,0 164 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 165
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 247,0 166 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 167
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 264,0 168 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 332,0 169 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 45,0 170 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 352,0 171 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 213,0 173 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 312,0 174 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 247,0 175 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 176
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 264,0 177 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 178
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 506,0 179 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 544,0 180 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 264,0 182 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 554,0 183 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 506,0 185 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 186
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 506,0 187 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 188
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 95,0 189 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 191
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 192 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 193
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+GRAPHIC 32,0 195 0
+LIBRARY tripole_lib
+DESIGN tri_hi_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 198

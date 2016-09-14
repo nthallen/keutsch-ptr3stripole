@@ -1,0 +1,353 @@
+DESIGN dither
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 50,0 11 0 
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 478,0 18 0 
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 488,0 19 0 
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 493,0 20 0 
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 458,0 21 0 
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 661,0 22 0 
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 463,0 23 0 
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 585,0 24 0 
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 1,0 27 0 
+DESIGN dither
+VIEW symbol.sb
+GRAPHIC 1,0 28 0 
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 33,0 40 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 42
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 32,0 46 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 50
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 2,0 73 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 74
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 2,0 76 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 77
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 62,0 78 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 523,0 79 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 81
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 2,0 92 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 45,0 93 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 60,0 94 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 287,0 98 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 290,0 99 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 305,0 100 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 307,0 107 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 322,0 108 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 341,0 112 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 356,0 113 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 863,0 115 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 287,0 117 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 118
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 358,0 119 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 440,0 120 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 287,0 122 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 123
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 672,0 124 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 687,0 125 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 126
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 2,0 128 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 129
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 2,0 131 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 132
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 2,0 134 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 135
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 2,0 144 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 45,0 145 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 273,0 146 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 450,0 148 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 290,0 149 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 390,0 150 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 307,0 151 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 152
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 273,0 153 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 154
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 290,0 155 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 460,0 156 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 307,0 157 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 158
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 672,0 159 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 160
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 307,0 161 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 324,0 162 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 420,0 164 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 341,0 166 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 167
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 358,0 168 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 169
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 341,0 170 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 863,0 171 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 273,0 173 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 174
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 358,0 175 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 176
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 358,0 177 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 440,0 178 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 273,0 180 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 181
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 358,0 182 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 183
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 672,0 184 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 307,0 185 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 95,0 186 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 188
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 2,0 189 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 190
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+GRAPHIC 32,0 192 0
+LIBRARY tripole_lib
+DESIGN dither
+VIEW fsm.sm
+NO_GRAPHIC 195
