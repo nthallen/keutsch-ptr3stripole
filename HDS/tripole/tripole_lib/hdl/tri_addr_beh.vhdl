@@ -13,7 +13,9 @@ USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
 ENTITY tri_addr IS
-   GENERIC ( BASE_ADDR : std_logic_vector (15 DOWNTO 0) := X"0200" );
+   GENERIC( 
+      BASE_ADDR : std_logic_vector (15 DOWNTO 0) := X"0200"
+   );
    PORT( 
       ExpAddr  : IN     std_logic_vector (15 DOWNTO 0);
       AHiPerEn : OUT    std_logic;
@@ -24,6 +26,7 @@ ENTITY tri_addr IS
       CHiPerEn : OUT    std_logic;
       CPhaseEn : OUT    std_logic;
       CtrlEn   : OUT    std_logic;
+      Fail_In  : OUT    std_ulogic;
       PerEn    : OUT    std_logic
    );
 
@@ -71,5 +74,7 @@ BEGIN
       BdEn <= '1';
     end if;
   end process;
+  
+  Fail_In <= '0';
 END ARCHITECTURE beh;
 

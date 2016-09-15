@@ -11,7 +11,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
-LIBRARY idx_fpga_lib;
+LIBRARY tripole_lib;
 
 ENTITY syscon IS
   GENERIC(
@@ -78,7 +78,7 @@ ARCHITECTURE arch OF syscon IS
         F8M         : IN     std_ulogic
      );
   END COMPONENT;
-  FOR ALL : syscon_tick USE ENTITY idx_fpga_lib.syscon_tick;
+  FOR ALL : syscon_tick USE ENTITY tripole_lib.syscon_tick;
   alias RdEn is Ctrl_int(0);
   alias WrEn is Ctrl_int(1);
   alias CS is Ctrl_int(2);
@@ -97,13 +97,13 @@ BEGIN
       DEBUG_MULTIPLIER => 1
     )
     PORT MAP (
+      Flt_CPU_Reset => Flt_CPU_Reset,
+      CmdEnbl     => CmdEnbl,
+      TwoMinuteTO => TwoMinuteTO,
       TickTock    => TickTock,
       CmdEnbl_cmd => CE,
       Arm_In      => arm,
-      CmdEnbl     => CmdEnbl,
       TwoSecondTO => TwoSecondTO,
-      Flt_CPU_Reset => Flt_CPU_Reset,
-      TwoMinuteTO => TwoMinuteTO,
       F8M         => F8M
     );
 
@@ -136,7 +136,7 @@ BEGIN
   -- Make the collision check synchronous to avoid latch
   ackr : process (F8M) is
     Variable ack_i: std_ulogic;
-    Variable n_ack: integer range N_BOARDS-1 DOWNTO 0;
+    Variable n_ack: integer range N_BOARDS DOWNTO 0;
     Variable coll: std_ulogic;
   begin
     if F8M'Event AND F8M = '1' then

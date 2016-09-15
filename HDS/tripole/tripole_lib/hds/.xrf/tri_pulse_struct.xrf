@@ -15,201 +15,225 @@ VIEW symbol.sb
 GRAPHIC 341,0 20 0 
 DESIGN tri_pulse
 VIEW symbol.sb
-GRAPHIC 346,0 21 0 
+GRAPHIC 538,0 21 0 
 DESIGN tri_pulse
 VIEW symbol.sb
-GRAPHIC 361,0 22 0 
+GRAPHIC 346,0 22 0 
 DESIGN tri_pulse
 VIEW symbol.sb
-GRAPHIC 366,0 23 0 
+GRAPHIC 361,0 23 0 
 DESIGN tri_pulse
 VIEW symbol.sb
-GRAPHIC 326,0 24 0 
+GRAPHIC 366,0 24 0 
 DESIGN tri_pulse
 VIEW symbol.sb
-GRAPHIC 356,0 25 0 
+GRAPHIC 326,0 25 0 
 DESIGN tri_pulse
 VIEW symbol.sb
-GRAPHIC 437,0 26 0 
+GRAPHIC 356,0 26 0 
 DESIGN tri_pulse
 VIEW symbol.sb
-GRAPHIC 1,0 29 0 
+GRAPHIC 437,0 27 0 
 DESIGN tri_pulse
 VIEW symbol.sb
-GRAPHIC 1,0 30 0 
+GRAPHIC 543,0 28 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 1,0 31 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 1,0 32 0 
 DESIGN tri_pulse
 VIEW struct.bd
-NO_GRAPHIC 33
+NO_GRAPHIC 35
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 185,0 43 0 
+GRAPHIC 185,0 45 0 
 DESIGN tri_pulse
 VIEW struct.bd
-NO_GRAPHIC 47
+NO_GRAPHIC 49
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 0,0 50 2 
+GRAPHIC 0,0 52 2 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 449,0 55 0 
+GRAPHIC 449,0 57 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 447,0 56 0 
+GRAPHIC 447,0 58 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 445,0 57 0 
+GRAPHIC 445,0 59 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 548,0 58 0 
+GRAPHIC 548,0 60 0 
 DESIGN tri_pulse
 VIEW struct.bd
-NO_GRAPHIC 59
+NO_GRAPHIC 61
 DESIGN tri_pulse
 VIEW struct.bd
-NO_GRAPHIC 60
+NO_GRAPHIC 62
 LIBRARY tripole_lib
 DESIGN dither_wrap
 VIEW struct
-GRAPHIC 281,0 62 0 
+GRAPHIC 1016,0 64 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 213,0 64 0 
+GRAPHIC 213,0 66 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 218,0 65 0 
+GRAPHIC 218,0 67 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 223,0 66 0 
+GRAPHIC 348,0 68 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 228,0 67 0 
+GRAPHIC 383,0 69 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 233,0 68 0 
+GRAPHIC 228,0 70 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 203,0 69 0 
+GRAPHIC 233,0 71 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 208,0 70 0 
+GRAPHIC 203,0 72 0 
+DESIGN dither_wrap
+VIEW symbol.sb
+GRAPHIC 208,0 73 0 
+DESIGN dither_wrap
+VIEW symbol.sb
+GRAPHIC 353,0 74 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 512,0 73 0 
+GRAPHIC 512,0 77 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 540,0 75 0 
+GRAPHIC 540,0 79 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 373,0 76 0 
+GRAPHIC 373,0 80 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 552,0 77 0 
+GRAPHIC 552,0 81 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 532,0 78 0 
+GRAPHIC 532,0 82 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 524,0 79 0 
+GRAPHIC 524,0 83 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 357,0 80 0 
+GRAPHIC 357,0 84 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 15,0 81 0 
+GRAPHIC 15,0 85 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 329,0 84 0 
+GRAPHIC 329,0 88 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 391,0 86 0 
+GRAPHIC 391,0 90 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 365,0 87 0 
+GRAPHIC 365,0 91 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 85,0 88 0 
+GRAPHIC 85,0 92 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 381,0 89 0 
+GRAPHIC 381,0 93 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 99,0 90 0 
+GRAPHIC 99,0 94 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 524,0 91 0 
+GRAPHIC 524,0 95 0 
 LIBRARY tripole_lib
 DESIGN tri_pulse
 VIEW struct.bd
-NO_GRAPHIC 94
+NO_GRAPHIC 98
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 281,0 97 0 
+GRAPHIC 1016,0 101 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 512,0 98 0 
+GRAPHIC 512,0 102 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 329,0 99 0 
+GRAPHIC 329,0 103 0 
 DESIGN tri_pulse
 VIEW struct.bd
-NO_GRAPHIC 102
+NO_GRAPHIC 106
 DESIGN tri_pulse
 VIEW struct.bd
-NO_GRAPHIC 104
+NO_GRAPHIC 108
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 281,0 106 0 
+GRAPHIC 1016,0 110 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 43,0 108 0 
+GRAPHIC 43,0 112 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 677,0 109 0 
+GRAPHIC 677,0 113 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 825,0 110 0 
+GRAPHIC 825,0 114 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 113,0 111 0 
+GRAPHIC 1034,0 115 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 127,0 112 0 
+GRAPHIC 113,0 116 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 29,0 113 0 
+GRAPHIC 127,0 117 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 365,0 114 0 
+GRAPHIC 29,0 118 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 319,0 116 0 
+GRAPHIC 365,0 119 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 429,0 118 0 
+GRAPHIC 1108,0 120 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 663,0 119 0 
+GRAPHIC 1078,0 122 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 357,0 120 0 
+GRAPHIC 429,0 124 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 421,0 121 0 
+GRAPHIC 663,0 125 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 413,0 122 0 
+GRAPHIC 357,0 126 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 437,0 123 0 
+GRAPHIC 1090,0 127 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 373,0 124 0 
+GRAPHIC 421,0 128 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 512,0 126 0 
+GRAPHIC 413,0 129 0 
 DESIGN tri_pulse
 VIEW struct.bd
-GRAPHIC 329,0 136 0 
+GRAPHIC 437,0 130 0 
 DESIGN tri_pulse
 VIEW struct.bd
-NO_GRAPHIC 146
+GRAPHIC 373,0 131 0 
+DESIGN tri_pulse
+VIEW struct.bd
+GRAPHIC 1098,0 132 0 
+DESIGN tri_pulse
+VIEW struct.bd
+GRAPHIC 512,0 134 0 
+DESIGN tri_pulse
+VIEW struct.bd
+GRAPHIC 329,0 144 0 
+DESIGN tri_pulse
+VIEW struct.bd
+NO_GRAPHIC 154

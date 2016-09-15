@@ -77,19 +77,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "08/ 9/2016"
+value "09/15/2016"
 )
 (vvPair
 variable "day"
-value "Tue"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Tuesday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "09"
+value "15"
 )
 (vvPair
 variable "entity_name"
@@ -117,7 +117,7 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "08/09/16"
+value "09/15/16"
 )
 (vvPair
 variable "graphical_source_group"
@@ -125,7 +125,7 @@ value "Domain Users"
 )
 (vvPair
 variable "graphical_source_time"
-value "14:46:46"
+value "11:30:05"
 )
 (vvPair
 variable "group"
@@ -153,7 +153,7 @@ value "$HDS_PROJECT_DIR/tripole_lib/work"
 )
 (vvPair
 variable "mm"
-value "08"
+value "09"
 )
 (vvPair
 variable "module_name"
@@ -161,11 +161,11 @@ value "tri_per_ctrl"
 )
 (vvPair
 variable "month"
-value "Aug"
+value "Sep"
 )
 (vvPair
 variable "month_long"
-value "August"
+value "September"
 )
 (vvPair
 variable "p"
@@ -229,7 +229,7 @@ value "fsm"
 )
 (vvPair
 variable "time"
-value "14:56:16"
+value "11:30:36"
 )
 (vvPair
 variable "unit"
@@ -400,7 +400,7 @@ va (VaSet
 xt "14320,37500,21920,40500"
 st "RunOut_cld <= '0';
 tri_start_cld <= '0';
-RdEn_cld <= '0';"
+RdCnt_cld <= '0';"
 tm "Actions"
 )
 exitActions (MLText
@@ -622,7 +622,7 @@ va (VaSet
 fg "0,0,32768"
 bg "0,0,32768"
 )
-xt "30840,47640,39640,48640"
+xt "30840,47640,39540,48640"
 st "
 by %user on %dd %month %year
 "
@@ -1061,7 +1061,7 @@ va (VaSet
 xt "31150,37830,38850,40830"
 st "CntDn <= Count - 1;
 tri_start_cld <= '1';
-RdEn_cld <= '1';"
+RdCnt_cld <= '1';"
 tm "Actions"
 )
 exitActions (MLText
@@ -1223,7 +1223,7 @@ va (VaSet
 xt "45090,37740,52990,40740"
 st "CntDn <= CntDn - 1;
 tri_start_cld <= '0';
-RdEn_cld <= '0';"
+RdCnt_cld <= '0';"
 tm "Actions"
 )
 exitActions (MLText
@@ -2262,7 +2262,7 @@ tm "SmCompilerDirectivesTextMgr"
 associable 1
 )
 windowSize "0,14,1281,1024"
-viewArea "-1000,-2000,69551,53543"
+viewArea "-1000,-2000,69551,55419"
 cachedDiagramExtent "0,-1000,67640,48640"
 pageSetupInfo (PageSetupInfo
 ptrCmd ""
@@ -2569,10 +2569,10 @@ font "Courier New,8,0"
 )
 xt "35600,0,63600,4000"
 st "SIGNAL     MODE    DEFAULT  RESET            SCHEME 
-RdEn       OUT              '0'              CLKD   
 RunOut     OUT              '0'              CLKD   
 tri_start  OUT              '0'              CLKD   
 CntDn      LOCAL            (others => '0')  CLKD   
+RdCnt      OUT              '0'              CLKD   
 "
 tm "SmSignalsGenStatusTextMgr"
 )
@@ -2671,7 +2671,7 @@ stateOrder [
 name "csm"
 )
 ]
-lastUid 584,0
+lastUid 615,0
 commonDM (CommonDM
 ldm (LogicalDM
 emptyRow *57 (LEmptyRow
@@ -2787,19 +2787,6 @@ expr "clk'EVENT AND clk = '1'"
 port (LogicalPort
 m 1
 decl (Decl
-n "RdEn"
-t "std_logic"
-o 7
-)
-)
-uid 172,0
-scheme 1
-rstVal "'0'"
-)
-*82 (LeafLogPort
-port (LogicalPort
-m 1
-decl (Decl
 n "RunOut"
 t "std_logic"
 o 8
@@ -2809,7 +2796,7 @@ uid 174,0
 scheme 1
 rstVal "'0'"
 )
-*83 (LeafLogPort
+*82 (LeafLogPort
 port (LogicalPort
 m 1
 decl (Decl
@@ -2822,7 +2809,7 @@ uid 176,0
 scheme 1
 rstVal "'0'"
 )
-*84 (LeafLogPort
+*83 (LeafLogPort
 port (LogicalPort
 m 4
 decl (Decl
@@ -2836,7 +2823,7 @@ uid 309,0
 scheme 1
 rstVal "(others => '0')"
 )
-*85 (LeafLogPort
+*84 (LeafLogPort
 port (LogicalPort
 decl (Decl
 n "rst"
@@ -2848,6 +2835,19 @@ uid 435,0
 cat 12
 ass ""
 expr "rst = '1'"
+)
+*85 (LeafLogPort
+port (LogicalPort
+m 1
+decl (Decl
+n "RdCnt"
+t "std_logic"
+o 7
+)
+)
+uid 615,0
+scheme 1
+rstVal "'0'"
 )
 ]
 )
@@ -2913,13 +2913,13 @@ uid 161,0
 )
 *93 (MRCItem
 litem &78
-pos 4
+pos 7
 dimension 20
 uid 167,0
 )
 *94 (MRCItem
 litem &79
-pos 5
+pos 8
 dimension 20
 uid 169,0
 )
@@ -2931,33 +2931,33 @@ uid 171,0
 )
 *96 (MRCItem
 litem &81
-pos 7
+pos 5
 dimension 20
-uid 173,0
+uid 175,0
 )
 *97 (MRCItem
 litem &82
-pos 8
+pos 6
 dimension 20
-uid 175,0
+uid 177,0
 )
 *98 (MRCItem
 litem &83
 pos 9
 dimension 20
-uid 177,0
+uid 310,0
 )
 *99 (MRCItem
 litem &84
-pos 6
+pos 4
 dimension 20
-uid 310,0
+uid 434,0
 )
 *100 (MRCItem
 litem &85
 pos 3
 dimension 20
-uid 434,0
+uid 614,0
 )
 ]
 )
