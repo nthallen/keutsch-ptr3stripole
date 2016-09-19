@@ -17,11 +17,84 @@
   <files>
     <file xil_pn:name="MBlaze/MBlaze.xmp" xil_pn:type="FILE_XPS">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="8"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="15"/>
     </file>
     <file xil_pn:name="../vhdl/Nexys4_top.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="16"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="16"/>
+    </file>
+    <file xil_pn:name="../vhdl/tripole_nexys4.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
+    </file>
+    <file xil_pn:name="../vhdl/dither_fsm.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="64"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/dither_wq_fsm.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="65"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/dither_wrap_struct.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="66"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/subbus_io_beh.vhdl" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="67"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="13"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/syscon_arch.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="68"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="12"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/syscon_tick_beh.vhdl" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="69"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="7"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/tri_addr_beh.vhdl" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="70"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="11"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/tri_hi_ctrl_fsm.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="71"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="6"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/tri_lvl_b_struct.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="72"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="14"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/tri_period_struct.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="73"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="10"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/tri_per_ctrl_fsm.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="74"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/tri_per_stat_beh.vhdl" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="75"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/tri_ph_ctrl_fsm.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="76"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
+      <library xil_pn:name="tripole_lib"/>
+    </file>
+    <file xil_pn:name="../vhdl/tri_pulse_struct.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="77"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="9"/>
+      <library xil_pn:name="tripole_lib"/>
     </file>
   </files>
 
@@ -55,7 +128,9 @@
 
   <bindings/>
 
-  <libraries/>
+  <libraries>
+    <library xil_pn:name="tripole_lib"/>
+  </libraries>
 
   <autoManagedFiles>
     <!-- The following files are identified by `include statements in verilog -->

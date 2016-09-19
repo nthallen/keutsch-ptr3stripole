@@ -20,3 +20,6 @@ platgen.opt
 pn_processor_info
 stubgen.log
 synthesis
+bitinit.log
+bootloops
+pn_processor_list
