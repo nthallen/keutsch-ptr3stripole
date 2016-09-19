@@ -14,7 +14,7 @@ USE ieee.std_logic_arith.all;
 
 ENTITY tri_lvl_b_tester IS
    PORT (
-      Addr        : OUT    std_logic_vector(15 DOWNTO 0);
+      Addr        : OUT    std_logic_vector(7 DOWNTO 0);
       clk_100MHz  : OUT    std_logic;
       Ctrl        : OUT    std_logic_vector(6 DOWNTO 0);
       Data_i      : IN     std_logic_vector(15 DOWNTO 0);
@@ -69,7 +69,7 @@ BEGIN
 
   test_proc: Process is
     
-    procedure sbwr( Addr_In : IN std_logic_vector (15 downto 0);
+    procedure sbwr( Addr_In : IN std_logic_vector (7 downto 0);
                     Data_In : IN std_logic_vector (15 downto 0) ) is
     begin
       Addr <= Addr_In;
@@ -99,17 +99,17 @@ BEGIN
     wait until clk'Event and clk = '1';
     wait until clk'Event and clk = '1';
     
-    sbwr(X"0200", X"0000"); -- Ensure off
-    sbwr(X"0201", X"00A0"); -- Period 100 ns
-    sbwr(X"0203", X"0000"); -- Channel A phase 0
-    sbwr(X"0202", X"0040"); -- Channel A hi period 40 ns
-    sbwr(X"0205", X"0033"); -- Channel B phase (delay) 33 ns
-    sbwr(X"0204", X"0040"); -- Channel B hi period 40 ns
-    sbwr(X"0207", X"0066"); -- Channel C phase delay 66 ns
-    sbwr(X"0206", X"0040"); -- Channel C hi period 40 ns
-    sbwr(X"0200", X"0001"); -- Enable
+    sbwr(X"20", X"0000"); -- Ensure off
+    sbwr(X"21", X"00A0"); -- Period 100 ns
+    sbwr(X"23", X"0000"); -- Channel A phase 0
+    sbwr(X"22", X"0040"); -- Channel A hi period 40 ns
+    sbwr(X"25", X"0033"); -- Channel B phase (delay) 33 ns
+    sbwr(X"24", X"0040"); -- Channel B hi period 40 ns
+    sbwr(X"27", X"0066"); -- Channel C phase delay 66 ns
+    sbwr(X"26", X"0040"); -- Channel C hi period 40 ns
+    sbwr(X"20", X"0001"); -- Enable
     wait for 1 us;
-    sbwr(X"0200", X"0000"); -- Disable
+    sbwr(X"20", X"0000"); -- Disable
     wait for 200 ns;
     
     SimDone <= '1';

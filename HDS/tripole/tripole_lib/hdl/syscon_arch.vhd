@@ -23,7 +23,7 @@ ENTITY syscon IS
   PORT (
     F8M : IN std_logic;
     Ctrl : IN std_logic_vector (6 DOWNTO 0); -- Arm_in, Tick, Rst, CE,CS,Wr,Rd
-    Addr : IN std_logic_vector (15 DOWNTO 0);
+    Addr : IN std_logic_vector (7 DOWNTO 0);
     Data_i : OUT std_logic_vector (15 DOWNTO 0);
     Data_o : IN std_logic_vector (15 DOWNTO 0);
     Status : OUT std_logic_vector (3 DOWNTO 0); -- 2SecTO, ExpIntr,Ack,Done
@@ -31,7 +31,7 @@ ENTITY syscon IS
     ExpWr : OUT std_logic;
     WData : OUT std_logic_vector (15 DOWNTO 0);
     RData : IN std_logic_vector (16*N_BOARDS-1 DOWNTO 0);
-    ExpAddr : OUT std_logic_vector (15 DOWNTO 0);
+    ExpAddr : OUT std_logic_vector (7 DOWNTO 0);
     ExpAck : IN std_logic_vector (N_BOARDS-1 DOWNTO 0);
     BdIntr : IN std_ulogic_vector(N_INTERRUPTS-1 downto 0);
     Collision : OUT std_ulogic;
@@ -48,7 +48,7 @@ END ENTITY syscon;
 --
 ARCHITECTURE arch OF syscon IS
   SIGNAL DataIn : std_logic_vector (15 DOWNTO 0);
-  SIGNAL Addr_int : std_logic_vector(15 DOWNTO 0);
+  SIGNAL Addr_int : std_logic_vector(7 DOWNTO 0);
   SIGNAL Ctrl_int : std_logic_vector (6 DOWNTO 0); -- Arm_in, Tick, Rst, CE,CS,Wr,Rd
   SIGNAL Cnt : std_logic_vector (3 DOWNTO 0);
   SIGNAL INTA_int : std_ulogic;
@@ -200,12 +200,12 @@ BEGIN
       else
         CASE current_state IS
           WHEN sc0 =>
-            if RdEn = '1' AND WrEn = '0' AND Addr_int = X"0040" then
+            if RdEn = '1' AND WrEn = '0' AND Addr_int = X"40" then
               current_state <= sc1i;
               INTA_int <= '1';
               Start <= '1';
             elsif RdEn = '1' AND WrEn = '0' AND
-                 Addr_int(15 DOWNTO 1) = "000000001000000" then
+                 Addr_int(7 DOWNTO 1) = "1000000" then
               current_state <= sclbn;
               Start <= '1';
               BldNoEn <= '1';

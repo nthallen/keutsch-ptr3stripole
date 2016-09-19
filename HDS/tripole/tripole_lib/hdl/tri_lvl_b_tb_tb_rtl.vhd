@@ -29,7 +29,7 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
    -- Architecture declarations
 
    -- Internal signal declarations
-   SIGNAL Addr        : std_logic_vector(15 DOWNTO 0);
+   SIGNAL Addr        : std_logic_vector(7 DOWNTO 0);
    SIGNAL clk_100MHz  : std_logic;
    SIGNAL Ctrl        : std_logic_vector(6 DOWNTO 0);
    SIGNAL Data_i      : std_logic_vector(15 DOWNTO 0);
@@ -43,7 +43,7 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
    -- Component declarations
    COMPONENT tri_lvl_b
       PORT (
-         Addr        : IN     std_logic_vector(15 DOWNTO 0);
+         Addr        : IN     std_logic_vector(7 DOWNTO 0);
          clk_100MHz  : IN     std_logic;
          Ctrl        : IN     std_logic_vector(6 DOWNTO 0);
          Data_i      : OUT    std_logic_vector(15 DOWNTO 0);
@@ -57,7 +57,7 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
 
    COMPONENT tri_lvl_b_tester
       PORT (
-         Addr        : OUT    std_logic_vector(15 DOWNTO 0);
+         Addr        : OUT    std_logic_vector(7 DOWNTO 0);
          clk_100MHz  : OUT    std_logic;
          Ctrl        : OUT    std_logic_vector(6 DOWNTO 0);
          Data_i      : IN     std_logic_vector(15 DOWNTO 0);
