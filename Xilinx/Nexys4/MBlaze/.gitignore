@@ -23,3 +23,6 @@ synthesis
 bitinit.log
 bootloops
 pn_processor_list
+MBlaze.exportToSDK.tcl
+psf2Edward.log
+xdsgen.log

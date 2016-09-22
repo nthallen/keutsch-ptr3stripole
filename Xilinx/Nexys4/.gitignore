@@ -77,3 +77,4 @@ MBlaze.init_bram.tcl
 Nexys4_top_bitgen.xwbt
 nexys4_top.bit
 webtalk.log
+test.log
