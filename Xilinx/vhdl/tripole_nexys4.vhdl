@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Nexys4_top.vhd
+-- tripole_nexys4.vhd
 -------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -7,13 +7,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 
-entity Nexys4_top is
+entity tripole_nexys4 is
   port (
     RS232_TX        : out std_logic;
     RS232_RX        : in std_logic;
-    JXADC           : OUT std_logic_vector (7 DOWNTO 0);
-    JA              : OUT std_logic_vector (7 DOWNTO 0);
-    JB              : OUT std_logic_vector (7 DOWNTO 0);
+    JXADC_I1        : IN  std_logic_vector (1 DOWNTO 0);
+    JXADC           : OUT std_logic_vector (2 DOWNTO 2);
+    JXADC_I2        : IN  std_logic_vector (7 DOWNTO 3);
+    JA_I1           : IN  std_logic_vector (1 DOWNTO 0);
+    JA              : OUT std_logic_vector (2 DOWNTO 2);
+    JA_I2           : IN  std_logic_vector (7 DOWNTO 3);
+    JB_I1           : IN  std_logic_vector (1 DOWNTO 0);
+    JB              : OUT std_logic_vector (3 DOWNTO 2);
+    JB_I2           : IN  std_logic_vector (7 DOWNTO 4);
     JC              : OUT std_logic_vector (7 DOWNTO 0);
     JD              : OUT std_logic_vector (7 DOWNTO 0);
     Nexys4_LEDs     : out std_logic_vector(15 downto 0);
@@ -21,9 +27,9 @@ entity Nexys4_top is
     clk_100MHz_in   : in  std_logic;
     RESET           : in  std_logic
   );
-end Nexys4_top;
+end tripole_nexys4;
 
-architecture STRUCTURE of Nexys4_top is
+architecture STRUCTURE of tripole_nexys4 is
   SIGNAL subbus_addr : std_logic_vector(7 downto 0);
   SIGNAL subbus_ctrl : std_logic_vector(6 downto 0);
   SIGNAL subbus_data_i : std_logic_vector(15 downto 0);
@@ -33,6 +39,10 @@ architecture STRUCTURE of Nexys4_top is
   SIGNAL tri_pulse_A : std_logic;
   SIGNAL tri_pulse_B : std_logic;
   SIGNAL tri_pulse_C : std_logic;
+  SIGNAL Fail_Out : std_logic;
+  SIGNAL Run_int : std_logic;
+  SIGNAL RunStatus : std_logic;
+  SIGNAL LEDs : std_logic_vector(15 downto 0);
   
   component MBlaze is
     port (
@@ -62,6 +72,9 @@ architecture STRUCTURE of Nexys4_top is
         Addr        : IN  std_logic_vector (7 DOWNTO 0);
         Ctrl        : IN  std_logic_vector (6 DOWNTO 0);
         Data_o      : IN  std_logic_vector (15 DOWNTO 0);
+        RunStatus   : IN  std_logic;
+        Fail_Out    : OUT std_ulogic;
+        Run         : OUT std_logic;
         clk_100MHz  : IN  std_logic;
         Data_i      : OUT std_logic_vector (15 DOWNTO 0);
         Status      : OUT std_logic_vector (3 DOWNTO 0);
@@ -83,7 +96,7 @@ begin
       axi_gpio_subbus_data_i_pin => subbus_data_i,
       axi_gpio_subbus_data_o_pin => subbus_data_o,
       axi_gpio_subbus_status_pin => subbus_status,
-      axi_gpio_subbus_leds_pin => Nexys4_LEDs,
+      axi_gpio_subbus_leds_pin => LEDs,
       axi_gpio_subbus_switches_pin => Nexys4_Switches,
       clk_100MHz_in_pin => clk_100MHz_in,
       CLK_OUT => Clk_100MHz
@@ -99,18 +112,20 @@ begin
       clk_100MHz => Clk_100MHz,
       tri_pulse_A => tri_pulse_A,
       tri_pulse_B => tri_pulse_B,
-      tri_pulse_C => tri_pulse_C
+      tri_pulse_C => tri_pulse_C,
+      Run => Run_int,
+      RunStatus => RunStatus,
+      Fail_Out => Fail_Out
     );
     
-  JA(0) <= tri_pulse_A;
-  JA(1) <= '0';
+  JXADC(2) <= tri_pulse_A;
+  RunStatus <= JXADC_I2(7);
   JA(2) <= tri_pulse_B;
-  JA(3) <= '0';
-  JA(4) <= tri_pulse_C;
-  JA(7 DOWNTO 5) <= (others => '0');
-  JB(7 DOWNTO 0) <= (others => '0');
-  JC(7 DOWNTO 0) <= (others => '0');
-  JD(7 DOWNTO 0) <= (others => '0');
-  JXADC(7 DOWNTO 0) <= (others => '0');
+  JB(2) <= tri_pulse_C;
+  JB(3) <= Run_int;
+  Nexys4_LEDs(0) <= Fail_Out;
+  Nexys4_LEDs(1) <= Run_int;
+  Nexys4_LEDs(2) <= RunStatus;
+  Nexys4_LEDs(15 downto 3) <= LEDs(15 downto 3);
 end architecture STRUCTURE;
 

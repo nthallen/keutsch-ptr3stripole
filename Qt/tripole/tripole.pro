@@ -8,16 +8,23 @@ QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = QtW
+TARGET = tripole
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    subbus.cpp
+    snprintf.cpp \
+    mainwindow.cpp \
+    subbus.cpp nl_verr.cpp \
+    nl_error.cpp nldbg.cpp nlresp.cpp \
+    ascii_esc.cpp \
+    tripole_nsec.cpp \
+    sbwriter.cpp
 
 HEADERS  += mainwindow.h \
-    subbus.h
+    subbus.h nortlib.h nl_assert.h \
+    tripole_nsec.h \
+    sbwriter.h
 
 FORMS    += mainwindow.ui
 

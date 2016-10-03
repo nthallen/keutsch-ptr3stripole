@@ -13,14 +13,19 @@ USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
 ENTITY tri_per_stat IS
-   PORT( 
-      CtrlEn : IN     std_logic;
-      RdEn   : IN     std_ulogic;
-      RunOut : IN     std_logic;
-      clk    : IN     std_logic;
-      rst    : IN     std_logic;
-      RData  : INOUT  std_logic_vector (15 DOWNTO 0)
-   );
+  GENERIC (
+    DELAY_BITS : integer range 8 downto 1 := 3
+  );
+  PORT( 
+    CtrlEn    : IN     std_logic;
+    RdEn      : IN     std_ulogic;
+    RunOut    : IN     std_logic;
+    RunStatus : IN     std_logic;
+    clk       : IN     std_logic;
+    rst       : IN     std_logic;
+    Fail      : OUT    std_ulogic;
+    RData     : INOUT  std_logic_vector (15 DOWNTO 0)
+  );
 
 -- Declarations
 
@@ -28,6 +33,8 @@ END tri_per_stat ;
 
 --
 ARCHITECTURE beh OF tri_per_stat IS
+  SIGNAL Failing : std_logic;
+  SIGNAL RunDelay : std_logic_vector(DELAY_BITS-1 downto 0);
 BEGIN
   RdStat : Process (clk) IS
   Begin
@@ -35,12 +42,35 @@ BEGIN
       if rst = '1' then
         RData <= (others => 'Z');
       elsif RdEn = '1' and CtrlEn = '1' then
-        RData(15 downto 1) <= (others => '0');
+        RData(15 downto 3) <= (others => '0');
+        RData(2) <= Failing;
+        RData(1) <= RunStatus;
         RData(0) <= RunOut;
       else
         RData <= (others => 'Z');
       end if;
     end if;
   End Process;
+  
+  FailChk : Process (clk) IS
+  Begin
+    if clk'Event AND clk = '1' then
+      if rst = '1' then
+        RunDelay <= (others => '0');
+        Failing <= '0';
+      else
+        RunDelay(DELAY_BITS-2 downto 0) <= RunDelay(DELAY_BITS-1 downto 1);
+        RunDelay(DELAY_BITS-1) <= RunOut;
+        if RunDelay(0) = '1' AND RunStatus /= '1' then
+          Failing <= '1';
+        else
+          Failing <= '0';
+        end if;
+      end if;
+    end if;
+  End Process;
+  
+  Fail <= Failing;
+  
 END ARCHITECTURE beh;
 

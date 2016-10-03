@@ -21,9 +21,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>160</y>
-      <width>131</width>
-      <height>81</height>
+      <y>220</y>
+      <width>261</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -39,20 +39,7 @@
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="startButton">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Start</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -105,7 +92,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>211</x>
@@ -311,57 +298,25 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>200</y>
+      <x>130</x>
+      <y>150</y>
       <width>238</width>
       <height>25</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QComboBox" name="comboBox">
-       <item>
-        <property name="text">
-         <string>Period</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>PhaseADly</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>PhaseBDly</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>PhaseCDly</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>PhaseAHi</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>PhaseBHi</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>PhaseCHi</string>
-        </property>
-       </item>
+      <widget class="QComboBox" name="cmdSelect">
+       <property name="editable">
+        <bool>false</bool>
+       </property>
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox">
+      <widget class="QSpinBox" name="cmdValue">
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
@@ -377,7 +332,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="cmdUnits">
        <property name="font">
         <font>
          <italic>true</italic>
@@ -397,7 +352,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -466,34 +421,56 @@
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>230</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="MFCtr_lbl">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>MFCtr:</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="MFCtr">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>12345</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
    <zorder>status_text</zorder>
-   <zorder>startButton</zorder>
-   <zorder>Period</zorder>
-   <zorder>PhaseADly</zorder>
-   <zorder>PhaseAHi</zorder>
-   <zorder>Period_4</zorder>
-   <zorder>Period_5</zorder>
-   <zorder>Period_6</zorder>
-   <zorder>PhaseBHi</zorder>
-   <zorder>PhaseBDly</zorder>
-   <zorder>PhaseCHi</zorder>
-   <zorder>PhaseCDly</zorder>
-   <zorder>Period_11</zorder>
-   <zorder>Period_12</zorder>
-   <zorder>Period_13</zorder>
-   <zorder>label</zorder>
-   <zorder>label_2</zorder>
-   <zorder>label_3</zorder>
-   <zorder>label_4</zorder>
-   <zorder>Set</zorder>
-   <zorder>comboBox</zorder>
-   <zorder>label_5</zorder>
-   <zorder>spinBox</zorder>
-   <zorder>label_5</zorder>
-   <zorder>EnableCmd</zorder>
-   <zorder>Enable</zorder>
-   <zorder>label_6</zorder>
-   <zorder>Interlock</zorder>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
@@ -501,14 +478,30 @@
  <resources/>
  <connections>
   <connection>
-   <sender>startButton</sender>
+   <sender>Set</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>Start()</slot>
+   <slot>setCommand()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>77</x>
-     <y>64</y>
+     <x>329</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>EnableCmd</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setEnable(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>80</y>
     </hint>
     <hint type="destinationlabel">
      <x>199</x>
@@ -519,6 +512,7 @@
  </connections>
  <slots>
   <signal>statusChanged(QString)</signal>
-  <slot>Start()</slot>
+  <slot>setCommand()</slot>
+  <slot>setEnable(bool)</slot>
  </slots>
 </ui>

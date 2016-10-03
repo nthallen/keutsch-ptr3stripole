@@ -38,6 +38,9 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
    SIGNAL tri_pulse_A : std_logic;
    SIGNAL tri_pulse_B : std_logic;
    SIGNAL tri_pulse_C : std_logic;
+   SIGNAL Run         : std_logic;
+   SIGNAL RunStatus   : std_logic;
+   SIGNAL Fail_Out    : std_logic;
 
 
    -- Component declarations
@@ -46,9 +49,12 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
          Addr        : IN     std_logic_vector(7 DOWNTO 0);
          clk_100MHz  : IN     std_logic;
          Ctrl        : IN     std_logic_vector(6 DOWNTO 0);
+         RunStatus   : IN     std_logic;
          Data_i      : OUT    std_logic_vector(15 DOWNTO 0);
          Data_o      : IN     std_logic_vector(15 DOWNTO 0);
+         Fail_Out    : OUT    std_ulogic;
          Status      : OUT    std_logic_vector(3 DOWNTO 0);
+         Run         : OUT    std_logic;
          tri_pulse_A : OUT    std_logic;
          tri_pulse_B : OUT    std_logic;
          tri_pulse_C : OUT    std_logic
@@ -63,6 +69,9 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
          Data_i      : IN     std_logic_vector(15 DOWNTO 0);
          Data_o      : OUT    std_logic_vector(15 DOWNTO 0);
          Status      : IN     std_logic_vector(3 DOWNTO 0);
+         Run         : IN     std_logic;
+         RunStatus   : OUT    std_logic;
+         Fail_Out    : IN     std_logic;
          tri_pulse_A : IN     std_logic;
          tri_pulse_B : IN     std_logic;
          tri_pulse_C : IN     std_logic
@@ -85,6 +94,9 @@ BEGIN
                Data_i      => Data_i,
                Data_o      => Data_o,
                Status      => Status,
+               Run         => Run,
+               RunStatus   => RunStatus,
+               Fail_Out    => Fail_Out,
                tri_pulse_A => tri_pulse_A,
                tri_pulse_B => tri_pulse_B,
                tri_pulse_C => tri_pulse_C
@@ -98,6 +110,9 @@ BEGIN
                Data_i      => Data_i,
                Data_o      => Data_o,
                Status      => Status,
+               Run         => Run,
+               RunStatus   => RunStatus,
+               Fail_Out    => Fail_Out,
                tri_pulse_A => tri_pulse_A,
                tri_pulse_B => tri_pulse_B,
                tri_pulse_C => tri_pulse_C

@@ -507,7 +507,6 @@ static void SendUSB(char *msg) {
   while (*msg)
     uart_send_char(*msg++);
   uart_send_char('\n');			// End with NL
-  // Strobe the FTDI "Send Immediate" line:
   uart_flush_output();
 }
 

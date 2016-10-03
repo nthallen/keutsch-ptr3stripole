@@ -20,6 +20,9 @@ ENTITY tri_lvl_b_tester IS
       Data_i      : IN     std_logic_vector(15 DOWNTO 0);
       Data_o      : OUT    std_logic_vector(15 DOWNTO 0);
       Status      : IN     std_logic_vector(3 DOWNTO 0);
+      Run         : IN     std_logic;
+      RunStatus   : OUT    std_logic;
+      Fail_Out    : IN     std_logic;
       tri_pulse_A : IN     std_logic;
       tri_pulse_B : IN     std_logic;
       tri_pulse_C : IN     std_logic
@@ -94,6 +97,7 @@ BEGIN
     rst <= '1';
     arm <= '0';
     TickTock <= '0';
+    RunStatus <= '0';
     wait for 50 ns;
     rst <= '0';
     wait until clk'Event and clk = '1';

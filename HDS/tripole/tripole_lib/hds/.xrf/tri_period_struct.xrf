@@ -15,198 +15,216 @@ VIEW symbol.sb
 GRAPHIC 514,0 20 0 
 DESIGN tri_period
 VIEW symbol.sb
-GRAPHIC 240,0 21 0 
+GRAPHIC 643,0 21 0 
 DESIGN tri_period
 VIEW symbol.sb
-GRAPHIC 245,0 22 0 
+GRAPHIC 240,0 22 0 
 DESIGN tri_period
 VIEW symbol.sb
-GRAPHIC 210,0 23 0 
+GRAPHIC 245,0 23 0 
 DESIGN tri_period
 VIEW symbol.sb
-GRAPHIC 406,0 24 0 
+GRAPHIC 210,0 24 0 
 DESIGN tri_period
 VIEW symbol.sb
-GRAPHIC 436,0 25 0 
+GRAPHIC 406,0 25 0 
 DESIGN tri_period
 VIEW symbol.sb
-GRAPHIC 235,0 26 0 
+GRAPHIC 648,0 26 0 
 DESIGN tri_period
 VIEW symbol.sb
-GRAPHIC 519,0 27 0 
+GRAPHIC 436,0 27 0 
 DESIGN tri_period
 VIEW symbol.sb
-GRAPHIC 1,0 30 0 
+GRAPHIC 235,0 28 0 
 DESIGN tri_period
 VIEW symbol.sb
-GRAPHIC 1,0 31 0 
+GRAPHIC 519,0 29 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 1,0 32 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 1,0 33 0 
 DESIGN tri_period
 VIEW struct.bd
-NO_GRAPHIC 34
+NO_GRAPHIC 36
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 153,0 44 0 
+GRAPHIC 153,0 46 0 
 DESIGN tri_period
 VIEW struct.bd
-NO_GRAPHIC 48
+NO_GRAPHIC 50
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 0,0 51 2 
+GRAPHIC 0,0 53 2 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 683,0 56 0 
+GRAPHIC 683,0 58 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 331,0 57 0 
+GRAPHIC 331,0 59 0 
 DESIGN tri_period
 VIEW struct.bd
-NO_GRAPHIC 58
+NO_GRAPHIC 60
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1206,0 60 0 
+GRAPHIC 1206,0 62 0 
 DESIGN tri_period
 VIEW struct.bd
-NO_GRAPHIC 62
+NO_GRAPHIC 64
 LIBRARY tripole_lib
 DESIGN dither_wrap
 VIEW struct
-GRAPHIC 1059,0 64 0 
+GRAPHIC 1059,0 66 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 213,0 66 0 
+GRAPHIC 213,0 68 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 218,0 67 0 
+GRAPHIC 218,0 69 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 348,0 68 0 
+GRAPHIC 348,0 70 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 383,0 69 0 
+GRAPHIC 383,0 71 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 228,0 70 0 
+GRAPHIC 228,0 72 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 233,0 71 0 
+GRAPHIC 233,0 73 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 203,0 72 0 
+GRAPHIC 203,0 74 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 208,0 73 0 
+GRAPHIC 208,0 75 0 
 DESIGN dither_wrap
 VIEW symbol.sb
-GRAPHIC 353,0 74 0 
+GRAPHIC 353,0 76 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 221,0 77 0 
+GRAPHIC 221,0 79 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 685,0 79 0 
+GRAPHIC 685,0 81 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 15,0 80 0 
+GRAPHIC 15,0 82 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 85,0 81 0 
+GRAPHIC 85,0 83 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 99,0 82 0 
+GRAPHIC 99,0 84 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 691,0 83 0 
+GRAPHIC 691,0 85 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 29,0 84 0 
+GRAPHIC 29,0 86 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 568,0 85 0 
+GRAPHIC 568,0 87 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 846,0 86 0 
+GRAPHIC 846,0 88 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 71,0 87 0 
+GRAPHIC 71,0 89 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1156,0 90 0 
+GRAPHIC 1156,0 92 0 
+DESIGN tri_per_stat
+VIEW interface
+GRAPHIC 14,0 93 1 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1198,0 92 0 
+GRAPHIC 1198,0 97 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1188,0 93 0 
+GRAPHIC 1188,0 98 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1206,0 94 0 
+GRAPHIC 1206,0 99 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1178,0 95 0 
+GRAPHIC 1291,0 100 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1168,0 96 0 
+GRAPHIC 1178,0 101 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1214,0 97 0 
+GRAPHIC 1168,0 102 0 
+DESIGN tri_period
+VIEW struct.bd
+GRAPHIC 1301,0 103 0 
+DESIGN tri_period
+VIEW struct.bd
+GRAPHIC 1214,0 104 0 
 LIBRARY tripole_lib
 DESIGN tri_period
 VIEW struct.bd
-NO_GRAPHIC 100
+NO_GRAPHIC 107
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1059,0 103 0 
+GRAPHIC 1059,0 110 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 221,0 104 0 
+GRAPHIC 221,0 111 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1156,0 105 0 
+GRAPHIC 1156,0 112 0 
 DESIGN tri_period
 VIEW struct.bd
-NO_GRAPHIC 108
+NO_GRAPHIC 115
 DESIGN tri_period
 VIEW struct.bd
-NO_GRAPHIC 110
+NO_GRAPHIC 117
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1059,0 112 0 
+GRAPHIC 1059,0 119 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 544,0 114 0 
+GRAPHIC 544,0 121 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 758,0 115 0 
+GRAPHIC 758,0 122 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 568,0 116 0 
+GRAPHIC 568,0 123 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1071,0 117 0 
+GRAPHIC 1071,0 124 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 536,0 118 0 
+GRAPHIC 536,0 125 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 528,0 119 0 
+GRAPHIC 528,0 126 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 552,0 120 0 
+GRAPHIC 552,0 127 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 685,0 121 0 
+GRAPHIC 685,0 128 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1085,0 122 0 
+GRAPHIC 1085,0 129 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 221,0 124 0 
+GRAPHIC 221,0 131 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1156,0 136 0 
+GRAPHIC 1156,0 143 0 
 DESIGN tri_period
 VIEW struct.bd
-GRAPHIC 1206,0 147 0 
+GRAPHIC 1163,0 144 1 
 DESIGN tri_period
 VIEW struct.bd
-NO_GRAPHIC 149
+GRAPHIC 1206,0 159 0 
+DESIGN tri_period
+VIEW struct.bd
+NO_GRAPHIC 161

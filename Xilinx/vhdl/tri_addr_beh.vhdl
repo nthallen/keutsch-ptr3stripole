@@ -26,7 +26,6 @@ ENTITY tri_addr IS
       CHiPerEn : OUT    std_logic;
       CPhaseEn : OUT    std_logic;
       CtrlEn   : OUT    std_logic;
-      Fail_In  : OUT    std_ulogic;
       PerEn    : OUT    std_logic
    );
 
@@ -75,6 +74,5 @@ BEGIN
     end if;
   end process;
   
-  Fail_In <= '0';
 END ARCHITECTURE beh;
 
