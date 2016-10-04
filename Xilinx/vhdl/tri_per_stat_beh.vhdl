@@ -13,19 +13,20 @@ USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
 ENTITY tri_per_stat IS
-  GENERIC (
-    DELAY_BITS : integer range 8 downto 1 := 3
-  );
-  PORT( 
-    CtrlEn    : IN     std_logic;
-    RdEn      : IN     std_ulogic;
-    RunOut    : IN     std_logic;
-    RunStatus : IN     std_logic;
-    clk       : IN     std_logic;
-    rst       : IN     std_logic;
-    Fail      : OUT    std_ulogic;
-    RData     : INOUT  std_logic_vector (15 DOWNTO 0)
-  );
+   GENERIC( 
+      DELAY_BITS : integer range 8 downto 1 := 3
+   );
+   PORT( 
+      CtrlEn    : IN     std_logic;
+      RdEn      : IN     std_ulogic;
+      RunCmd    : IN     std_logic;
+      RunStatus : IN     std_logic;
+      clk       : IN     std_logic;
+      rst       : IN     std_logic;
+      Fail      : OUT    std_ulogic;
+      RunOut    : OUT    std_logic;
+      RData     : INOUT  std_logic_vector (15 DOWNTO 0)
+   );
 
 -- Declarations
 
@@ -45,7 +46,7 @@ BEGIN
         RData(15 downto 3) <= (others => '0');
         RData(2) <= Failing;
         RData(1) <= RunStatus;
-        RData(0) <= RunOut;
+        RData(0) <= RunCmd;
       else
         RData <= (others => 'Z');
       end if;
@@ -60,12 +61,27 @@ BEGIN
         Failing <= '0';
       else
         RunDelay(DELAY_BITS-2 downto 0) <= RunDelay(DELAY_BITS-1 downto 1);
-        RunDelay(DELAY_BITS-1) <= RunOut;
-        if RunDelay(0) = '1' AND RunStatus /= '1' then
+        RunDelay(DELAY_BITS-1) <= RunCmd;
+        if Failing = '1' AND RunCmd = '1' then
+          Failing <= '1';
+        elsif RunDelay(0) = '1' AND RunCmd = '1' AND RunStatus /= '1' then
           Failing <= '1';
         else
           Failing <= '0';
         end if;
+      end if;
+    end if;
+  End Process;
+  
+  Running : Process (clk) IS
+  Begin
+    if clk'Event AND clk = '1' then
+      if rst = '1' then
+        RunOut <= '0';
+      elsif RunCmd = '1' AND Failing = '0' then
+        RunOut <= '1';
+      else
+        RunOut <= '0';
       end if;
     end if;
   End Process;
