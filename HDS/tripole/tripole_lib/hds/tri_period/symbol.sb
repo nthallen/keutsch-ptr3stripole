@@ -592,19 +592,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "10/ 3/2016"
+value "10/ 4/2016"
 )
 (vvPair
 variable "day"
-value "Mon"
+value "Tue"
 )
 (vvPair
 variable "day_long"
-value "Monday"
+value "Tuesday"
 )
 (vvPair
 variable "dd"
-value "03"
+value "04"
 )
 (vvPair
 variable "entity_name"
@@ -632,7 +632,7 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "10/03/16"
+value "10/04/16"
 )
 (vvPair
 variable "graphical_source_group"
@@ -640,7 +640,7 @@ value "Domain Users"
 )
 (vvPair
 variable "graphical_source_time"
-value "11:04:51"
+value "11:43:38"
 )
 (vvPair
 variable "group"
@@ -744,7 +744,7 @@ value "symbol"
 )
 (vvPair
 variable "time"
-value "11:04:51"
+value "11:43:38"
 )
 (vvPair
 variable "unit"
@@ -2000,6 +2000,6 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 721,0
+lastUid 744,0
 activeModelName "Symbol:CDM"
 )

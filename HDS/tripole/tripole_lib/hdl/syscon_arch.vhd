@@ -168,14 +168,15 @@ BEGIN
   
   Collision <= Collision_int;
   
-  Failer : Process (Fail_In, TwoMinuteTO) IS
-  Begin
-    if Fail_In = '1' OR TwoMinuteTO = '1' then
-      Fail_Out <= '1';
-    else
-      Fail_Out <= '0';
-    end if;
-  End Process;
+--  Failer : Process (Fail_In, TwoMinuteTO) IS
+--  Begin
+--    if Fail_In = '1' OR TwoMinuteTO = '1' then
+--      Fail_Out <= '1';
+--    else
+--      Fail_Out <= '0';
+--    end if;
+--  End Process;
+  Fail_Out <= Fail_In;
 
   Data_i <= DataIn;
   CmdStrb <= CS;

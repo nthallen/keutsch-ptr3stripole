@@ -77,19 +77,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "09/15/2016"
+value "10/ 4/2016"
 )
 (vvPair
 variable "day"
-value "Thu"
+value "Tue"
 )
 (vvPair
 variable "day_long"
-value "Thursday"
+value "Tuesday"
 )
 (vvPair
 variable "dd"
-value "15"
+value "04"
 )
 (vvPair
 variable "entity_name"
@@ -125,7 +125,7 @@ value "Domain Users"
 )
 (vvPair
 variable "graphical_source_time"
-value "11:30:05"
+value "11:30:36"
 )
 (vvPair
 variable "group"
@@ -153,7 +153,7 @@ value "$HDS_PROJECT_DIR/tripole_lib/work"
 )
 (vvPair
 variable "mm"
-value "09"
+value "10"
 )
 (vvPair
 variable "module_name"
@@ -161,11 +161,11 @@ value "tri_per_ctrl"
 )
 (vvPair
 variable "month"
-value "Sep"
+value "Oct"
 )
 (vvPair
 variable "month_long"
-value "September"
+value "October"
 )
 (vvPair
 variable "p"
@@ -229,7 +229,7 @@ value "fsm"
 )
 (vvPair
 variable "time"
-value "11:30:36"
+value "11:45:14"
 )
 (vvPair
 variable "unit"
@@ -398,7 +398,7 @@ uid 60,0
 va (VaSet
 )
 xt "14320,37500,21920,40500"
-st "RunOut_cld <= '0';
+st "RunCmd_cld <= '0';
 tri_start_cld <= '0';
 RdCnt_cld <= '0';"
 tm "Actions"
@@ -1559,7 +1559,7 @@ fg "65535,65535,65535"
 bg "0,0,0"
 lineColor "0,32768,49152"
 )
-xt "21805,31640,30005,37440"
+xt "21605,31640,30205,37440"
 )
 autoResize 1
 lineShape (Line
@@ -1567,10 +1567,10 @@ uid 303,0
 va (VaSet
 vasetType 3
 )
-xt "22305,35540,29505,35540"
+xt "22105,35540,29705,35540"
 pts [
-"22305,35540"
-"29505,35540"
+"22105,35540"
+"29705,35540"
 ]
 )
 condition (MLText
@@ -1587,8 +1587,8 @@ actions (MLText
 uid 305,0
 va (VaSet
 )
-xt "22305,35940,29505,36940"
-st "RunOut_cld <= '1';"
+xt "22105,35940,29705,36940"
+st "RunCmd_cld <= '1';"
 tm "Actions"
 )
 )
@@ -2569,10 +2569,10 @@ font "Courier New,8,0"
 )
 xt "35600,0,63600,4000"
 st "SIGNAL     MODE    DEFAULT  RESET            SCHEME 
-RunOut     OUT              '0'              CLKD   
 tri_start  OUT              '0'              CLKD   
 CntDn      LOCAL            (others => '0')  CLKD   
 RdCnt      OUT              '0'              CLKD   
+RunCmd     OUT              '0'              CLKD   
 "
 tm "SmSignalsGenStatusTextMgr"
 )
@@ -2671,7 +2671,7 @@ stateOrder [
 name "csm"
 )
 ]
-lastUid 615,0
+lastUid 646,0
 commonDM (CommonDM
 ldm (LogicalDM
 emptyRow *57 (LEmptyRow
@@ -2787,19 +2787,6 @@ expr "clk'EVENT AND clk = '1'"
 port (LogicalPort
 m 1
 decl (Decl
-n "RunOut"
-t "std_logic"
-o 8
-)
-)
-uid 174,0
-scheme 1
-rstVal "'0'"
-)
-*82 (LeafLogPort
-port (LogicalPort
-m 1
-decl (Decl
 n "tri_start"
 t "std_logic"
 o 9
@@ -2809,7 +2796,7 @@ uid 176,0
 scheme 1
 rstVal "'0'"
 )
-*83 (LeafLogPort
+*82 (LeafLogPort
 port (LogicalPort
 m 4
 decl (Decl
@@ -2823,7 +2810,7 @@ uid 309,0
 scheme 1
 rstVal "(others => '0')"
 )
-*84 (LeafLogPort
+*83 (LeafLogPort
 port (LogicalPort
 decl (Decl
 n "rst"
@@ -2836,7 +2823,7 @@ cat 12
 ass ""
 expr "rst = '1'"
 )
-*85 (LeafLogPort
+*84 (LeafLogPort
 port (LogicalPort
 m 1
 decl (Decl
@@ -2846,6 +2833,19 @@ o 7
 )
 )
 uid 615,0
+scheme 1
+rstVal "'0'"
+)
+*85 (LeafLogPort
+port (LogicalPort
+m 1
+decl (Decl
+n "RunCmd"
+t "std_logic"
+o 8
+)
+)
+uid 646,0
 scheme 1
 rstVal "'0'"
 )
@@ -2913,13 +2913,13 @@ uid 161,0
 )
 *93 (MRCItem
 litem &78
-pos 7
+pos 4
 dimension 20
 uid 167,0
 )
 *94 (MRCItem
 litem &79
-pos 8
+pos 5
 dimension 20
 uid 169,0
 )
@@ -2931,33 +2931,33 @@ uid 171,0
 )
 *96 (MRCItem
 litem &81
-pos 5
+pos 9
 dimension 20
-uid 175,0
+uid 177,0
 )
 *97 (MRCItem
 litem &82
 pos 6
 dimension 20
-uid 177,0
+uid 310,0
 )
 *98 (MRCItem
 litem &83
-pos 9
-dimension 20
-uid 310,0
-)
-*99 (MRCItem
-litem &84
-pos 4
+pos 3
 dimension 20
 uid 434,0
 )
-*100 (MRCItem
-litem &85
-pos 3
+*99 (MRCItem
+litem &84
+pos 7
 dimension 20
 uid 614,0
+)
+*100 (MRCItem
+litem &85
+pos 8
+dimension 20
+uid 645,0
 )
 ]
 )

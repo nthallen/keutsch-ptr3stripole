@@ -111,16 +111,26 @@ BEGIN
     sbwr(X"24", X"0040"); -- Channel B hi period 40 ns
     sbwr(X"27", X"0066"); -- Channel C phase delay 66 ns
     sbwr(X"26", X"0040"); -- Channel C hi period 40 ns
+    RunStatus <= '1';
     sbwr(X"20", X"0001"); -- Enable
     wait for 1 us;
+    RunStatus <= '0';
+    wait for 100 ns;
+    RunStatus <= '1';
+    wait for 100 ns;
     sbwr(X"20", X"0000"); -- Disable
     wait for 200 ns;
+    sbwr(X"20", X"0001"); -- Enable
+    wait for 100 ns;
+    sbwr(X"20", X"0000"); -- Disable
+    wait for 80 ns;
     
     SimDone <= '1';
     wait;
    -- pragma synthesis_on
   End Process;
   
+  -- RunStatus <= Run;
   Ctrl <= Ctrl_int;
   clk_100MHz <= clk;
 END rtl;
