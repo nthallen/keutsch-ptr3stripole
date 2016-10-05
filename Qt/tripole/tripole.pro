@@ -19,12 +19,14 @@ SOURCES += main.cpp\
     nl_error.cpp nldbg.cpp nlresp.cpp \
     ascii_esc.cpp \
     tripole_nsec.cpp \
-    sbwriter.cpp
+    sbwriter.cpp \
+    status_report.cpp
 
 HEADERS  += mainwindow.h \
     subbus.h nortlib.h nl_assert.h \
     tripole_nsec.h \
-    sbwriter.h
+    sbwriter.h \
+    status_report.h
 
 FORMS    += mainwindow.ui
 

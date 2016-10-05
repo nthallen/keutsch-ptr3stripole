@@ -18,9 +18,10 @@ MainWindow::MainWindow(QWidget *parent) :
   setup_nsec(0x24, ui->PhaseBHi);
   setup_nsec(0x27, ui->PhaseCDly);
   setup_nsec(0x26, ui->PhaseCHi);
+  setup_status_report(0x20, ui->Enable, ui->Interlock);
   Subbus_client::SB.init();
   poll.setSingleShot(false);
-  poll.start(1000);
+  poll.start(250);
 }
 
 MainWindow::~MainWindow()
@@ -34,6 +35,12 @@ void MainWindow::setup_nsec(uint16_t addr, QLabel *lbl) {
   nsecs.push_back(ns);
   ui->cmdSelect->addItem(ns->getName(), nsecs.size()-1);
   connect(&poll, &QTimer::timeout, ns, &tripole_nsec::acquire);
+}
+
+void MainWindow::setup_status_report(uint16_t addr, QLabel *RunLbl, QLabel *FailLbl) {
+  status_report *rpt = new status_report(addr, RunLbl, FailLbl);
+  rpt->setParent(this);
+  connect(&poll, &QTimer::timeout, rpt, &status_report::acquire);
 }
 
 void MainWindow::setEnable(bool on) {

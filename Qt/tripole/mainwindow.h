@@ -5,6 +5,7 @@
 #include <QLabel>
 #include <deque>
 #include "tripole_nsec.h"
+#include "status_report.h"
 #include "subbus.h"
 #include "sbwriter.h"
 
@@ -32,6 +33,7 @@ private:
   Ui::MainWindow *ui;
   QTimer poll;
   void setup_nsec(uint16_t addr, QLabel *lbl);
+  void setup_status_report(uint16_t addr, QLabel *RunLbl, QLabel *FailLbl);
   std::deque<tripole_nsec*> nsecs;
   sbwriter sbw;
 };

@@ -64,6 +64,15 @@ void tripole_nsec::ready() {
     default:
       nl_error(4,"Unexpect command value in tripole_nsec::ready()");
   }
+  if (req_status == SBDR_IDLE) {
+    if (read_pending) {
+      read(addr);
+      read_pending = false;
+    } else if (write_pending) {
+      write(addr, pending_value);
+      write_pending = false;
+    }
+  }
 }
 
 void tripole_nsec::acquire() {
