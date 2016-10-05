@@ -11,6 +11,7 @@ public:
   ~tripole_nsec();
   void ready();
   QString getName();
+  uint16_t getValue();
 public slots:
   void acquire();
   void set(int nsec); // converts nsec to raw

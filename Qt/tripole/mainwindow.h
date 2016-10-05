@@ -25,6 +25,9 @@ public:
 public slots:
   void setCommand();
   void setEnable(bool on);
+  void saveFile();
+  void loadFile();
+  void updateMFCtr();
 
 signals:
   void statusChanged(QString);
@@ -34,8 +37,10 @@ private:
   QTimer poll;
   void setup_nsec(uint16_t addr, QLabel *lbl);
   void setup_status_report(uint16_t addr, QLabel *RunLbl, QLabel *FailLbl);
+  void set_nsec(QString name, uint16_t value);
   std::deque<tripole_nsec*> nsecs;
   sbwriter sbw;
+  int MFCtr;
 };
 
 #endif // MAINWINDOW_H

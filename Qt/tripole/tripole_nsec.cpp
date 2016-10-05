@@ -106,3 +106,7 @@ void tripole_nsec::set(int nsec) {
 QString tripole_nsec::getName() {
   return QO->objectName();
 }
+
+uint16_t tripole_nsec::getValue() {
+  return current_value;
+}
