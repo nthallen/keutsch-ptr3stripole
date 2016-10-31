@@ -66,7 +66,7 @@ void MainWindow::setCommand() {
 void MainWindow::saveFile() {
   // QString cwd = QDir::currentPath();
   // nl_error(0, "Save File Action: %s", cwd.toUtf8().constData());
-  QFile data("../tripole_init.dat");
+  QFile data("tripole_init.dat");
   if (data.open(QFile::WriteOnly | QFile::Truncate)) {
     QTextStream out(&data);
     for (auto i = nsecs.begin(); i != nsecs.end(); ++i) {
@@ -79,7 +79,9 @@ void MainWindow::saveFile() {
 }
 
 void MainWindow::loadFile() {
-  QFile data("../tripole_init.dat");
+  // QString cwd = QDir::currentPath();
+  // nl_error(0, "Load File, CWD = %s", cwd.toUtf8().constData());
+  QFile data("tripole_init.dat");
   if (data.open(QFile::ReadOnly)) {
     QTextStream in(&data);
     for (;;) {
