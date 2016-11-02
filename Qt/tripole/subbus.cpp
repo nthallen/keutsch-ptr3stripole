@@ -423,6 +423,7 @@ int Subbus::submit(Subbus_client *clt) {
 void Subbus::process_request() {
   int cmdlen, n;
   int no_response = 0;
+  if (!port) return;
   while ( cur_req == NULL && !ReqQ.empty()) {
     Subbus_client *sbr = ReqQ[0];
     nl_assert( sbr->req_status == SBDR_STATUS_QUEUED );
