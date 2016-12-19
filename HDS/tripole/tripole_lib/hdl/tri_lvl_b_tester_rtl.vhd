@@ -41,6 +41,7 @@ ARCHITECTURE rtl OF tri_lvl_b_tester IS
   SIGNAL Ctrl_int : std_logic_vector(6 DOWNTO 0);
   SIGNAL SimDone : std_logic;
   SIGNAL clk : std_logic;
+  SIGNAL ReadData : std_logic_vector(15 DOWNTO 0);
   -- pragma synthesis_off
   alias RdEn is Ctrl_int(0);
   alias WrEn is Ctrl_int(1);
@@ -87,6 +88,21 @@ BEGIN
       -- pragma synthesis_on
       return;
     end procedure sbwr;
+    
+    procedure sbrd( Addr_In : IN std_logic_vector (7 downto 0) ) is
+    begin
+      Addr <= Addr_In;
+      -- pragma synthesis_off
+      wait for 40 ns;
+      RdEn <= '1';
+      wait for 100 ns;
+      assert Ack = '1' report "No acknowledge on read" severity error;
+      ReadData <= Data_i;
+      RdEn <= '0';
+      wait for 50 ns;
+      -- pragma synthesis_on
+      return;
+    end procedure sbrd;
   Begin
     SimDone <= '0';
     -- pragma synthesis_off
@@ -122,6 +138,14 @@ BEGIN
     wait for 200 ns;
     sbwr(X"20", X"0001"); -- Enable
     wait for 100 ns;
+    sbrd(X"20");
+    sbrd(X"21");
+    sbrd(X"22");
+    sbrd(X"23");
+    sbrd(X"24");
+    sbrd(X"25");
+    sbrd(X"26");
+    sbrd(X"27");
     sbwr(X"20", X"0000"); -- Disable
     wait for 80 ns;
     
