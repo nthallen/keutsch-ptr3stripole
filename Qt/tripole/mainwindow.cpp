@@ -4,6 +4,7 @@
 #include <QtSerialPort/QtSerialPort>
 #include <QFile>
 #include <QTextStream>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,6 +15,10 @@ MainWindow::MainWindow(QWidget *parent) :
   MFCtr = 0;
   connect(&Subbus_client::SB, &Subbus::statusChanged,
           ui->status_text, &QLabel::setText);
+  connect(&Subbus_client::SB, &Subbus::subbus_initialized,
+          this, &MainWindow::start_acquisition);
+  connect(&Subbus_client::SB, &Subbus::subbus_closed,
+          this, &MainWindow::suspend_acquisition);
   // Setup the tripole_nsec objects
   setup_nsec(0x21, ui->Period);
   setup_nsec(0x23, ui->PhaseADly);
@@ -24,9 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
   setup_nsec(0x26, ui->PhaseCHi);
   setup_status_report(0x20, ui->Enable, ui->Interlock);
   connect(&poll, &QTimer::timeout, this, &MainWindow::updateMFCtr);
-  Subbus_client::SB.init();
-  poll.setSingleShot(false);
-  poll.start(250);
+  init();
 }
 
 MainWindow::~MainWindow()
@@ -111,4 +114,40 @@ void MainWindow::set_nsec(QString name, uint16_t value) {
 void MainWindow::updateMFCtr() {
   ui->MFCtr->setNum(MFCtr++);
   if (MFCtr >= 65536) MFCtr = 0;
+}
+
+void MainWindow::init() {
+  Subbus_client::SB.init();
+  if (state != ws_slow_poll) {
+    state = ws_slow_poll;
+  }
+}
+
+void MainWindow::start_acquisition() {
+  poll.stop();
+  if (state != ws_acquire) {
+    state = ws_acquire;
+  }
+  poll.setSingleShot(false);
+  poll.start(250);
+}
+
+void MainWindow::suspend_acquisition() {
+  poll.stop();
+  if (state != ws_slow_poll) {
+    state = ws_slow_poll;
+  }
+  QMessageBox::StandardButton response =
+    QMessageBox::warning(0, "Serial Connection",
+                         "Serial Port Initialization Failed",
+                       QMessageBox::Abort|QMessageBox::Retry);
+  if (response == QMessageBox::Abort) {
+    if (state == ws_looping) {
+      QApplication::quit();
+    } else {
+      exit(0);
+    }
+  } else {
+    init();
+  }
 }

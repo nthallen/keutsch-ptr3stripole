@@ -13,6 +13,8 @@ namespace Ui {
 class MainWindow;
 }
 
+enum MainWindowState { ws_init, ws_looping, ws_acquire, ws_slow_poll };
+
 class MainWindow : public QMainWindow
 {
   Q_OBJECT
@@ -28,6 +30,9 @@ public slots:
   void saveFile();
   void loadFile();
   void updateMFCtr();
+  void init();
+  void start_acquisition();
+  void suspend_acquisition();
 
 signals:
   void statusChanged(QString);
@@ -41,6 +46,7 @@ private:
   std::deque<tripole_nsec*> nsecs;
   sbwriter sbw;
   int MFCtr;
+  MainWindowState state;
 };
 
 #endif // MAINWINDOW_H

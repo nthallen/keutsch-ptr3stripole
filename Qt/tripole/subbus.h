@@ -51,9 +51,12 @@ public:
 public slots:
   void ProcessData();
   void ProcessTimeout();
+  void SerialError(QSerialPort::SerialPortError error);
 
 signals:
   void statusChanged(QString);
+  void subbus_initialized();
+  void subbus_closed();
 
 private:
   void process_request();
@@ -125,6 +128,7 @@ public:
     uint16_t read_data;
   } reply_data;
   static Subbus SB;
+  static bool timed_out;
 };
 
 class Internal_Subbus_client : Subbus_client {
