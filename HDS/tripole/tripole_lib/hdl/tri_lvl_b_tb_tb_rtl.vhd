@@ -40,11 +40,16 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
    SIGNAL tri_pulse_C : std_logic;
    SIGNAL Run         : std_logic;
    SIGNAL RunStatus   : std_logic;
-   SIGNAL Fail_Out    : std_logic;
+   SIGNAL Fail_Out    : std_logic_vector(0 DOWNTO 0);
+   SIGNAL IlckFail    : std_logic;
 
 
    -- Component declarations
    COMPONENT tri_lvl_b
+      GENERIC( 
+        N_INTERRUPTS : integer := 1;
+        SW_WIDTH     : integer := 16
+      );
       PORT (
          Addr        : IN     std_logic_vector(7 DOWNTO 0);
          clk_100MHz  : IN     std_logic;
@@ -52,7 +57,8 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
          RunStatus   : IN     std_logic;
          Data_i      : OUT    std_logic_vector(15 DOWNTO 0);
          Data_o      : IN     std_logic_vector(15 DOWNTO 0);
-         Fail_Out    : OUT    std_ulogic;
+         Fail_Out    : OUT    std_logic_vector(0 DOWNTO 0);
+         IlckFail    : OUT    std_logic;
          Status      : OUT    std_logic_vector(3 DOWNTO 0);
          Run         : OUT    std_logic;
          tri_pulse_A : OUT    std_logic;
@@ -71,7 +77,8 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
          Status      : IN     std_logic_vector(3 DOWNTO 0);
          Run         : IN     std_logic;
          RunStatus   : OUT    std_logic;
-         Fail_Out    : IN     std_logic;
+         Fail_Out    : IN     std_logic_vector(0 DOWNTO 0);
+         IlckFail    : IN     std_logic;
          tri_pulse_A : IN     std_logic;
          tri_pulse_B : IN     std_logic;
          tri_pulse_C : IN     std_logic
@@ -87,6 +94,10 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
 BEGIN
 
          U_0 : tri_lvl_b
+            GENERIC MAP (
+              N_INTERRUPTS => 0,
+              SW_WIDTH => 0
+            )
             PORT MAP (
                Addr        => Addr,
                clk_100MHz  => clk_100MHz,
@@ -97,6 +108,7 @@ BEGIN
                Run         => Run,
                RunStatus   => RunStatus,
                Fail_Out    => Fail_Out,
+               IlckFail    => IlckFail,
                tri_pulse_A => tri_pulse_A,
                tri_pulse_B => tri_pulse_B,
                tri_pulse_C => tri_pulse_C
@@ -113,6 +125,7 @@ BEGIN
                Run         => Run,
                RunStatus   => RunStatus,
                Fail_Out    => Fail_Out,
+               IlckFail    => IlckFail,
                tri_pulse_A => tri_pulse_A,
                tri_pulse_B => tri_pulse_B,
                tri_pulse_C => tri_pulse_C

@@ -19,8 +19,8 @@ libraryRefs [
 "ieee"
 ]
 )
-version "25.1"
-appVersion "2013.1b (Build 2)"
+version "26.1"
+appVersion "2016.1 (Build 8)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
@@ -158,7 +158,7 @@ uid 435,0
 port (LogicalPort
 decl (Decl
 n "RdEn"
-t "std_ulogic"
+t "std_logic"
 o 3
 suid 19,0
 )
@@ -194,7 +194,7 @@ port (LogicalPort
 m 1
 decl (Decl
 n "Fail"
-t "std_ulogic"
+t "std_logic"
 o 9
 suid 22,0
 )
@@ -592,7 +592,7 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "10/ 4/2016"
+value "01/24/2017"
 )
 (vvPair
 variable "day"
@@ -604,7 +604,7 @@ value "Tuesday"
 )
 (vvPair
 variable "dd"
-value "04"
+value "24"
 )
 (vvPair
 variable "entity_name"
@@ -632,15 +632,19 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "10/04/16"
+value "01/24/2017"
 )
 (vvPair
 variable "graphical_source_group"
-value "Domain Users"
+value "UNKNOWN"
+)
+(vvPair
+variable "graphical_source_host"
+value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "11:43:38"
+value "11:03:51"
 )
 (vvPair
 variable "group"
@@ -668,7 +672,7 @@ value "$HDS_PROJECT_DIR/tripole_lib/work"
 )
 (vvPair
 variable "mm"
-value "10"
+value "01"
 )
 (vvPair
 variable "module_name"
@@ -676,11 +680,11 @@ value "tri_period"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Jan"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "January"
 )
 (vvPair
 variable "p"
@@ -712,7 +716,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "C:\\modeltech64_10.3\\win64"
+value "C:\\modeltech64_10.6\\win64"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -744,7 +748,7 @@ value "symbol"
 )
 (vvPair
 variable "time"
-value "11:43:38"
+value "11:03:51"
 )
 (vvPair
 variable "unit"
@@ -756,7 +760,7 @@ value "nort"
 )
 (vvPair
 variable "version"
-value "2013.1b (Build 2)"
+value "2016.1 (Build 8)"
 )
 (vvPair
 variable "view"
@@ -764,11 +768,11 @@ value "symbol"
 )
 (vvPair
 variable "year"
-value "2016"
+value "2017"
 )
 (vvPair
 variable "yy"
-value "16"
+value "17"
 )
 ]
 )
@@ -810,7 +814,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,6800,61000,7600"
-st "clk       : IN     std_logic  ;"
+st "clk       : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -853,7 +858,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,2000,61000,2800"
-st "CtrlEn    : IN     std_logic  ;"
+st "CtrlEn    : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -896,7 +902,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,2800,61000,3600"
-st "PerEn     : IN     std_logic  ;"
+st "PerEn     : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -940,7 +947,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,10000,61000,10800"
-st "tri_start : OUT    std_logic  ;"
+st "tri_start : OUT    std_logic  ;
+"
 )
 thePort (LogicalPort
 m 1
@@ -984,7 +992,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,5200,71500,6000"
-st "WData     : IN     std_logic_vector (15 DOWNTO 0) ;"
+st "WData     : IN     std_logic_vector (15 DOWNTO 0) ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1028,7 +1037,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,6000,61000,6800"
-st "WrEn      : IN     std_logic  ;"
+st "WrEn      : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1071,7 +1081,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,7600,61000,8400"
-st "rst       : IN     std_logic  ;"
+st "rst       : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1115,7 +1126,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,9200,61000,10000"
-st "RunOut    : OUT    std_logic  ;"
+st "RunOut    : OUT    std_logic  ;
+"
 )
 thePort (LogicalPort
 m 1
@@ -1158,13 +1170,14 @@ uid 518,0
 va (VaSet
 font "Courier New,8,0"
 )
-xt "44000,3600,61500,4400"
-st "RdEn      : IN     std_ulogic  ;"
+xt "44000,3600,61000,4400"
+st "RdEn      : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
 n "RdEn"
-t "std_ulogic"
+t "std_logic"
 o 3
 suid 19,0
 )
@@ -1203,7 +1216,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,10800,70500,11600"
-st "RData     : INOUT  std_logic_vector (15 DOWNTO 0)"
+st "RData     : INOUT  std_logic_vector (15 DOWNTO 0)
+"
 )
 thePort (LogicalPort
 m 2
@@ -1248,7 +1262,8 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "44000,4400,61000,5200"
-st "RunStatus : IN     std_logic  ;"
+st "RunStatus : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1291,14 +1306,15 @@ uid 652,0
 va (VaSet
 font "Courier New,8,0"
 )
-xt "44000,8400,61500,9200"
-st "Fail      : OUT    std_ulogic  ;"
+xt "44000,8400,61000,9200"
+st "Fail      : OUT    std_logic  ;
+"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "Fail"
-t "std_ulogic"
+t "std_logic"
 o 9
 suid 22,0
 )
@@ -2000,6 +2016,6 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 744,0
+lastUid 813,0
 activeModelName "Symbol:CDM"
 )

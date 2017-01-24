@@ -25,8 +25,8 @@ void tripole_nsec::ready() {
     case SBC_READACK:
       switch (cmd_status) {
         case SBS_ACK:
-          current_value = ((reply_data.read_data)>>4)*10 +
-              (reply_data.read_data & 0xF);
+          current_value = ((reply_data.read_data)>>4)*5 +
+              ((reply_data.read_data>>1) & 0x7);
           QO->setNum(current_value);
           break;
         case SBS_NOACK:
@@ -91,10 +91,10 @@ void tripole_nsec::acquire() {
  */
 void tripole_nsec::set(int nsec) {
   if (nsec < 0) nsec = 0;
-  else if (nsec >= 0x1000 * 10) {
-    nsec = 10*0xFFF + 9;
+  else if (nsec >= 0x1000 * 5) {
+    nsec = 5*0xFFF + 8;
   }
-  pending_value = ((nsec/10)<<4) + (nsec%10);
+  pending_value = ((nsec/5)<<4) + ((nsec%5)<<1);
   if (req_status == SBDR_IDLE) {
     write(addr, pending_value);
     write_pending = false;

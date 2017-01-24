@@ -13,24 +13,24 @@ USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
 ENTITY tri_per_stat IS
-   GENERIC( 
-      DELAY_BITS : integer range 8 downto 1 := 3
-   );
-   PORT( 
-      CtrlEn    : IN     std_logic;
-      RdEn      : IN     std_ulogic;
-      RunCmd    : IN     std_logic;
-      RunStatus : IN     std_logic;
-      clk       : IN     std_logic;
-      rst       : IN     std_logic;
-      Fail      : OUT    std_ulogic;
-      RunOut    : OUT    std_logic;
-      RData     : INOUT  std_logic_vector (15 DOWNTO 0)
-   );
+  GENERIC( 
+    DELAY_BITS : integer range 16 downto 1 := 9
+  );
+  PORT( 
+    CtrlEn    : IN     std_logic;
+    RdEn      : IN     std_logic;
+    RunCmd    : IN     std_logic;
+    RunStatus : IN     std_logic;
+    clk       : IN     std_logic;
+    rst       : IN     std_logic;
+    Fail      : OUT    std_logic;
+    RunOut    : OUT    std_logic;
+    RData     : INOUT  std_logic_vector (15 DOWNTO 0)
+  );
 
 -- Declarations
 
-END tri_per_stat ;
+END ENTITY tri_per_stat ;
 
 --
 ARCHITECTURE beh OF tri_per_stat IS

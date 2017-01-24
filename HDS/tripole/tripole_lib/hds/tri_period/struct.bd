@@ -41,7 +41,7 @@ duName "tri_per_stat"
 elements [
 (GiElement
 name "DELAY_BITS"
-type "integer range 8 downto 1"
+type "integer range 16 downto 1"
 value "3"
 )
 ]
@@ -53,8 +53,8 @@ libraryRefs [
 "ieee"
 ]
 )
-version "30.1"
-appVersion "2013.1b (Build 2)"
+version "31.1"
+appVersion "2016.1 (Build 8)"
 noEmbeddedEditors 1
 model (BlockDiag
 VExpander (VariableExpander
@@ -101,7 +101,7 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "10/ 4/2016"
+value "01/24/2017"
 )
 (vvPair
 variable "day"
@@ -113,7 +113,7 @@ value "Tuesday"
 )
 (vvPair
 variable "dd"
-value "04"
+value "24"
 )
 (vvPair
 variable "entity_name"
@@ -141,15 +141,19 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "10/03/16"
+value "01/24/2017"
 )
 (vvPair
 variable "graphical_source_group"
-value "Domain Users"
+value "UNKNOWN"
+)
+(vvPair
+variable "graphical_source_host"
+value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "11:04:51"
+value "11:03:51"
 )
 (vvPair
 variable "group"
@@ -177,7 +181,7 @@ value "$HDS_PROJECT_DIR/tripole_lib/work"
 )
 (vvPair
 variable "mm"
-value "10"
+value "01"
 )
 (vvPair
 variable "module_name"
@@ -185,11 +189,11 @@ value "tri_period"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Jan"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "January"
 )
 (vvPair
 variable "p"
@@ -221,7 +225,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "C:\\modeltech64_10.3\\win64"
+value "C:\\modeltech64_10.6\\win64"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -253,7 +257,7 @@ value "struct"
 )
 (vvPair
 variable "time"
-value "11:43:38"
+value "11:03:51"
 )
 (vvPair
 variable "unit"
@@ -265,7 +269,7 @@ value "nort"
 )
 (vvPair
 variable "version"
-value "2013.1b (Build 2)"
+value "2016.1 (Build 8)"
 )
 (vvPair
 variable "view"
@@ -273,11 +277,11 @@ value "struct"
 )
 (vvPair
 variable "year"
-value "2016"
+value "2017"
 )
 (vvPair
 variable "yy"
-value "16"
+value "17"
 )
 ]
 )
@@ -1637,7 +1641,7 @@ archFileType "UNKNOWN"
 uid 1069,0
 decl (Decl
 n "RdEn"
-t "std_ulogic"
+t "std_logic"
 o 11
 suid 18,0
 )
@@ -1646,8 +1650,8 @@ uid 1070,0
 va (VaSet
 font "Courier New,8,0"
 )
-xt "35000,3600,47500,4400"
-st "RdEn      : std_ulogic
+xt "35000,3600,47000,4400"
+st "RdEn      : std_logic
 "
 )
 )
@@ -1818,15 +1822,15 @@ va (VaSet
 isHidden 1
 font "Courier New,8,0"
 )
-xt "42000,19200,68000,20000"
-st "DELAY_BITS = 3    ( integer range 8 downto 1 )  "
+xt "42000,19200,68500,20000"
+st "DELAY_BITS = 3    ( integer range 16 downto 1 )  "
 )
 header ""
 )
 elements [
 (GiElement
 name "DELAY_BITS"
-type "integer range 8 downto 1"
+type "integer range 16 downto 1"
 value "3"
 )
 ]
@@ -1956,7 +1960,7 @@ tm "WireNameMgr"
 uid 1313,0
 decl (Decl
 n "Fail"
-t "std_ulogic"
+t "std_logic"
 o 14
 suid 27,0
 )
@@ -1965,8 +1969,8 @@ uid 1314,0
 va (VaSet
 font "Courier New,8,0"
 )
-xt "35000,8400,47500,9200"
-st "Fail      : std_ulogic
+xt "35000,8400,47000,9200"
+st "Fail      : std_logic
 "
 )
 )
@@ -3073,12 +3077,12 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "106,124,1133,1024"
-viewArea "-800,-2696,62321,56317"
-cachedDiagramExtent "0,0,68000,51000"
+windowSize "106,124,1135,1024"
+viewArea "-800,-2700,62479,56313"
+cachedDiagramExtent "0,0,68500,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-7000,0"
-lastUid 1403,0
+lastUid 1537,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -4275,7 +4279,7 @@ uid 856,0
 port (LogicalPort
 decl (Decl
 n "RdEn"
-t "std_ulogic"
+t "std_logic"
 o 11
 suid 18,0
 )
@@ -4312,7 +4316,7 @@ port (LogicalPort
 m 1
 decl (Decl
 n "Fail"
-t "std_ulogic"
+t "std_logic"
 o 14
 suid 27,0
 )

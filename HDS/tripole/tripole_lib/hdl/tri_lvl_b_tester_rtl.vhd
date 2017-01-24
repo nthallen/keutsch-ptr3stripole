@@ -22,7 +22,8 @@ ENTITY tri_lvl_b_tester IS
       Status      : IN     std_logic_vector(3 DOWNTO 0);
       Run         : IN     std_logic;
       RunStatus   : OUT    std_logic;
-      Fail_Out    : IN     std_logic;
+      Fail_Out    : IN     std_logic_vector(0 DOWNTO 0);
+      IlckFail    : IN     std_logic;
       tri_pulse_A : IN     std_logic;
       tri_pulse_B : IN     std_logic;
       tri_pulse_C : IN     std_logic

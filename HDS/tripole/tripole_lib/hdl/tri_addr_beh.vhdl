@@ -13,25 +13,25 @@ USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
 ENTITY tri_addr IS
-   GENERIC( 
-      BASE_ADDR : std_logic_vector (7 DOWNTO 0) := X"20"
-   );
-   PORT( 
-      ExpAddr  : IN     std_logic_vector (7 DOWNTO 0);
-      AHiPerEn : OUT    std_logic;
-      APhaseEn : OUT    std_logic;
-      BHiPerEn : OUT    std_logic;
-      BPhaseEn : OUT    std_logic;
-      BdEn     : OUT    std_ulogic;
-      CHiPerEn : OUT    std_logic;
-      CPhaseEn : OUT    std_logic;
-      CtrlEn   : OUT    std_logic;
-      PerEn    : OUT    std_logic
-   );
+  GENERIC( 
+    BASE_ADDR : std_logic_vector (7 DOWNTO 0) := X"20"
+  );
+  PORT( 
+    ExpAddr  : IN     std_logic_vector (7 DOWNTO 0);
+    AHiPerEn : OUT    std_logic;
+    APhaseEn : OUT    std_logic;
+    BHiPerEn : OUT    std_logic;
+    BPhaseEn : OUT    std_logic;
+    BdEn     : OUT    std_logic;
+    CHiPerEn : OUT    std_logic;
+    CPhaseEn : OUT    std_logic;
+    CtrlEn   : OUT    std_logic;
+    PerEn    : OUT    std_logic
+  );
 
 -- Declarations
 
-END tri_addr ;
+END ENTITY tri_addr ;
 
 --
 ARCHITECTURE beh OF tri_addr IS
