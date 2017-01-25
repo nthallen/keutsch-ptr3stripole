@@ -16,7 +16,8 @@ USE ieee.std_logic_arith.all;
 ENTITY tri_lvl_b IS
   GENERIC( 
     N_INTERRUPTS : integer := 1;
-    SW_WIDTH     : integer := 16
+    SW_WIDTH     : integer := 16;
+    BUILD_NUMBER  : std_logic_vector(15 DOWNTO 0) := X"0008"
   );
   PORT( 
     Addr        : IN     std_logic_vector (7 DOWNTO 0);
@@ -225,7 +226,7 @@ BEGIN
     );
   U_2 : syscon
     GENERIC MAP (
-      BUILD_NUMBER  => X"0008",
+      BUILD_NUMBER  => BUILD_NUMBER,
       INSTRUMENT_ID => X"0006",
       N_INTERRUPTS  => N_INTERRUPTS,
       N_BOARDS      => 1,
