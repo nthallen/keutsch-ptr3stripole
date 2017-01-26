@@ -14,6 +14,10 @@ unitName "std_logic_arith"
 library "ieee"
 unitName "std_logic_unsigned"
 )
+(DmPackageRef
+library "ieee"
+unitName "numeric_std"
+)
 ]
 instances [
 (Instance
@@ -40,9 +44,9 @@ duLibraryName "tripole_lib"
 duName "tri_per_stat"
 elements [
 (GiElement
-name "DELAY_BITS"
-type "integer range 16 downto 1"
-value "3"
+name "DELAY_COUNT"
+type "integer range 500 downto 1"
+value "40"
 )
 ]
 mwi 0
@@ -101,19 +105,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "01/24/2017"
+value "01/26/2017"
 )
 (vvPair
 variable "day"
-value "Tue"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Tuesday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "24"
+value "26"
 )
 (vvPair
 variable "entity_name"
@@ -141,7 +145,7 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "01/24/2017"
+value "01/26/2017"
 )
 (vvPair
 variable "graphical_source_group"
@@ -153,7 +157,7 @@ value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "11:03:51"
+value "11:26:40"
 )
 (vvPair
 variable "group"
@@ -257,7 +261,7 @@ value "struct"
 )
 (vvPair
 variable "time"
-value "11:03:51"
+value "11:26:40"
 )
 (vvPair
 variable "unit"
@@ -347,8 +351,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,2000,47000,2800"
-st "CtrlEn    : std_logic
-"
+st "CtrlEn    : std_logic"
 )
 )
 *3 (PortIoIn
@@ -410,8 +413,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,7600,47000,8400"
-st "rst       : std_logic
-"
+st "rst       : std_logic"
 )
 )
 *5 (PortIoIn
@@ -561,8 +563,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,10000,47000,10800"
-st "tri_start : std_logic
-"
+st "tri_start : std_logic"
 )
 )
 *9 (PortIoIn
@@ -625,8 +626,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,5200,57500,6000"
-st "WData     : std_logic_vector(15 DOWNTO 0)
-"
+st "WData     : std_logic_vector(15 DOWNTO 0)"
 )
 )
 *11 (PortIoIn
@@ -688,8 +688,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,6000,47000,6800"
-st "WrEn      : std_logic
-"
+st "WrEn      : std_logic"
 )
 )
 *13 (Grouping
@@ -1112,8 +1111,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,6800,47000,7600"
-st "clk       : std_logic
-"
+st "clk       : std_logic"
 )
 )
 *29 (Net
@@ -1130,8 +1128,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,13400,50500,14200"
-st "SIGNAL RdCnt     : std_logic
-"
+st "SIGNAL RdCnt     : std_logic"
 )
 )
 *30 (PortIoIn
@@ -1194,8 +1191,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,12600,61000,13400"
-st "SIGNAL Count     : std_logic_vector(15 DOWNTO 0)
-"
+st "SIGNAL Count     : std_logic_vector(15 DOWNTO 0)"
 )
 )
 *32 (Net
@@ -1212,8 +1208,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,2800,47000,3600"
-st "PerEn     : std_logic
-"
+st "PerEn     : std_logic"
 )
 )
 *33 (Net
@@ -1230,8 +1225,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,9200,47000,10000"
-st "RunOut    : std_logic
-"
+st "RunOut    : std_logic"
 )
 )
 *34 (SaComponent
@@ -1651,8 +1645,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,3600,47000,4400"
-st "RdEn      : std_logic
-"
+st "RdEn      : std_logic"
 )
 )
 *48 (PortIoIn
@@ -1715,8 +1708,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,10800,57500,11600"
-st "RData     : std_logic_vector(15 DOWNTO 0)
-"
+st "RData     : std_logic_vector(15 DOWNTO 0)"
 )
 )
 *50 (PortIoInOut
@@ -1822,16 +1814,17 @@ va (VaSet
 isHidden 1
 font "Courier New,8,0"
 )
-xt "42000,19200,68500,20000"
-st "DELAY_BITS = 3    ( integer range 16 downto 1 )  "
+xt "42000,19200,70000,20000"
+st "DELAY_COUNT = 40    ( integer range 500 downto 1 )  
+"
 )
 header ""
 )
 elements [
 (GiElement
-name "DELAY_BITS"
-type "integer range 16 downto 1"
-value "3"
+name "DELAY_COUNT"
+type "integer range 500 downto 1"
+value "40"
 )
 ]
 )
@@ -1908,8 +1901,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,4400,47000,5200"
-st "RunStatus : std_logic
-"
+st "RunStatus : std_logic"
 )
 )
 *57 (PortIoOut
@@ -1970,8 +1962,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,8400,47000,9200"
-st "Fail      : std_logic
-"
+st "Fail      : std_logic"
 )
 )
 *59 (Net
@@ -1988,8 +1979,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "35000,14200,50500,15000"
-st "SIGNAL RunCmd    : std_logic
-"
+st "SIGNAL RunCmd    : std_logic"
 )
 )
 *60 (Wire
@@ -2995,11 +2985,12 @@ blo "0,800"
 uid 155,0
 va (VaSet
 )
-xt "0,1000,12400,5000"
+xt "0,1000,12400,6000"
 st "LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
-USE ieee.std_logic_unsigned.all;"
+USE ieee.std_logic_unsigned.all;
+USE ieee.numeric_std.all;"
 tm "PackageList"
 )
 ]
@@ -3077,12 +3068,12 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "106,124,1135,1024"
-viewArea "-800,-2700,62479,56313"
-cachedDiagramExtent "0,0,68500,51000"
+windowSize "106,124,1136,1024"
+viewArea "-800,-2700,62558,56313"
+cachedDiagramExtent "0,0,70000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-7000,0"
-lastUid 1537,0
+lastUid 1671,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

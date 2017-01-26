@@ -42,6 +42,7 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
    SIGNAL RunStatus   : std_logic;
    SIGNAL Fail_Out    : std_logic_vector(0 DOWNTO 0);
    SIGNAL IlckFail    : std_logic;
+   SIGNAL Switches    : std_logic_vector(0-1 DOWNTO 0);
 
 
    -- Component declarations
@@ -55,6 +56,7 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
          clk_100MHz  : IN     std_logic;
          Ctrl        : IN     std_logic_vector(6 DOWNTO 0);
          RunStatus   : IN     std_logic;
+         Switches    : IN     std_logic_vector (SW_WIDTH-1 DOWNTO 0);
          Data_i      : OUT    std_logic_vector(15 DOWNTO 0);
          Data_o      : IN     std_logic_vector(15 DOWNTO 0);
          Fail_Out    : OUT    std_logic_vector(0 DOWNTO 0);
@@ -104,6 +106,7 @@ BEGIN
                Ctrl        => Ctrl,
                Data_i      => Data_i,
                Data_o      => Data_o,
+               Switches    => Switches,
                Status      => Status,
                Run         => Run,
                RunStatus   => RunStatus,

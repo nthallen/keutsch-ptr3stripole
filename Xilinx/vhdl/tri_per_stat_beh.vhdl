@@ -9,12 +9,11 @@
 --
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.std_logic_arith.all;
-USE ieee.std_logic_unsigned.all;
+USE ieee.numeric_std.all;
 
 ENTITY tri_per_stat IS
   GENERIC( 
-    DELAY_BITS : integer range 16 downto 1 := 9
+    DELAY_COUNT : integer range 500 downto 1 := 40
   );
   PORT( 
     CtrlEn    : IN     std_logic;
@@ -35,7 +34,7 @@ END ENTITY tri_per_stat ;
 --
 ARCHITECTURE beh OF tri_per_stat IS
   SIGNAL Failing : std_logic;
-  SIGNAL RunDelay : std_logic_vector(DELAY_BITS-1 downto 0);
+  SIGNAL Delay : unsigned(8 DOWNTO 0);
 BEGIN
   RdStat : Process (clk) IS
   Begin
@@ -57,17 +56,18 @@ BEGIN
   Begin
     if clk'Event AND clk = '1' then
       if rst = '1' then
-        RunDelay <= (others => '0');
+        Delay <= to_unsigned(DELAY_COUNT,9);
         Failing <= '0';
       else
-        RunDelay(DELAY_BITS-2 downto 0) <= RunDelay(DELAY_BITS-1 downto 1);
-        RunDelay(DELAY_BITS-1) <= RunCmd;
-        if Failing = '1' AND RunCmd = '1' then
-          Failing <= '1';
-        elsif RunDelay(0) = '1' AND RunCmd = '1' AND RunStatus /= '1' then
-          Failing <= '1';
-        else
+        if RunCmd = '0' then
+          Delay <= to_unsigned(DELAY_COUNT,9);
           Failing <= '0';
+        elsif RunStatus = '0' then
+          if Delay = 0 then
+            Failing <= '1';
+          else
+            Delay <= Delay-1;
+          end if;
         end if;
       end if;
     end if;
