@@ -37,7 +37,7 @@ ARCHITECTURE beh OF tri_wrap IS
     GENERIC (
       N_INTERRUPTS : integer := 1;
       SW_WIDTH     : integer := 16;
-      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0008"
+      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0009"
     );
     PORT (
       Addr        : IN     std_logic_vector(7 DOWNTO 0);
