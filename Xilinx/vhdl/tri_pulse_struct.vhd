@@ -48,7 +48,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
-LIBRARY tripole_lib;
+-- LIBRARY tripole_lib;
 
 ARCHITECTURE struct OF tri_pulse IS
 
@@ -99,9 +99,9 @@ ARCHITECTURE struct OF tri_pulse IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : dither_wrap USE ENTITY tripole_lib.dither_wrap;
-   FOR ALL : tri_hi_ctrl USE ENTITY tripole_lib.tri_hi_ctrl;
-   FOR ALL : tri_ph_ctrl USE ENTITY tripole_lib.tri_ph_ctrl;
+   -- FOR ALL : dither_wrap USE ENTITY tripole_lib.dither_wrap;
+   -- FOR ALL : tri_hi_ctrl USE ENTITY tripole_lib.tri_hi_ctrl;
+   -- FOR ALL : tri_ph_ctrl USE ENTITY tripole_lib.tri_ph_ctrl;
    -- pragma synthesis_on
 
 

@@ -46,7 +46,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
-LIBRARY tripole_lib;
+-- LIBRARY tripole_lib;
 
 ARCHITECTURE struct OF dither_wrap IS
 
@@ -87,8 +87,8 @@ ARCHITECTURE struct OF dither_wrap IS
 
    -- Optional embedded configurations
    -- pragma synthesis_off
-   FOR ALL : dither USE ENTITY tripole_lib.dither;
-   FOR ALL : dither_wq USE ENTITY tripole_lib.dither_wq;
+   -- FOR ALL : dither USE ENTITY tripole_lib.dither;
+   -- FOR ALL : dither_wq USE ENTITY tripole_lib.dither_wq;
    -- pragma synthesis_on
 
 
