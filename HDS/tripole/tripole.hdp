@@ -1,7 +1,7 @@
 [DesignChecker]
-tripole_lib = $HDS_PROJECT_DIR\tripole_lib\designcheck
+tripole_lib = $HDS_PROJECT_DIR/tripole_lib/designcheck
 [ModelSim]
-tripole_lib = $HDS_PROJECT_DIR\tripole_lib\work
+tripole_lib = $HDS_PROJECT_DIR/tripole_lib/work
 [hdl]
 tripole_lib = $HDS_PROJECT_DIR/tripole_lib/hdl
 [hdl_vm]
@@ -12,6 +12,7 @@ tripole_lib = $HDS_PROJECT_DIR
 tripole_lib = $HDS_PROJECT_DIR/tripole_lib/hds
 [hds_settings]
 default_library = tripole_lib
+design_root = .()
 version = 2
 [library_type]
 tripole_lib = regular
