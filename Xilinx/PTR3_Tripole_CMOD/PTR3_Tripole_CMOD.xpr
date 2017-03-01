@@ -149,25 +149,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="hdl/Tri_block.hwdef"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="hw_handoff/Tri_block_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="hw_handoff/Tri_block.hwh"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="Tri_block_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="Tri_block.bmm"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="hdl/Tri_block.vhd"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_tri_wrap_0_0/Tri_block_tri_wrap_0_0.xci">
-          <Proxy FileSetName="Tri_block_tri_wrap_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_xbar_0/Tri_block_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_4/Tri_block_axi_gpio_0_4.xci"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_3/Tri_block_axi_gpio_0_3.xci"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_2/Tri_block_axi_gpio_0_2.xci"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_1/Tri_block_axi_gpio_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_0/Tri_block_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_uartlite_0_0/Tri_block_axi_uartlite_0_0.xci">
-          <Proxy FileSetName="Tri_block_axi_uartlite_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_rst_clk_wiz_1_100M_0/Tri_block_rst_clk_wiz_1_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_mdm_1_0/Tri_block_mdm_1_0.xci">
           <Proxy FileSetName="Tri_block_mdm_1_0"/>
         </CompFileExtendedInfo>
@@ -176,6 +157,10 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_microblaze_0_axi_intc_0/Tri_block_microblaze_0_axi_intc_0.xci">
           <Proxy FileSetName="Tri_block_microblaze_0_axi_intc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_rst_clk_wiz_1_100M_0/Tri_block_rst_clk_wiz_1_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_clk_wiz_1_0/Tri_block_clk_wiz_1_0.xci">
+          <Proxy FileSetName="Tri_block_clk_wiz_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_microblaze_0_axi_periph_0/Tri_block_microblaze_0_axi_periph_0.xci"/>
         <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_lmb_bram_0/Tri_block_lmb_bram_0.xci">
@@ -188,16 +173,27 @@
         <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_microblaze_0_0/Tri_block_microblaze_0_0.xci">
           <Proxy FileSetName="Tri_block_microblaze_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_clk_wiz_1_0/Tri_block_clk_wiz_1_0.xci">
-          <Proxy FileSetName="Tri_block_clk_wiz_1_0"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_uartlite_0_0/Tri_block_axi_uartlite_0_0.xci">
+          <Proxy FileSetName="Tri_block_axi_uartlite_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="Tri_block_tri_wrap_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="synth/Tri_block_tri_wrap_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="Tri_block_tri_wrap_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="Tri_block_tri_wrap_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="Tri_block_tri_wrap_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="sim/Tri_block_tri_wrap_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_4/Tri_block_axi_gpio_0_4.xci"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_3/Tri_block_axi_gpio_0_3.xci"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_2/Tri_block_axi_gpio_0_2.xci"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_1/Tri_block_axi_gpio_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_axi_gpio_0_0/Tri_block_axi_gpio_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_tri_wrap_0_0/Tri_block_tri_wrap_0_0.xci">
+          <Proxy FileSetName="Tri_block_tri_wrap_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="ip/Tri_block_xbar_0/Tri_block_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="hdl/Tri_block.vhd"/>
         <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="Tri_block_tri_wrap_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="synth/Tri_block_tri_wrap_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="sim/Tri_block_tri_wrap_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="Tri_block_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="Tri_block.bmm"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="hdl/Tri_block.hwdef"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="hw_handoff/Tri_block_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="Tri_block.bd" FileRelPathName="hw_handoff/Tri_block.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Tri_block/hdl/Tri_block_wrapper.vhd">
         <FileInfo>
@@ -483,7 +479,9 @@
     </Run>
     <Run Id="Tri_block_tri_wrap_0_0_synth_1" Type="Ft3:Synth" SrcSet="Tri_block_tri_wrap_0_0" Part="xc7a35tcpg236-1" ConstrsSet="Tri_block_tri_wrap_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/Tri_block_tri_wrap_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -614,7 +612,9 @@
     </Run>
     <Run Id="Tri_block_tri_wrap_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="Tri_block_tri_wrap_0_0" Description="Default settings for Implementation." SynthRun="Tri_block_tri_wrap_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
