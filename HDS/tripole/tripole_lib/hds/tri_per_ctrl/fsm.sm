@@ -30,8 +30,8 @@ libraryRefs [
 "ieee"
 ]
 )
-version "25.1"
-appVersion "2013.1b (Build 2)"
+version "26.1"
+appVersion "2016.1 (Build 8)"
 model (StateMachine
 VExpander (VariableExpander
 vvMap [
@@ -77,19 +77,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "10/ 4/2016"
+value "03/ 1/2017"
 )
 (vvPair
 variable "day"
-value "Tue"
+value "Wed"
 )
 (vvPair
 variable "day_long"
-value "Tuesday"
+value "Wednesday"
 )
 (vvPair
 variable "dd"
-value "04"
+value "01"
 )
 (vvPair
 variable "entity_name"
@@ -117,15 +117,19 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "09/15/16"
+value "03/ 1/2017"
 )
 (vvPair
 variable "graphical_source_group"
-value "Domain Users"
+value "UNKNOWN"
+)
+(vvPair
+variable "graphical_source_host"
+value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "11:30:36"
+value "16:29:13"
 )
 (vvPair
 variable "group"
@@ -153,7 +157,7 @@ value "$HDS_PROJECT_DIR/tripole_lib/work"
 )
 (vvPair
 variable "mm"
-value "10"
+value "03"
 )
 (vvPair
 variable "module_name"
@@ -161,11 +165,11 @@ value "tri_per_ctrl"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Mar"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "March"
 )
 (vvPair
 variable "p"
@@ -197,7 +201,7 @@ value "<TBD>"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "C:\\modeltech64_10.3\\win64"
+value "C:\\modeltech64_10.6\\win64"
 )
 (vvPair
 variable "task_NC-SimPath"
@@ -229,7 +233,7 @@ value "fsm"
 )
 (vvPair
 variable "time"
-value "11:45:14"
+value "16:29:13"
 )
 (vvPair
 variable "unit"
@@ -241,7 +245,7 @@ value "nort"
 )
 (vvPair
 variable "version"
-value "2013.1b (Build 2)"
+value "2016.1 (Build 8)"
 )
 (vvPair
 variable "view"
@@ -249,11 +253,11 @@ value "fsm"
 )
 (vvPair
 variable "year"
-value "2016"
+value "2017"
 )
 (vvPair
 variable "yy"
-value "16"
+value "17"
 )
 ]
 )
@@ -329,7 +333,7 @@ lineColor "39936,56832,65280"
 lineWidth -1
 fillStyle 1
 )
-xt "14220,37400,22020,40600"
+xt "14220,37900,22020,40100"
 )
 autoResize 1
 tline (Line
@@ -340,10 +344,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "14320,37300,21920,37300"
+xt "14320,37800,21920,37800"
 pts [
-"14320,37300"
-"21920,37300"
+"14320,37800"
+"21920,37800"
 ]
 )
 bline (Line
@@ -354,10 +358,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "14320,38150,21920,38150"
+xt "14320,37900,21920,37900"
 pts [
-"14320,38150"
-"21920,38150"
+"14320,37900"
+"21920,37900"
 ]
 )
 ttri (Triangle
@@ -371,7 +375,7 @@ bg "0,0,0"
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "13870,36925,14220,37275"
+xt "13870,37425,14220,37775"
 )
 btri (Triangle
 uid 58,0
@@ -390,17 +394,16 @@ entryActions (MLText
 uid 59,0
 va (VaSet
 )
-xt "14320,37100,14320,37100"
+xt "14320,37600,14320,37600"
 tm "Actions"
 )
 inActions (MLText
 uid 60,0
 va (VaSet
 )
-xt "14320,37500,21920,40500"
+xt "14320,38000,21920,40000"
 st "RunCmd_cld <= '0';
-tri_start_cld <= '0';
-RdCnt_cld <= '0';"
+tri_start_cld <= '0';"
 tm "Actions"
 )
 exitActions (MLText
@@ -622,7 +625,7 @@ va (VaSet
 fg "0,0,32768"
 bg "0,0,32768"
 )
-xt "30840,47640,39540,48640"
+xt "30840,47640,39440,48640"
 st "
 by %user on %dd %month %year
 "
@@ -990,7 +993,7 @@ lineColor "39936,56832,65280"
 lineWidth -1
 fillStyle 1
 )
-xt "31050,37730,38950,40930"
+xt "31050,38230,38950,40430"
 )
 autoResize 1
 tline (Line
@@ -1001,10 +1004,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "31150,37630,38850,37630"
+xt "31150,38130,38850,38130"
 pts [
-"31150,37630"
-"38850,37630"
+"31150,38130"
+"38850,38130"
 ]
 )
 bline (Line
@@ -1015,10 +1018,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "31150,38480,38850,38480"
+xt "31150,38230,38850,38230"
 pts [
-"31150,38480"
-"38850,38480"
+"31150,38230"
+"38850,38230"
 ]
 )
 ttri (Triangle
@@ -1032,7 +1035,7 @@ bg "0,0,0"
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "30700,37255,31050,37605"
+xt "30700,37755,31050,38105"
 )
 btri (Triangle
 uid 295,0
@@ -1051,17 +1054,16 @@ entryActions (MLText
 uid 296,0
 va (VaSet
 )
-xt "31150,37430,31150,37430"
+xt "31150,37930,31150,37930"
 tm "Actions"
 )
 inActions (MLText
 uid 297,0
 va (VaSet
 )
-xt "31150,37830,38850,40830"
+xt "31150,38330,38850,40330"
 st "CntDn <= Count - 1;
-tri_start_cld <= '1';
-RdCnt_cld <= '1';"
+tri_start_cld <= '1';"
 tm "Actions"
 )
 exitActions (MLText
@@ -1152,7 +1154,7 @@ lineColor "39936,56832,65280"
 lineWidth -1
 fillStyle 1
 )
-xt "44990,37640,53090,40840"
+xt "44990,38140,53090,40340"
 )
 autoResize 1
 tline (Line
@@ -1163,10 +1165,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "45090,37540,52990,37540"
+xt "45090,38040,52990,38040"
 pts [
-"45090,37540"
-"52990,37540"
+"45090,38040"
+"52990,38040"
 ]
 )
 bline (Line
@@ -1177,10 +1179,10 @@ isHidden 1
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "45090,38390,52990,38390"
+xt "45090,38140,52990,38140"
 pts [
-"45090,38390"
-"52990,38390"
+"45090,38140"
+"52990,38140"
 ]
 )
 ttri (Triangle
@@ -1194,7 +1196,7 @@ bg "0,0,0"
 lineColor "39936,56832,65280"
 lineWidth -1
 )
-xt "44640,37165,44990,37515"
+xt "44640,37665,44990,38015"
 )
 btri (Triangle
 uid 324,0
@@ -1213,17 +1215,16 @@ entryActions (MLText
 uid 325,0
 va (VaSet
 )
-xt "45090,37340,45090,37340"
+xt "45090,37840,45090,37840"
 tm "Actions"
 )
 inActions (MLText
 uid 326,0
 va (VaSet
 )
-xt "45090,37740,52990,40740"
+xt "45090,38240,52990,40240"
 st "CntDn <= CntDn - 1;
-tri_start_cld <= '0';
-RdCnt_cld <= '0';"
+tri_start_cld <= '0';"
 tm "Actions"
 )
 exitActions (MLText
@@ -2262,7 +2263,7 @@ tm "SmCompilerDirectivesTextMgr"
 associable 1
 )
 windowSize "0,14,1281,1024"
-viewArea "-1000,-2000,69551,55419"
+viewArea "-969,-1938,69158,55136"
 cachedDiagramExtent "0,-1000,67640,48640"
 pageSetupInfo (PageSetupInfo
 ptrCmd ""
@@ -2567,11 +2568,10 @@ uid 32,0
 va (VaSet
 font "Courier New,8,0"
 )
-xt "35600,0,63600,4000"
+xt "35600,0,63600,3200"
 st "SIGNAL     MODE    DEFAULT  RESET            SCHEME 
 tri_start  OUT              '0'              CLKD   
 CntDn      LOCAL            (others => '0')  CLKD   
-RdCnt      OUT              '0'              CLKD   
 RunCmd     OUT              '0'              CLKD   
 "
 tm "SmSignalsGenStatusTextMgr"
@@ -2671,7 +2671,7 @@ stateOrder [
 name "csm"
 )
 ]
-lastUid 646,0
+lastUid 675,0
 commonDM (CommonDM
 ldm (LogicalDM
 emptyRow *57 (LEmptyRow
@@ -2789,7 +2789,7 @@ m 1
 decl (Decl
 n "tri_start"
 t "std_logic"
-o 9
+o 8
 )
 )
 uid 176,0
@@ -2803,7 +2803,7 @@ decl (Decl
 n "CntDn"
 t "std_logic_vector"
 b "(15 DOWNTO 0)"
-o 10
+o 9
 )
 )
 uid 309,0
@@ -2827,22 +2827,9 @@ expr "rst = '1'"
 port (LogicalPort
 m 1
 decl (Decl
-n "RdCnt"
-t "std_logic"
-o 7
-)
-)
-uid 615,0
-scheme 1
-rstVal "'0'"
-)
-*85 (LeafLogPort
-port (LogicalPort
-m 1
-decl (Decl
 n "RunCmd"
 t "std_logic"
-o 8
+o 7
 )
 )
 uid 646,0
@@ -2856,7 +2843,7 @@ displayShortBounds 1
 editShortBounds 1
 uid 201,0
 optionalChildren [
-*86 (Sheet
+*85 (Sheet
 sheetRow (SheetRow
 headerVa (MVa
 cellColor "49152,49152,49152"
@@ -2873,89 +2860,83 @@ cellColor "39936,56832,65280"
 fontColor "0,0,0"
 font "Tahoma,10,0"
 )
-emptyMRCItem *87 (MRCItem
+emptyMRCItem *86 (MRCItem
 litem &57
-pos 10
+pos 9
 dimension 20
 )
 uid 203,0
 optionalChildren [
-*88 (MRCItem
+*87 (MRCItem
 litem &58
 pos 0
 dimension 20
 uid 204,0
 )
-*89 (MRCItem
+*88 (MRCItem
 litem &59
 pos 1
 dimension 24
 uid 205,0
 )
-*90 (MRCItem
+*89 (MRCItem
 litem &60
 pos 2
 hidden 1
 dimension 20
 uid 206,0
 )
-*91 (MRCItem
+*90 (MRCItem
 litem &76
 pos 1
 dimension 20
 uid 159,0
 )
-*92 (MRCItem
+*91 (MRCItem
 litem &77
 pos 2
 dimension 20
 uid 161,0
 )
-*93 (MRCItem
+*92 (MRCItem
 litem &78
-pos 4
+pos 6
 dimension 20
 uid 167,0
 )
-*94 (MRCItem
+*93 (MRCItem
 litem &79
-pos 5
+pos 7
 dimension 20
 uid 169,0
 )
-*95 (MRCItem
+*94 (MRCItem
 litem &80
 pos 0
 dimension 20
 uid 171,0
 )
-*96 (MRCItem
+*95 (MRCItem
 litem &81
-pos 9
+pos 5
 dimension 20
 uid 177,0
 )
-*97 (MRCItem
+*96 (MRCItem
 litem &82
-pos 6
+pos 8
 dimension 20
 uid 310,0
 )
-*98 (MRCItem
+*97 (MRCItem
 litem &83
 pos 3
 dimension 20
 uid 434,0
 )
-*99 (MRCItem
+*98 (MRCItem
 litem &84
-pos 7
-dimension 20
-uid 614,0
-)
-*100 (MRCItem
-litem &85
-pos 8
+pos 4
 dimension 20
 uid 645,0
 )
@@ -2970,85 +2951,85 @@ textAngle 90
 )
 uid 207,0
 optionalChildren [
-*101 (MRCItem
+*99 (MRCItem
 litem &61
 pos 0
 dimension 20
 uid 208,0
 )
-*102 (MRCItem
+*100 (MRCItem
 litem &63
 pos 1
 dimension 50
 uid 209,0
 )
-*103 (MRCItem
+*101 (MRCItem
 litem &64
 pos 2
 dimension 70
 uid 210,0
 )
-*104 (MRCItem
+*102 (MRCItem
 litem &65
 pos 3
 dimension 56
 uid 211,0
 )
-*105 (MRCItem
+*103 (MRCItem
 litem &66
 pos 4
 dimension 80
 uid 212,0
 )
-*106 (MRCItem
+*104 (MRCItem
 litem &67
 pos 5
 dimension 80
 uid 213,0
 )
-*107 (MRCItem
+*105 (MRCItem
 litem &68
 pos 6
 dimension 40
 uid 214,0
 )
-*108 (MRCItem
+*106 (MRCItem
 litem &69
 pos 7
 dimension 100
 uid 215,0
 )
-*109 (MRCItem
+*107 (MRCItem
 litem &70
 pos 8
 dimension 60
 uid 216,0
 )
-*110 (MRCItem
+*108 (MRCItem
 litem &71
 pos 9
 dimension 130
 uid 217,0
 )
-*111 (MRCItem
+*109 (MRCItem
 litem &72
 pos 10
 dimension 56
 uid 218,0
 )
-*112 (MRCItem
+*110 (MRCItem
 litem &73
 pos 11
 dimension 50
 uid 219,0
 )
-*113 (MRCItem
+*111 (MRCItem
 litem &74
 pos 12
 dimension 50
 uid 220,0
 )
-*114 (MRCItem
+*112 (MRCItem
 litem &75
 pos 13
 dimension 80
@@ -3070,38 +3051,38 @@ uid 181,0
 cdmCsm &1
 genericsCommonDM (CommonDM
 ldm (LogicalDM
-emptyRow *115 (LEmptyRow
+emptyRow *113 (LEmptyRow
 )
 uid 223,0
 optionalChildren [
-*116 (RefLabelRowHdr
+*114 (RefLabelRowHdr
 )
-*117 (TitleRowHdr
+*115 (TitleRowHdr
 )
-*118 (FilterRowHdr
+*116 (FilterRowHdr
 )
-*119 (RefLabelColHdr
+*117 (RefLabelColHdr
 tm "RefLabelColHdrMgr"
 )
-*120 (RowExpandColHdr
+*118 (RowExpandColHdr
 tm "RowExpandColHdrMgr"
 )
-*121 (GroupColHdr
+*119 (GroupColHdr
 tm "GroupColHdrMgr"
 )
-*122 (NameColHdr
+*120 (NameColHdr
 tm "GenericNameColHdrMgr"
 )
-*123 (TypeColHdr
+*121 (TypeColHdr
 tm "GenericTypeColHdrMgr"
 )
-*124 (InitColHdr
+*122 (InitColHdr
 tm "GenericValueColHdrMgr"
 )
-*125 (PragmaColHdr
+*123 (PragmaColHdr
 tm "GenericPragmaColHdrMgr"
 )
-*126 (EolColHdr
+*124 (EolColHdr
 tm "GenericEolColHdrMgr"
 )
 ]
@@ -3111,7 +3092,7 @@ displayShortBounds 1
 editShortBounds 1
 uid 235,0
 optionalChildren [
-*127 (Sheet
+*125 (Sheet
 sheetRow (SheetRow
 headerVa (MVa
 cellColor "49152,49152,49152"
@@ -3128,27 +3109,27 @@ cellColor "39936,56832,65280"
 fontColor "0,0,0"
 font "Tahoma,10,0"
 )
-emptyMRCItem *128 (MRCItem
-litem &115
+emptyMRCItem *126 (MRCItem
+litem &113
 pos 0
 dimension 20
 )
 uid 237,0
 optionalChildren [
-*129 (MRCItem
-litem &116
+*127 (MRCItem
+litem &114
 pos 0
 dimension 20
 uid 238,0
 )
-*130 (MRCItem
-litem &117
+*128 (MRCItem
+litem &115
 pos 1
 dimension 23
 uid 239,0
 )
-*131 (MRCItem
-litem &118
+*129 (MRCItem
+litem &116
 pos 2
 hidden 1
 dimension 20
@@ -3165,44 +3146,44 @@ textAngle 90
 )
 uid 241,0
 optionalChildren [
-*132 (MRCItem
-litem &119
+*130 (MRCItem
+litem &117
 pos 0
 dimension 20
 uid 242,0
 )
-*133 (MRCItem
-litem &121
+*131 (MRCItem
+litem &119
 pos 1
 dimension 50
 uid 243,0
 )
-*134 (MRCItem
-litem &122
+*132 (MRCItem
+litem &120
 pos 2
 dimension 100
 uid 244,0
 )
-*135 (MRCItem
-litem &123
+*133 (MRCItem
+litem &121
 pos 3
 dimension 100
 uid 245,0
 )
-*136 (MRCItem
-litem &124
+*134 (MRCItem
+litem &122
 pos 4
 dimension 50
 uid 246,0
 )
-*137 (MRCItem
-litem &125
+*135 (MRCItem
+litem &123
 pos 5
 dimension 50
 uid 247,0
 )
-*138 (MRCItem
-litem &126
+*136 (MRCItem
+litem &124
 pos 6
 dimension 80
 uid 248,0

@@ -6,22 +6,22 @@ VIEW interface
 GRAPHIC 50,0 11 0 
 DESIGN tri_ph_ctrl
 VIEW interface
-GRAPHIC 277,0 18 0 
+GRAPHIC 365,0 18 0 
 DESIGN tri_ph_ctrl
 VIEW interface
-GRAPHIC 282,0 19 0 
+GRAPHIC 370,0 19 0 
 DESIGN tri_ph_ctrl
 VIEW interface
-GRAPHIC 287,0 20 0 
+GRAPHIC 375,0 20 0 
 DESIGN tri_ph_ctrl
 VIEW interface
-GRAPHIC 272,0 21 0 
+GRAPHIC 360,0 21 0 
 DESIGN tri_ph_ctrl
 VIEW interface
-GRAPHIC 297,0 22 0 
+GRAPHIC 385,0 22 0 
 DESIGN tri_ph_ctrl
 VIEW interface
-GRAPHIC 292,0 23 0 
+GRAPHIC 380,0 23 0 
 DESIGN tri_ph_ctrl
 VIEW interface
 GRAPHIC 1,0 26 0 
@@ -31,99 +31,67 @@ GRAPHIC 1,0 27 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 33,0 39 0
+GRAPHIC 33,0 48 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 42
+NO_GRAPHIC 51
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 32,0 46 0
+GRAPHIC 32,0 55 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 47
+NO_GRAPHIC 56
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 2,0 67 0
+GRAPHIC 2,0 76 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 68
+NO_GRAPHIC 77
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 2,0 70 0
+GRAPHIC 2,0 79 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 71
+NO_GRAPHIC 80
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 62,0 72 0
+GRAPHIC 62,0 81 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 72,0 73 0
+GRAPHIC 72,0 82 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 75
+NO_GRAPHIC 84
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 2,0 82 0
+GRAPHIC 2,0 91 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 45,0 83 0
+GRAPHIC 45,0 92 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 60,0 84 0
+GRAPHIC 60,0 93 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 237,0 85 0
+GRAPHIC 237,0 94 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 256,0 86 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-NO_GRAPHIC 87
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 242,0 88 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 257,0 89 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 344,0 90 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 439,0 91 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 300,0 93 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 308,0 94 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 283,0 95 0
+GRAPHIC 256,0 95 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
@@ -131,55 +99,63 @@ NO_GRAPHIC 96
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 269,0 97 0
+GRAPHIC 242,0 97 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 284,0 98 0
+GRAPHIC 257,0 98 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 354,0 99 0
+GRAPHIC 344,0 99 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 466,0 100 0
+GRAPHIC 439,0 100 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 458,0 104 0
+GRAPHIC 300,0 102 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 318,0 106 0
+GRAPHIC 308,0 103 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 300,0 107 0
+GRAPHIC 283,0 104 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 108
+NO_GRAPHIC 105
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 286,0 109 0
+GRAPHIC 269,0 106 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 532,0 110 0
+GRAPHIC 284,0 107 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 524,0 113 0
+GRAPHIC 354,0 108 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 115
+GRAPHIC 466,0 109 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 256,0 116 0
+GRAPHIC 458,0 113 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+GRAPHIC 318,0 115 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+GRAPHIC 300,0 116 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
@@ -187,43 +163,43 @@ NO_GRAPHIC 117
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 444,0 118 0
+GRAPHIC 286,0 118 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 283,0 119 0
+GRAPHIC 532,0 119 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 510,0 120 0
+GRAPHIC 524,0 122 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 283,0 121 0
+NO_GRAPHIC 124
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 122
+GRAPHIC 256,0 125 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 2,0 124 0
+NO_GRAPHIC 126
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 125
+GRAPHIC 444,0 127 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 2,0 127 0
+GRAPHIC 283,0 128 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 128
+GRAPHIC 510,0 129 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 2,0 130 0
+GRAPHIC 283,0 130 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
@@ -231,59 +207,51 @@ NO_GRAPHIC 131
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
+GRAPHIC 2,0 133 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 134
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 136 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 137
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
 GRAPHIC 2,0 139 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 45,0 140 0
+NO_GRAPHIC 140
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 237,0 141 0
+GRAPHIC 2,0 148 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 242,0 142 0
+GRAPHIC 45,0 149 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 143
+GRAPHIC 237,0 150 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 45,0 144 0
+GRAPHIC 242,0 151 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 145
+NO_GRAPHIC 152
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 242,0 146 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 344,0 147 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 45,0 148 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 439,0 149 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 286,0 151 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 308,0 152 0
-LIBRARY tripole_lib
-DESIGN tri_ph_ctrl
-VIEW fsm.sm
-GRAPHIC 269,0 153 0
+GRAPHIC 45,0 153 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
@@ -295,91 +263,91 @@ GRAPHIC 242,0 155 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 156
+GRAPHIC 344,0 156 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 269,0 157 0
+GRAPHIC 45,0 157 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 354,0 158 0
+GRAPHIC 439,0 158 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 45,0 159 0
+GRAPHIC 286,0 160 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 466,0 160 0
+GRAPHIC 308,0 161 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 444,0 164 0
+GRAPHIC 269,0 162 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 318,0 165 0
+NO_GRAPHIC 163
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 286,0 166 0
+GRAPHIC 242,0 164 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 167
+NO_GRAPHIC 165
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 269,0 168 0
+GRAPHIC 269,0 166 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 169
+GRAPHIC 354,0 167 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 286,0 170 0
+GRAPHIC 45,0 168 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 532,0 171 0
+GRAPHIC 466,0 169 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 510,0 174 0
+GRAPHIC 444,0 173 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 175
+GRAPHIC 318,0 174 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 242,0 176 0
+GRAPHIC 286,0 175 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 177
+NO_GRAPHIC 176
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 444,0 178 0
+GRAPHIC 269,0 177 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 269,0 179 0
+NO_GRAPHIC 178
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 510,0 180 0
+GRAPHIC 286,0 179 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 269,0 181 0
+GRAPHIC 532,0 180 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 95,0 182 0
+GRAPHIC 510,0 183 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
@@ -387,7 +355,7 @@ NO_GRAPHIC 184
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 2,0 185 0
+GRAPHIC 242,0 185 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
@@ -395,8 +363,40 @@ NO_GRAPHIC 186
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-GRAPHIC 32,0 188 0
+GRAPHIC 444,0 187 0
 LIBRARY tripole_lib
 DESIGN tri_ph_ctrl
 VIEW fsm.sm
-NO_GRAPHIC 190
+GRAPHIC 269,0 188 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+GRAPHIC 510,0 189 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+GRAPHIC 269,0 190 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+GRAPHIC 95,0 191 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 193
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+GRAPHIC 2,0 194 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 195
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+GRAPHIC 32,0 197 0
+LIBRARY tripole_lib
+DESIGN tri_ph_ctrl
+VIEW fsm.sm
+NO_GRAPHIC 199

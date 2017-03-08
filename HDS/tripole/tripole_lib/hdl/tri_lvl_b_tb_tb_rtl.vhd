@@ -9,7 +9,6 @@
 --
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.std_logic_arith.all;
 
 
 ENTITY tri_lvl_b_tb IS
@@ -18,8 +17,6 @@ END tri_lvl_b_tb;
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.std_logic_arith.all;
-USE ieee.std_logic_unsigned.all;
 LIBRARY tripole_lib;
 USE tripole_lib.ALL;
 
@@ -38,10 +35,9 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
    SIGNAL tri_pulse_A : std_logic;
    SIGNAL tri_pulse_B : std_logic;
    SIGNAL tri_pulse_C : std_logic;
-   SIGNAL Run         : std_logic;
-   SIGNAL RunStatus   : std_logic;
+   SIGNAL Ilock_rtn   : std_logic;
    SIGNAL Fail_Out    : std_logic_vector(0 DOWNTO 0);
-   SIGNAL IlckFail    : std_logic;
+   SIGNAL Ilock_fail  : std_logic;
    SIGNAL Switches    : std_logic_vector(0-1 DOWNTO 0);
 
 
@@ -55,14 +51,13 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
          Addr        : IN     std_logic_vector(7 DOWNTO 0);
          clk_100MHz  : IN     std_logic;
          Ctrl        : IN     std_logic_vector(6 DOWNTO 0);
-         RunStatus   : IN     std_logic;
+         Ilock_rtn   : IN     std_logic;
          Switches    : IN     std_logic_vector (SW_WIDTH-1 DOWNTO 0);
          Data_i      : OUT    std_logic_vector(15 DOWNTO 0);
          Data_o      : IN     std_logic_vector(15 DOWNTO 0);
          Fail_Out    : OUT    std_logic_vector(0 DOWNTO 0);
-         IlckFail    : OUT    std_logic;
+         Ilock_fail    : OUT    std_logic;
          Status      : OUT    std_logic_vector(3 DOWNTO 0);
-         Run         : OUT    std_logic;
          tri_pulse_A : OUT    std_logic;
          tri_pulse_B : OUT    std_logic;
          tri_pulse_C : OUT    std_logic
@@ -77,10 +72,9 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
          Data_i      : IN     std_logic_vector(15 DOWNTO 0);
          Data_o      : OUT    std_logic_vector(15 DOWNTO 0);
          Status      : IN     std_logic_vector(3 DOWNTO 0);
-         Run         : IN     std_logic;
-         RunStatus   : OUT    std_logic;
+         Ilock_rtn   : OUT    std_logic;
          Fail_Out    : IN     std_logic_vector(0 DOWNTO 0);
-         IlckFail    : IN     std_logic;
+         Ilock_fail  : IN     std_logic;
          tri_pulse_A : IN     std_logic;
          tri_pulse_B : IN     std_logic;
          tri_pulse_C : IN     std_logic
@@ -89,13 +83,13 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
 
    -- embedded configurations
    -- pragma synthesis_off
-   FOR U_0 : tri_lvl_b USE ENTITY tripole_lib.tri_lvl_b;
-   FOR U_1 : tri_lvl_b_tester USE ENTITY tripole_lib.tri_lvl_b_tester;
+   FOR DUT : tri_lvl_b USE ENTITY tripole_lib.tri_lvl_b;
+   FOR tester : tri_lvl_b_tester USE ENTITY tripole_lib.tri_lvl_b_tester;
    -- pragma synthesis_on
 
 BEGIN
 
-         U_0 : tri_lvl_b
+         DUT : tri_lvl_b
             GENERIC MAP (
               N_INTERRUPTS => 0,
               SW_WIDTH => 0
@@ -108,16 +102,15 @@ BEGIN
                Data_o      => Data_o,
                Switches    => Switches,
                Status      => Status,
-               Run         => Run,
-               RunStatus   => RunStatus,
+               Ilock_rtn   => Ilock_rtn,
                Fail_Out    => Fail_Out,
-               IlckFail    => IlckFail,
+               Ilock_fail  => Ilock_fail,
                tri_pulse_A => tri_pulse_A,
                tri_pulse_B => tri_pulse_B,
                tri_pulse_C => tri_pulse_C
             );
 
-         U_1 : tri_lvl_b_tester
+         tester : tri_lvl_b_tester
             PORT MAP (
                Addr        => Addr,
                clk_100MHz  => clk_100MHz,
@@ -125,10 +118,9 @@ BEGIN
                Data_i      => Data_i,
                Data_o      => Data_o,
                Status      => Status,
-               Run         => Run,
-               RunStatus   => RunStatus,
+               Ilock_rtn   => Ilock_rtn,
                Fail_Out    => Fail_Out,
-               IlckFail    => IlckFail,
+               Ilock_fail  => Ilock_fail,
                tri_pulse_A => tri_pulse_A,
                tri_pulse_B => tri_pulse_B,
                tri_pulse_C => tri_pulse_C

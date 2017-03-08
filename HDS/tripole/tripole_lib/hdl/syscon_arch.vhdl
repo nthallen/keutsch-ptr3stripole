@@ -204,7 +204,7 @@ BEGIN
 
   -- outputs ExpRd, INTA_int, ExpWr, Ack, DataIn, Start
   clocked_proc : PROCESS ( clk )
-    variable ack_n : integer range N_BOARDS-1 downto 0;
+    -- variable ack_n : integer range N_BOARDS-1 downto 0;
   BEGIN
     IF (clk'EVENT AND clk = '1') THEN
       if rst = '1' then
@@ -268,13 +268,14 @@ BEGIN
             else
               Ack <= ack_int;
               if ack_int = '1' then
-                ack_n := 0;
+                -- ack_n := 0;
                 for i in 0 to N_BOARDS-1 loop
                   if ExpAck(i) = '1' then
-                    ack_n := i;
+                    DataIn <= RData(16*i+15 DOWNTO 16*i);
+                    -- ack_n := i;
                   end if;
                 end loop;
-                DataIn <= RData(16*ack_n+15 DOWNTO 16*ack_n);
+                -- DataIn <= RData(16*ack_n+15 DOWNTO 16*ack_n);
               else
                 DataIn <= (others => '0');
               end if;

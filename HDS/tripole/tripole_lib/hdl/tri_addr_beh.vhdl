@@ -22,7 +22,7 @@ ENTITY tri_addr IS
     APhaseEn : OUT    std_logic;
     BHiPerEn : OUT    std_logic;
     BPhaseEn : OUT    std_logic;
-    BdEn     : OUT    std_logic;
+    BdEn     : OUT    std_logic_vector (7 DOWNTO 0);
     CHiPerEn : OUT    std_logic;
     CPhaseEn : OUT    std_logic;
     CtrlEn   : OUT    std_logic;
@@ -38,7 +38,6 @@ ARCHITECTURE beh OF tri_addr IS
 BEGIN
   Addr_Select : Process (ExpAddr) is
   begin
-    BdEn <= '0';
     CtrlEn <= '0';
     PerEn <= '0';
     AHiPerEn <= '0';
@@ -49,30 +48,25 @@ BEGIN
     CPhaseEn <= '0';
     if ExpAddr = BASE_ADDR then
       CtrlEn <= '1';
-      BdEn <= '1';
     elsif ExpAddr = BASE_ADDR + 1 then
       PerEn <= '1';
-      BdEn <= '1';
     elsif ExpAddr = BASE_ADDR + 2 then
       AHiPerEn <= '1';
-      BdEn <= '1';
     elsif ExpAddr = BASE_ADDR + 3 then
       APhaseEn <= '1';
-      BdEn <= '1';
     elsif ExpAddr = BASE_ADDR + 4 then
       BHiPerEn <= '1';
-      BdEn <= '1';
     elsif ExpAddr = BASE_ADDR + 5 then
       BPhaseEn <= '1';
-      BdEn <= '1';
     elsif ExpAddr = BASE_ADDR + 6 then
       CHiPerEn <= '1';
-      BdEn <= '1';
     elsif ExpAddr = BASE_ADDR + 7 then
       CPhaseEn <= '1';
-      BdEn <= '1';
     end if;
   end process;
+  
+  BdEn <= CPhaseEn & CHiPerEn & BPhaseEn & BHiPerEn &
+          APhaseEn & AHiPerEn & PerEn & CtrlEn;
   
 END ARCHITECTURE beh;
 

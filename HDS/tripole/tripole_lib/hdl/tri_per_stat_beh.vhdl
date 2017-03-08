@@ -9,6 +9,8 @@
 --
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+USE ieee.std_logic_arith.all;
+USE ieee.std_logic_unsigned.all;
 USE ieee.numeric_std.all;
 
 ENTITY tri_per_stat IS
@@ -17,14 +19,13 @@ ENTITY tri_per_stat IS
   );
   PORT( 
     CtrlEn    : IN     std_logic;
-    RdEn      : IN     std_logic;
     RunCmd    : IN     std_logic;
-    RunStatus : IN     std_logic;
     clk       : IN     std_logic;
     rst       : IN     std_logic;
     Fail      : OUT    std_logic;
     RunOut    : OUT    std_logic;
-    RData     : INOUT  std_logic_vector (15 DOWNTO 0)
+    StatRData : OUT    std_logic_vector (15 DOWNTO 0);
+    Ilock_rtn : IN     std_logic
   );
 
 -- Declarations
@@ -34,20 +35,18 @@ END ENTITY tri_per_stat ;
 --
 ARCHITECTURE beh OF tri_per_stat IS
   SIGNAL Failing : std_logic;
-  SIGNAL Delay : unsigned(8 DOWNTO 0);
+  SIGNAL Run_int : std_logic;
 BEGIN
   RdStat : Process (clk) IS
   Begin
     if clk'Event AND clk = '1' then
       if rst = '1' then
-        RData <= (others => 'Z');
-      elsif RdEn = '1' and CtrlEn = '1' then
-        RData(15 downto 3) <= (others => '0');
-        RData(2) <= Failing;
-        RData(1) <= RunStatus;
-        RData(0) <= RunCmd;
-      else
-        RData <= (others => 'Z');
+        StatRData <= (others => '0');
+      elsif CtrlEn = '1' then
+        StatRData(15 downto 3) <= (others => '0');
+        StatRData(2) <= Failing;
+        StatRData(1) <= Run_int;
+        StatRData(0) <= RunCmd;
       end if;
     end if;
   End Process;
@@ -56,18 +55,12 @@ BEGIN
   Begin
     if clk'Event AND clk = '1' then
       if rst = '1' then
-        Delay <= to_unsigned(DELAY_COUNT,9);
         Failing <= '0';
       else
         if RunCmd = '0' then
-          Delay <= to_unsigned(DELAY_COUNT,9);
           Failing <= '0';
-        elsif RunStatus = '0' then
-          if Delay = 0 then
-            Failing <= '1';
-          else
-            Delay <= Delay-1;
-          end if;
+        elsif Ilock_rtn = '0' then
+          Failing <= '1';
         end if;
       end if;
     end if;
@@ -77,16 +70,16 @@ BEGIN
   Begin
     if clk'Event AND clk = '1' then
       if rst = '1' then
-        RunOut <= '0';
+        Run_int <= '0';
       elsif RunCmd = '1' AND Failing = '0' then
-        RunOut <= '1';
+        Run_int <= '1';
       else
-        RunOut <= '0';
+        Run_int <= '0';
       end if;
     end if;
   End Process;
   
+  RunOut <= Run_int;
   Fail <= Failing;
   
 END ARCHITECTURE beh;
-

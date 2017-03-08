@@ -12,14 +12,17 @@ USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
 ENTITY tri_wrap IS
+    GENERIC (
+      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0008"
+    );
     PORT (
       Addr        : IN     std_logic_vector(7 DOWNTO 0);
       Ctrl        : IN     std_logic_vector(6 DOWNTO 0);
       Data_i      : OUT    std_logic_vector(15 DOWNTO 0);
       Data_o      : IN     std_logic_vector(15 DOWNTO 0);
       Status      : OUT    std_logic_vector(3 DOWNTO 0);
-      Run         : OUT    std_logic;
-      RunStatus   : IN     std_logic;
+      Ilock_out   : OUT    std_logic;
+      Ilock_rtn   : IN     std_logic;
       leds        : OUT    std_logic_vector(1 DOWNTO 0);
       tri_pulse_A : OUT    std_logic;
       tri_pulse_B : OUT    std_logic;
@@ -33,11 +36,13 @@ ARCHITECTURE beh OF tri_wrap IS
   SIGNAL Switches    : std_logic_vector(0-1 DOWNTO 0);
   SIGNAL Fail_Out    : std_logic_vector(0 TO 0);
   SIGNAL IlckFail    : std_logic;
+  SIGNAL Run         : std_logic;
   COMPONENT tri_lvl_b
     GENERIC (
       N_INTERRUPTS : integer := 1;
       SW_WIDTH     : integer := 16;
-      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0008"
+      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0008";
+      N_BOARDS : integer := 8
     );
     PORT (
       Addr        : IN     std_logic_vector(7 DOWNTO 0);
@@ -62,7 +67,8 @@ BEGIN
     GENERIC MAP (
       N_INTERRUPTS => 0,
       SW_WIDTH     => 0,
-      BUILD_NUMBER => X"0008"
+      BUILD_NUMBER => BUILD_NUMBER,
+      N_BOARDS => 8
     )
     PORT MAP (
       Addr        => Addr,
@@ -75,12 +81,13 @@ BEGIN
       Fail_Out    => Fail_Out,
       IlckFail    => IlckFail,
       Run         => Run,
-      Status      => Status,
+      Status      => Ilock_rtn,
       tri_pulse_A => tri_pulse_A,
       tri_pulse_B => tri_pulse_B,
       tri_pulse_C => tri_pulse_C
     );
     
     leds <= Fail_Out & IlckFail;
+    Ilock_out <= '1';
 END ARCHITECTURE beh;
 

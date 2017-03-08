@@ -1,0 +1,479 @@
+DESIGN tri_lvl_c
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 50,0 11 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 118,0 17 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 123,0 18 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 128,0 19 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 133,0 20 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 402,0 21 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 213,0 22 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 108,0 23 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 113,0 24 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 138,0 25 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 143,0 26 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 148,0 27 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 153,0 28 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 158,0 29 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 163,0 30 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 168,0 31 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 173,0 32 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 178,0 33 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 198,0 34 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 203,0 35 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 208,0 36 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 1,0 39 0 
+DESIGN tri_lvl_c
+VIEW symbol.sb
+GRAPHIC 1,0 40 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+NO_GRAPHIC 43
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 175,0 59 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+NO_GRAPHIC 63
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 0,0 66 2 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 13,0 71 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 15,0 72 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 19,0 73 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 21,0 74 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 17,0 75 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 23,0 76 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 25,0 77 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 9,0 78 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 11,0 79 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 75,0 80 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 31,0 81 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 35,0 82 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 33,0 83 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+NO_GRAPHIC 84
+DESIGN tri_lvl_c
+VIEW struct.bd
+NO_GRAPHIC 85
+LIBRARY tripole_lib
+DESIGN subbus_io
+VIEW beh
+GRAPHIC 2879,0 87 0 
+DESIGN subbus_io
+VIEW symbol.sb
+GRAPHIC 14,0 88 1 
+DESIGN subbus_io
+VIEW beh
+GRAPHIC 61,0 93 0 
+DESIGN subbus_io
+VIEW beh
+GRAPHIC 66,0 94 0 
+DESIGN subbus_io
+VIEW beh
+GRAPHIC 56,0 95 0 
+DESIGN subbus_io
+VIEW beh
+GRAPHIC 71,0 96 0 
+DESIGN subbus_io
+VIEW beh
+GRAPHIC 76,0 97 0 
+DESIGN subbus_io
+VIEW beh
+GRAPHIC 81,0 98 0 
+DESIGN subbus_io
+VIEW beh
+GRAPHIC 51,0 99 0 
+DESIGN subbus_io
+VIEW beh
+GRAPHIC 204,0 100 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 173,0 103 0 
+DESIGN tri_addr
+VIEW interface
+GRAPHIC 14,0 104 1 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3231,0 108 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 416,0 109 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 426,0 110 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1865,0 111 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1873,0 112 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 738,0 113 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1885,0 114 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1899,0 115 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 266,0 116 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 276,0 117 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1583,0 120 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 215,0 122 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 1153,0 123 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 225,0 124 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 240,0 125 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 245,0 126 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 210,0 127 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 406,0 128 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 985,0 129 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 648,0 130 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 436,0 131 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 908,0 132 0 
+DESIGN tri_period
+VIEW symbol.sb
+GRAPHIC 235,0 133 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1525,0 136 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 331,0 138 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 336,0 139 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 341,0 140 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 346,0 141 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 361,0 142 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 366,0 143 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 326,0 144 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 356,0 145 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 603,0 146 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 598,0 147 0 
+DESIGN tri_pulse
+VIEW symbol.sb
+GRAPHIC 437,0 148 0 
+LIBRARY tripole_lib
+DESIGN tri_lvl_c
+VIEW struct.bd
+NO_GRAPHIC 151
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 2879,0 154 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 173,0 155 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1583,0 156 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1525,0 157 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+NO_GRAPHIC 160
+DESIGN tri_lvl_c
+VIEW struct.bd
+NO_GRAPHIC 162
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 2879,0 164 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 2886,0 165 1 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3415,0 170 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3423,0 171 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3407,0 172 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3431,0 173 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3439,0 174 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 348,0 175 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 738,0 176 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 2889,0 177 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 173,0 179 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 180,0 180 1 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1583,0 195 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 266,0 197 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3287,0 198 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 276,0 199 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 256,0 200 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 348,0 201 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3579,0 202 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3271,0 203 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3295,0 204 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3279,0 205 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 155,0 206 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3303,0 207 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 131,0 208 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1525,0 210 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 382,0 212 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 416,0 213 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 426,0 214 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 155,0 215 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3239,0 216 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 484,0 217 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1207,0 218 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 131,0 219 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3255,0 220 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3263,0 221 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3247,0 222 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1615,0 224 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3319,0 226 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1865,0 227 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1873,0 228 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1815,0 229 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3327,0 230 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1763,0 231 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3311,0 232 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1821,0 233 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3343,0 234 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3351,0 235 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3335,0 236 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1669,0 238 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3367,0 240 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1885,0 241 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1899,0 242 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1809,0 243 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3375,0 244 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1779,0 245 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3359,0 246 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 1803,0 247 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3391,0 248 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3399,0 249 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+GRAPHIC 3383,0 250 0 
+DESIGN tri_lvl_c
+VIEW struct.bd
+NO_GRAPHIC 253

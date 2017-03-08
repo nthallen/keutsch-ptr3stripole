@@ -54,6 +54,27 @@ set(ax(1),'XTickLabel',[],'YAxisLocation','Right');
 linkaxes(ax,'x');
 %xlim([100 300]);
 %%
+% Here I'm looking at the actual output frequency allowing for a final
+% divisor of 20 or 21. This alone gets us down to less than 6e-4 increase
+% between possible frequencies.
+Fout20 = Fout/20;
+Fout21 = Fout/21;
+[sFout2X,IA2X,IC2X] = unique([Fout20;Fout21]);
+dFout2X = (sFout2X(2:end)./sFout2X(1:end-1))-1;
+sFout2Xa = sFout2X(1:end-1);
+V = sFout2Xa >= 9.5e6 & sFout2Xa <= 9.75e6;
+figure;
+plot(sFout2Xa(V)*1e-6,dFout2X(V),'.');
+xlabel('MHz');
+ylabel('% deviation to next freq');
+%%
+sFout20 = sFout/20;
+sFout21 = sFout/21;
+figure;
+plot(sFout20(2:end)*1e-6,dFout*100,'.',sFout21(2:end)*1e-6,dFout*100,'.');
+xlabel('MHz');
+ylabel('Phase Resolution');
+%%
 % If we used dynamic phase shifting to adjust our master clock's period,
 % how much flexibility would that buy us?
 % The fine resolution divides the output period into 56*DO phases
@@ -84,10 +105,10 @@ DO = 6;
 %%
 % Actually, let's suppose we wanted to go with a second clock tile
 % so we could get the minimum Fvco, setting M = DO and D = 1
-Fin = 200e6; % MHz
-M = 3; % 600 MHz minimum
+Fin = 199e6; % MHz
+M = 4; % 600 MHz minimum
 Fvco = Fin*M;
-DO = 3;
+DO = 4;
 Fout = Fvco/DO;
 Pout = 1/Fout;
 Pdph = 1/(56*Fvco);

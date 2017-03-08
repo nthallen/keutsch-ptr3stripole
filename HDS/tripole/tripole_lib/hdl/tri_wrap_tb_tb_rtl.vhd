@@ -47,8 +47,8 @@ ARCHITECTURE rtl OF tri_wrap_tb IS
       Data_i      : OUT    std_logic_vector(15 DOWNTO 0);
       Data_o      : IN     std_logic_vector(15 DOWNTO 0);
       Status      : OUT    std_logic_vector(3 DOWNTO 0);
-      Run         : OUT    std_logic;
-      RunStatus   : IN     std_logic;
+      Ilock_out   : OUT    std_logic;
+      Ilock_rtn   : IN     std_logic;
       leds        : OUT    std_logic_vector(1 DOWNTO 0);
       tri_pulse_A : OUT    std_logic;
       tri_pulse_B : OUT    std_logic;
@@ -76,21 +76,21 @@ ARCHITECTURE rtl OF tri_wrap_tb IS
 
   -- embedded configurations
   -- pragma synthesis_off
-  FOR U_0 : tri_wrap USE ENTITY tripole_lib.tri_wrap;
-  FOR U_1 : tri_wrap_tester USE ENTITY tripole_lib.tri_wrap_tester;
+  FOR DUT : tri_wrap USE ENTITY tripole_lib.tri_wrap;
+  FOR tester : tri_wrap_tester USE ENTITY tripole_lib.tri_wrap_tester;
   -- pragma synthesis_on
 
 BEGIN
 
-    U_0 : tri_wrap
+    DUT : tri_wrap
       PORT MAP (
         Addr        => Addr,
         Ctrl        => Ctrl,
         Data_i      => Data_i,
         Data_o      => Data_o,
         Status      => Status,
-        Run         => Run,
-        RunStatus   => RunStatus,
+        Ilock_out   => Run,
+        Ilock_rtn   => RunStatus,
         leds        => leds,
         tri_pulse_A => tri_pulse_A,
         tri_pulse_B => tri_pulse_B,
@@ -98,7 +98,7 @@ BEGIN
         clk         => clk
       );
 
-    U_1 : tri_wrap_tester
+    tester : tri_wrap_tester
       PORT MAP (
         Addr        => Addr,
         Ctrl        => Ctrl,
