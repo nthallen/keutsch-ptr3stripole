@@ -77,19 +77,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "03/ 1/2017"
+value "03/10/2017"
 )
 (vvPair
 variable "day"
-value "Wed"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Wednesday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "01"
+value "10"
 )
 (vvPair
 variable "entity_name"
@@ -117,7 +117,7 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "03/ 1/2017"
+value "03/10/2017"
 )
 (vvPair
 variable "graphical_source_group"
@@ -129,7 +129,7 @@ value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "16:26:02"
+value "13:07:34"
 )
 (vvPair
 variable "group"
@@ -233,7 +233,7 @@ value "fsm"
 )
 (vvPair
 variable "time"
-value "16:26:02"
+value "13:07:34"
 )
 (vvPair
 variable "unit"
@@ -428,93 +428,7 @@ tm "SmCaseExpr"
 )
 )
 )
-*3 (SmClockPoint
-uid 62,0
-shape (CompositeShape
-uid 63,0
-va (VaSet
-vasetType 1
-fg "65535,65535,0"
-)
-optionalChildren [
-(Pentagon
-uid 64,0
-sl 0
-ro 270
-xt "3325,41398,5575,42398"
-)
-(OrthoPolyLine
-uid 65,0
-sl 0
-ro 270
-va (VaSet
-vasetType 3
-)
-xt "4225,41598,4824,42198"
-pts [
-"4225,42198"
-"4524,42198"
-"4524,41598"
-"4824,41598"
-]
-)
-(Arc2D
-pts [
-"3834,42051"
-"3579,41745"
-"3834,41745"
-]
-uid 66,0
-sl 0
-ro 270
-va (VaSet
-vasetType 1
-transparent 1
-)
-xt "3506,41698,3834,42097"
-)
-]
-)
-name (TextAssociate
-uid 67,0
-ps "CenterOffsetStrategy"
-text (Text
-uid 68,0
-va (VaSet
-font "arial,8,0"
-)
-xt "-1981,41333,3019,42333"
-st "clk_100MHz"
-ju 2
-blo "3019,42133"
-tm "SmControlSignalNameMgr"
-)
-)
-cond (SmControlCondition
-uid 69,0
-ps "CenterOffsetStrategy"
-shape (Rectangle
-uid 70,0
-va (VaSet
-vasetType 1
-fg "65535,65535,65535"
-lineColor "0,32768,49152"
-)
-xt "6220,41233,22620,42433"
-)
-autoResize 1
-cond (MLText
-uid 71,0
-va (VaSet
-font "arial,8,0"
-)
-xt "6320,41333,22520,42333"
-st "clk_100MHz'EVENT AND clk_100MHz = '1'"
-tm "SmControlConditionMgr"
-)
-)
-)
-*4 (SmResetPoint
+*3 (SmResetPoint
 uid 72,0
 shape (CompositeShape
 uid 73,0
@@ -662,7 +576,7 @@ tm "Actions"
 level 1
 mode 0
 )
-*5 (Link
+*4 (Link
 uid 89,0
 shape (CompositeShape
 uid 90,0
@@ -705,7 +619,7 @@ tm "LinkName"
 )
 )
 )
-*6 (SmRecoveryStatePoint
+*5 (SmRecoveryStatePoint
 uid 95,0
 shape (CompositeShape
 uid 96,0
@@ -751,7 +665,7 @@ pts [
 ]
 )
 )
-*7 (Link
+*6 (Link
 uid 100,0
 shape (CompositeShape
 uid 101,0
@@ -794,10 +708,10 @@ tm "LinkName"
 )
 )
 )
-*8 (Grouping
+*7 (Grouping
 uid 126,0
 optionalChildren [
-*9 (CommentText
+*8 (CommentText
 uid 128,0
 shape (Rectangle
 uid 129,0
@@ -828,7 +742,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-*10 (CommentText
+*9 (CommentText
 uid 131,0
 shape (Rectangle
 uid 132,0
@@ -859,7 +773,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-*11 (CommentText
+*10 (CommentText
 uid 134,0
 shape (Rectangle
 uid 135,0
@@ -890,7 +804,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-*12 (CommentText
+*11 (CommentText
 uid 137,0
 shape (Rectangle
 uid 138,0
@@ -921,7 +835,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-*13 (CommentText
+*12 (CommentText
 uid 140,0
 shape (Rectangle
 uid 141,0
@@ -951,7 +865,7 @@ visibleWidth 20000
 ignorePrefs 1
 titleBlock 1
 )
-*14 (CommentText
+*13 (CommentText
 uid 143,0
 shape (Rectangle
 uid 144,0
@@ -982,7 +896,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-*15 (CommentText
+*14 (CommentText
 uid 146,0
 shape (Rectangle
 uid 147,0
@@ -1013,7 +927,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-*16 (CommentText
+*15 (CommentText
 uid 149,0
 shape (Rectangle
 uid 150,0
@@ -1044,7 +958,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-*17 (CommentText
+*16 (CommentText
 uid 152,0
 shape (Rectangle
 uid 153,0
@@ -1075,7 +989,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-*18 (CommentText
+*17 (CommentText
 uid 155,0
 shape (Rectangle
 uid 156,0
@@ -1119,7 +1033,7 @@ xt "23219,43697,64219,48697"
 )
 oxt "14000,66000,55000,71000"
 )
-*19 (State
+*18 (State
 uid 247,0
 shape (Circle
 uid 248,0
@@ -1275,7 +1189,7 @@ tm "SmCaseExpr"
 )
 )
 )
-*20 (State
+*19 (State
 uid 264,0
 shape (Circle
 uid 265,0
@@ -1431,7 +1345,7 @@ tm "SmCaseExpr"
 )
 )
 )
-*21 (Link
+*20 (Link
 uid 281,0
 shape (CompositeShape
 uid 282,0
@@ -1474,7 +1388,7 @@ tm "LinkName"
 )
 )
 )
-*22 (State
+*21 (State
 uid 506,0
 shape (Circle
 uid 507,0
@@ -1630,7 +1544,7 @@ tm "SmCaseExpr"
 )
 )
 )
-*23 (Link
+*22 (Link
 uid 533,0
 shape (CompositeShape
 uid 534,0
@@ -1673,6 +1587,93 @@ tm "LinkName"
 )
 )
 )
+*23 (SmClockPoint
+uid 648,0
+shape (CompositeShape
+uid 649,0
+va (VaSet
+vasetType 1
+fg "65535,65535,0"
+)
+optionalChildren [
+(Pentagon
+uid 650,0
+sl 0
+ro 270
+xt "36875,3500,39125,4500"
+)
+(OrthoPolyLine
+uid 651,0
+sl 0
+ro 270
+va (VaSet
+vasetType 3
+)
+xt "37775,3700,38374,4300"
+pts [
+"37775,4300"
+"38074,4300"
+"38074,3700"
+"38374,3700"
+]
+)
+(Arc2D
+pts [
+"37384,4153"
+"37129,3847"
+"37384,3847"
+]
+uid 652,0
+sl 0
+ro 270
+va (VaSet
+vasetType 1
+transparent 1
+)
+xt "37056,3800,37384,4199"
+)
+]
+)
+name (TextAssociate
+uid 653,0
+ps "CenterOffsetStrategy"
+text (Text
+uid 654,0
+va (VaSet
+font "arial,8,0"
+)
+xt "35075,3500,36375,4500"
+st "clk"
+ju 2
+blo "36375,4300"
+tm "SmControlSignalNameMgr"
+)
+)
+cond (SmControlCondition
+uid 655,0
+ps "CenterOffsetStrategy"
+shape (Rectangle
+uid 656,0
+va (VaSet
+vasetType 1
+fg "65535,65535,65535"
+lineColor "0,32768,49152"
+)
+xt "39125,3400,45725,4600"
+)
+autoResize 1
+cond (MLText
+uid 657,0
+va (VaSet
+font "arial,8,0"
+)
+xt "39225,3500,45625,4500"
+st "rising_edge(clk)"
+tm "SmControlConditionMgr"
+)
+)
+edge 4
+)
 *24 (Transition
 uid 106,0
 shape (Spline
@@ -1686,8 +1687,8 @@ pts [
 "16510,46640"
 ]
 )
-start &4
-end &5
+start &3
+end &4
 ss 0
 es 0
 cond "ExpReset = '1'"
@@ -1775,8 +1776,8 @@ pts [
 "16639,44156"
 ]
 )
-start &6
-end &7
+start &5
+end &6
 ss 0
 es 0
 tb (TransitionBlock
@@ -1864,8 +1865,8 @@ pts [
 ]
 arrow 1
 )
-start &19
-end &20
+start &18
+end &19
 ss 0
 es 0
 cond "CntDn = X\"0000\" AND
@@ -1953,8 +1954,8 @@ pts [
 ]
 arrow 1
 )
-start &20
-end &19
+start &19
+end &18
 ss 0
 es 0
 cond "tri_phase = '1'"
@@ -2039,8 +2040,8 @@ pts [
 "44309,39065"
 ]
 )
-start &19
-end &23
+start &18
+end &22
 ss 0
 es 0
 cond "Run /= '1'"
@@ -2125,8 +2126,8 @@ pts [
 "41050,13874"
 ]
 )
-start &20
-end &21
+start &19
+end &20
 ss 0
 es 0
 cond "Run /= '1'"
@@ -2213,7 +2214,7 @@ pts [
 arrow 1
 )
 start &2
-end &20
+end &19
 ss 0
 cond "Run = '1'"
 tb (TransitionBlock
@@ -2300,8 +2301,8 @@ pts [
 ]
 arrow 1
 )
-start &19
-end &22
+start &18
+end &21
 ss 0
 es 0
 cond "CntDn = X\"0000\" AND
@@ -2389,8 +2390,8 @@ pts [
 ]
 arrow 1
 )
-start &22
-end &20
+start &21
+end &19
 ss 0
 es 0
 cond "CntDn = X\"0000\" AND
@@ -2480,8 +2481,8 @@ pts [
 ]
 arrow 1
 )
-start &22
-end &22
+start &21
+end &21
 cond "CntDn = X\"0000\" AND
 tri_phase = '1'"
 tb (TransitionBlock
@@ -2666,7 +2667,7 @@ associable 1
 )
 windowSize "1280,231,2881,1131"
 viewArea "-4400,-2000,86218,49018"
-cachedDiagramExtent "-1981,-1000,64219,51765"
+cachedDiagramExtent "-340,-1000,64219,51765"
 pageSetupInfo (PageSetupInfo
 ptrCmd ""
 toPrinter 1
@@ -3056,14 +3057,14 @@ radix 2
 )
 stateOrder [
 &2
+&18
 &19
-&20
-&22
+&21
 ]
 name "csm"
 )
 ]
-lastUid 616,0
+lastUid 657,0
 commonDM (CommonDM
 ldm (LogicalDM
 emptyRow *62 (LEmptyRow
@@ -3157,18 +3158,6 @@ uid 162,0
 *84 (LeafLogPort
 port (LogicalPort
 decl (Decl
-n "clk_100MHz"
-t "std_logic"
-o 4
-)
-)
-uid 164,0
-cat 1
-expr "clk_100MHz'EVENT AND clk_100MHz = '1'"
-)
-*85 (LeafLogPort
-port (LogicalPort
-decl (Decl
 n "tri_phase"
 t "std_logic"
 o 5
@@ -3176,7 +3165,7 @@ o 5
 )
 uid 166,0
 )
-*86 (LeafLogPort
+*85 (LeafLogPort
 port (LogicalPort
 m 1
 decl (Decl
@@ -3189,7 +3178,7 @@ uid 445,0
 scheme 1
 rstVal "'0'"
 )
-*87 (LeafLogPort
+*86 (LeafLogPort
 port (LogicalPort
 m 4
 decl (Decl
@@ -3202,6 +3191,19 @@ o 7
 uid 446,0
 scheme 1
 rstVal "(others => '0')"
+)
+*87 (LeafLogPort
+port (LogicalPort
+decl (Decl
+n "clk"
+t "std_logic"
+o 4
+)
+)
+uid 647,0
+cat 5
+ass ""
+expr "rising_edge(clk)"
 )
 ]
 )
@@ -3273,27 +3275,27 @@ uid 163,0
 )
 *96 (MRCItem
 litem &84
-pos 0
-dimension 20
-uid 165,0
-)
-*97 (MRCItem
-litem &85
 pos 5
 dimension 20
 uid 167,0
 )
-*98 (MRCItem
-litem &86
+*97 (MRCItem
+litem &85
 pos 3
 dimension 20
 uid 444,0
 )
-*99 (MRCItem
-litem &87
+*98 (MRCItem
+litem &86
 pos 6
 dimension 20
 uid 447,0
+)
+*99 (MRCItem
+litem &87
+pos 0
+dimension 20
+uid 646,0
 )
 ]
 )

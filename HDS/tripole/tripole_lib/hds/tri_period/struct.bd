@@ -34,11 +34,6 @@ name "U_1"
 duLibraryName "tripole_lib"
 duName "tri_per_stat"
 elements [
-(GiElement
-name "DELAY_COUNT"
-type "integer range 500 downto 1"
-value "40"
-)
 ]
 mwi 0
 uid 1156,0
@@ -105,19 +100,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "03/ 8/2017"
+value "03/10/2017"
 )
 (vvPair
 variable "day"
-value "Wed"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Wednesday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "08"
+value "10"
 )
 (vvPair
 variable "entity_name"
@@ -145,7 +140,7 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "03/ 8/2017"
+value "03/10/2017"
 )
 (vvPair
 variable "graphical_source_group"
@@ -157,7 +152,7 @@ value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "14:57:53"
+value "13:41:16"
 )
 (vvPair
 variable "group"
@@ -261,7 +256,7 @@ value "struct"
 )
 (vvPair
 variable "time"
-value "14:57:53"
+value "13:41:16"
 )
 (vvPair
 variable "unit"
@@ -1273,16 +1268,10 @@ isHidden 1
 font "Courier New,8,0"
 )
 xt "41000,16200,69000,17000"
-st "DELAY_COUNT = 40    ( integer range 500 downto 1 )  "
 )
 header ""
 )
 elements [
-(GiElement
-name "DELAY_COUNT"
-type "integer range 500 downto 1"
-value "40"
-)
 ]
 )
 viewicon (ZoomableIcon
@@ -2828,12 +2817,12 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "106,124,1141,1024"
-viewArea "1378,-6000,68359,56001"
+windowSize "106,124,1142,1024"
+viewArea "1400,-6000,68464,56001"
 cachedDiagramExtent "0,0,69000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-7000,0"
-lastUid 2050,0
+lastUid 2111,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

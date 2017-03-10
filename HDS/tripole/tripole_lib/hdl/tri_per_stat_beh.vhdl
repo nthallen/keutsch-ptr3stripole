@@ -14,9 +14,6 @@ USE ieee.std_logic_unsigned.all;
 USE ieee.numeric_std.all;
 
 ENTITY tri_per_stat IS
-  GENERIC( 
-    DELAY_COUNT : integer range 500 downto 1 := 40
-  );
   PORT( 
     CtrlEn    : IN     std_logic;
     RunCmd    : IN     std_logic;

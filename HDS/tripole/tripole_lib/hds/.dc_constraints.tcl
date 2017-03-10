@@ -3,7 +3,7 @@
 #
 # Created:
 #          by - nort.UNKNOWN (NORT-XPS14)
-#          at - 16:55:18 03/ 1/2017
+#          at - 13:07:40 03/10/2017
 #
 # using Mentor Graphics HDL Designer(TM) 2016.1 (Build 8)
 #
@@ -18,3 +18,5 @@ dc_exclude -source_file {C:\Users\nort.ARP\Documents\Exp\PTR3S\PTR3Stripole\HDS\
 dc_exclude -source_file {C:\Users\nort.ARP\Documents\Exp\PTR3S\PTR3Stripole\HDS\tripole\tripole_lib\hdl\syscon_arch.vhdl} -start_line 338 -end_line 338 -check {RuleSets\Essentials\Downstream Checks\Register Reset Control} -comment {OK}
 dc_exclude -source_file {C:\Users\nort.ARP\Documents\Exp\PTR3S\PTR3Stripole\HDS\tripole\tripole_lib\hdl\syscon_arch.vhdl} -start_line 58 -end_line 58 -check {RuleSets\Essentials\Coding Practices\Unused Declarations} -comment {OK}
 dc_exclude -source_file {C:\Users\nort.ARP\Documents\Exp\PTR3S\PTR3Stripole\HDS\tripole\tripole_lib\hdl\subbus_io_beh.vhdl} -start_line 31 -end_line 31 -check {RuleSets\Essentials\Coding Practices\Unused Declarations} -comment {OK}
+dc_exclude -source_file {C:\Users\nort.ARP\Documents\Exp\PTR3S\PTR3Stripole\HDS\tripole\tripole_lib\hdl\phase_beh.vhdl} -start_line 80 -end_line 80 -check {RuleSets\Essentials\Downstream Checks\Register Reset Control} -comment {Is too!}
+dc_exclude -source_file {C:\Users\nort.ARP\Documents\Exp\PTR3S\PTR3Stripole\HDS\tripole\tripole_lib\hdl\phase_beh.vhdl} -start_line 81 -end_line 81 -check {RuleSets\Essentials\Downstream Checks\Register Reset Control} -comment {Is too!}
