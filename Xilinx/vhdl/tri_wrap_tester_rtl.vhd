@@ -20,7 +20,7 @@ ENTITY tri_wrap_tester IS
     Data_o      : OUT    std_logic_vector(15 DOWNTO 0);
     Status      : IN     std_logic_vector(3 DOWNTO 0);
     Run         : IN     std_logic;
-    RunStatus   : OUT    std_logic;
+    Ilock_rtn   : OUT    std_logic;
     leds        : IN     std_logic_vector(1 DOWNTO 0);
     tri_pulse_A : IN     std_logic;
     tri_pulse_B : IN     std_logic;
@@ -28,9 +28,6 @@ ENTITY tri_wrap_tester IS
     clk_100MHz  : OUT    std_logic
   );
 END ENTITY tri_wrap_tester;
-
-
-LIBRARY tripole_lib;
 
 ARCHITECTURE rtl OF tri_wrap_tester IS
   SIGNAL Ctrl_int : std_logic_vector(6 DOWNTO 0);
@@ -108,47 +105,87 @@ BEGIN
     rst <= '1';
     arm <= '0';
     TickTock <= '0';
-    RunStatus <= '0';
+    Ilock_rtn <= '0';
     wait for 50 ns;
     rst <= '0';
     wait until clk'Event and clk = '1';
     wait until clk'Event and clk = '1';
     
     sbwr(X"20", X"0000"); -- Ensure off
-    sbwr(X"21", X"00A0"); -- Period 100 ns
+    sbwr(X"21", X"000A"); -- Period 100 ns
     sbwr(X"23", X"0000"); -- Channel A phase 0
-    sbwr(X"22", X"0040"); -- Channel A hi period 40 ns
-    sbwr(X"25", X"0033"); -- Channel B phase (delay) 33 ns
-    sbwr(X"24", X"0040"); -- Channel B hi period 40 ns
-    sbwr(X"27", X"0066"); -- Channel C phase delay 66 ns
-    sbwr(X"26", X"0040"); -- Channel C hi period 40 ns
-    RunStatus <= '0';
+    sbwr(X"22", X"0004"); -- Channel A hi period 40 ns
+    sbwr(X"25", X"065D"); -- Channel B phase (delay) 33 ns
+    sbwr(X"24", X"0004"); -- Channel B hi period 40 ns
+    sbwr(X"27", X"0CBB"); -- Channel C phase delay 66 ns
+    sbwr(X"26", X"0004"); -- Channel C hi period 40 ns
+    Ilock_rtn <= '0';
     sbwr(X"20", X"0001"); -- Enable
-    assert Run = '1' report "Expected Run" severity error;
     wait for 200 ns;
-    assert Run = '1' report "Expected Run still after 200 ns" severity error;
-    wait for 300 ns;
-    assert Run = '0' report "Expected !Run after timeout" severity error;
-    RunStatus <= '1';
-    wait for 1 us;
-    assert Run = '0' report "Expected !Run after RunStatus update" severity error;
-    RunStatus <= '0';
-    sbwr(X"20", X"0000"); -- Disable
-    assert Run = '0' report "Expected !Run" severity error;
-    sbwr(X"20", X"0001"); -- Enable
-    assert Run = '1' report "Expected Run" severity error;
-    RunStatus <= '1';
-    wait for 1000 ns;
-    assert Run = '1' report "Expected Runstill after 1us" severity error;
-    wait for 100 ns;
     sbrd(X"20");
-    sbrd(X"21");
-    sbrd(X"22");
-    sbrd(X"23");
-    sbrd(X"24");
-    sbrd(X"25");
-    sbrd(X"26");
-    sbrd(X"27");
+    assert ReadData(0) = '1' report "Expected RunCmd" severity error;
+    assert ReadData(1) = '0' report "Expected !Ilock_rtn" severity error;
+    assert ReadData(2) = '1' report "Expected Failing" severity error;
+    Ilock_rtn <= '1';
+    wait for 1 us;
+    sbrd(X"20");
+    assert ReadData(0) = '1' report "Expected RunCmd after Ilock fix" severity error;
+    assert ReadData(1) = '0' report "Expected !Ilock_rtn after Ilock fix" severity error;
+    assert ReadData(2) = '1' report "Expected Failing after Ilock fix" severity error;
+    Ilock_rtn <= '0';
+    sbwr(X"20", X"0000"); -- Disable
+    wait for 400 ns;
+    sbrd(X"20");
+    assert ReadData(0) = '0' report "Expected RunCmd" severity error;
+    assert ReadData(1) = '0' report "Expected !Ilock_rtn" severity error;
+    assert ReadData(2) = '0' report "Expected !Failing" severity error;
+    Ilock_rtn <= '1';
+    wait for 100 ns;
+    sbwr(X"20", X"0001"); -- Enable
+    wait for 200 ns;
+    sbrd(X"20");
+    assert ReadData(0) = '1' report "Expected RunCmd" severity error;
+    assert ReadData(1) = '1' report "Expected Ilock_rtn" severity error;
+    assert ReadData(2) = '0' report "Expected !Failing" severity error;
+    wait for 1 us;
+    sbwr(X"20", X"0000"); -- Disable
+    wait for 400 ns;
+    sbrd(X"20");
+    assert ReadData(0) = '0' report "Expected RunCmd" severity error;
+    assert ReadData(1) = '0' report "Expected !Ilock_rtn" severity error;
+    assert ReadData(2) = '0' report "Expected !Failing" severity error;
+    sbwr(X"20", X"0001"); -- Enable
+    wait for 200 ns;
+    sbrd(X"20");
+    assert ReadData(0) = '1' report "Expected RunCmd" severity error;
+    assert ReadData(1) = '1' report "Expected Ilock_rtn" severity error;
+    assert ReadData(2) = '0' report "Expected !Failing" severity error;
+    wait for 1 us;
+    Ilock_rtn <= '0';
+    wait for 40 ns;
+    sbrd(X"20");
+    assert ReadData(0) = '1' report "Expected RunCmd" severity error;
+    assert ReadData(1) = '0' report "Expected !Ilock_rtn" severity error;
+    assert ReadData(2) = '1' report "Expected Failing" severity error;
+    sbwr(X"20", X"0000"); -- Disable
+    Ilock_rtn <= '1';
+    wait for 200 ns;
+    sbwr(X"20", X"0001"); -- Enable
+    for i in 1 to 4 loop
+      wait for 100 us;
+      sbrd(X"20");
+      sbrd(X"21");
+      sbrd(X"22");
+      sbrd(X"23");
+      sbrd(X"24");
+      sbrd(X"25");
+      sbrd(X"26");
+      sbrd(X"27");
+    end loop;
+    sbwr(X"27", X"0B00"); -- Channel C phase delay go backward
+    while ReadData /= X"0B00" loop
+      sbrd(X"27");
+    end loop;
     sbwr(X"20", X"0000"); -- Disable
     wait for 80 ns;
     
@@ -157,7 +194,6 @@ BEGIN
    -- pragma synthesis_on
   End Process;
   
-  -- RunStatus <= Run;
   Ctrl <= Ctrl_int;
   clk_100MHz <= clk;
 END ARCHITECTURE rtl;
