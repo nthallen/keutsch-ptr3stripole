@@ -21,7 +21,7 @@ unitName "numeric_std"
 ]
 instances [
 (Instance
-name "U_0"
+name "per_ctrl"
 duLibraryName "tripole_lib"
 duName "tri_per_ctrl"
 elements [
@@ -30,7 +30,7 @@ mwi 0
 uid 221,0
 )
 (Instance
-name "U_1"
+name "per_stat"
 duLibraryName "tripole_lib"
 duName "tri_per_stat"
 elements [
@@ -100,19 +100,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "03/10/2017"
+value "03/13/2017"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Mon"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Monday"
 )
 (vvPair
 variable "dd"
-value "10"
+value "13"
 )
 (vvPair
 variable "entity_name"
@@ -140,7 +140,7 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "03/10/2017"
+value "03/13/2017"
 )
 (vvPair
 variable "graphical_source_group"
@@ -152,7 +152,7 @@ value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "13:41:16"
+value "11:49:34"
 )
 (vvPair
 variable "group"
@@ -256,7 +256,7 @@ value "struct"
 )
 (vvPair
 variable "time"
-value "13:41:16"
+value "11:49:34"
 )
 (vvPair
 variable "unit"
@@ -1054,8 +1054,8 @@ uid 226,0
 va (VaSet
 font "Arial,8,1"
 )
-xt "20750,18500,22550,19500"
-st "U_0"
+xt "20750,18500,23950,19500"
+st "per_ctrl"
 blo "20750,19300"
 tm "InstanceNameMgr"
 )
@@ -1249,8 +1249,8 @@ uid 1161,0
 va (VaSet
 font "Arial,8,1"
 )
-xt "42750,22500,44550,23500"
-st "U_1"
+xt "42750,22500,46150,23500"
+st "per_stat"
 blo "42750,23300"
 tm "InstanceNameMgr"
 )
@@ -2817,12 +2817,12 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "106,124,1142,1024"
-viewArea "1400,-6000,68464,56001"
+windowSize "106,124,1143,1024"
+viewArea "1400,-6000,68547,53677"
 cachedDiagramExtent "0,0,69000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-7000,0"
-lastUid 2111,0
+lastUid 2172,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

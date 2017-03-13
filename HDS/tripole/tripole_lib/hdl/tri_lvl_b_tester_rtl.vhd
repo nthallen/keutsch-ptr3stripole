@@ -15,7 +15,7 @@ USE ieee.std_logic_arith.all;
 ENTITY tri_lvl_b_tester IS
    PORT (
       Addr        : OUT    std_logic_vector(7 DOWNTO 0);
-      clk_100MHz  : OUT    std_logic;
+      clk         : OUT    std_logic;
       Ctrl        : OUT    std_logic_vector(6 DOWNTO 0);
       Data_i      : IN     std_logic_vector(15 DOWNTO 0);
       Data_o      : OUT    std_logic_vector(15 DOWNTO 0);
@@ -40,7 +40,7 @@ ARCHITECTURE rtl OF tri_lvl_b_tester IS
    -- Architecture declarations
   SIGNAL Ctrl_int : std_logic_vector(6 DOWNTO 0);
   SIGNAL SimDone : std_logic;
-  SIGNAL clk : std_logic;
+  SIGNAL clk_int : std_logic;
   SIGNAL ReadData : std_logic_vector(15 DOWNTO 0);
   -- pragma synthesis_off
   alias RdEn is Ctrl_int(0);
@@ -56,15 +56,15 @@ ARCHITECTURE rtl OF tri_lvl_b_tester IS
   alias TwoSecondTO is Status(3);
   -- pragma synthesis_on
 BEGIN
-  f100m_clk : Process is
+  f200m_clk : Process is
   Begin
-    clk <= '0';
+    clk_int <= '0';
     -- pragma synthesis_off
     wait for 20 ns;
     while SimDone = '0' loop
-      clk <= '1';
+      clk_int <= '1';
       wait for 3 ns;
-      clk <= '0';
+      clk_int <= '0';
       wait for 2 ns;
     end loop;
     wait;
@@ -116,16 +116,16 @@ BEGIN
     Ilock_rtn <= '0';
     wait for 50 ns;
     rst <= '0';
-    wait until clk'Event and clk = '1';
-    wait until clk'Event and clk = '1';
+    wait until clk_int'Event and clk_int = '1';
+    wait until clk_int'Event and clk_int = '1';
     
     sbwr(X"20", X"0000"); -- Ensure off
-    sbwr(X"21", X"000C"); -- Period 100 ns
+    sbwr(X"21", X"0016"); -- Period 110 ns ~9 MHz
     sbwr(X"23", X"0000"); -- Channel A phase 0
-    sbwr(X"22", X"0004"); -- Channel A hi period 40 ns
-    sbwr(X"25", X"0004"); -- Channel B phase (delay) 33 ns
+    sbwr(X"22", X"0005"); -- Channel A hi period 40 ns
+    sbwr(X"25", X"0E00"); -- Channel B phase (delay) 35 ns
     sbwr(X"24", X"0004"); -- Channel B hi period 40 ns
-    sbwr(X"27", X"0008"); -- Channel C phase delay 66 ns
+    sbwr(X"27", X"1F00"); -- Channel C phase delay 66 ns
     sbwr(X"26", X"0004"); -- Channel C hi period 40 ns
     Ilock_rtn <= '0';
     sbwr(X"20", X"0001"); -- Enable
@@ -179,15 +179,21 @@ BEGIN
     Ilock_rtn <= '1';
     wait for 200 ns;
     sbwr(X"20", X"0001"); -- Enable
-    wait for 100 ns;
-    sbrd(X"20");
-    sbrd(X"21");
-    sbrd(X"22");
-    sbrd(X"23");
-    sbrd(X"24");
-    sbrd(X"25");
-    sbrd(X"26");
-    sbrd(X"27");
+    for i in 1 to 4 loop
+      wait for 100 us;
+      sbrd(X"20");
+      sbrd(X"21");
+      sbrd(X"22");
+      sbrd(X"23");
+      sbrd(X"24");
+      sbrd(X"25");
+      sbrd(X"26");
+      sbrd(X"27");
+    end loop;
+    sbwr(X"27", X"1E1E"); -- Channel C phase delay 66 ns
+    while ReadData /= X"1E1E" loop
+      sbrd(X"27");
+    end loop;
     sbwr(X"20", X"0000"); -- Disable
     wait for 80 ns;
     
@@ -198,5 +204,5 @@ BEGIN
   
   -- Ilock_rtn <= Run;
   Ctrl <= Ctrl_int;
-  clk_100MHz <= clk;
+  clk <= clk_int;
 END rtl;

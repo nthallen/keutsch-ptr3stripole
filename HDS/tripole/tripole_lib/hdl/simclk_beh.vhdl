@@ -31,11 +31,11 @@ ARCHITECTURE beh OF simclk IS
   SIGNAL delay_count : integer range 0 to 279;
   SIGNAL delay_start : std_logic;
   SIGNAL done_count : unsigned(3 DOWNTO 0);
-  CONSTANT HALF_PERIOD : integer := CLK_PERIOD/(PHASE_RES*2);
 BEGIN
   dly : process is
   BEGIN
     if rst = '0' then
+      --pragma synthesis_off
       wait until clk'event AND clk = '1';
       -- wait for (delay_count*CLK_PERIOD/PHASE_RES) ps;
       for i in 1 to delay_count loop
@@ -43,23 +43,30 @@ BEGIN
       end loop;
       delay_start <= '1';
       wait for 9 ps;
+      --pragma synthesis_on
       delay_start <= '0';
     else
       delay_start <= '0';
+      --pragma synthesis_off
       wait for 10 ns;
+      --pragma synthesis_on
     end if;
   END process;
   
   dlyclkproc : process is
   BEGIN
     IF rst = '0' THEN
+      --pragma synthesis_off
       wait until delay_start'event AND delay_start = '1';
       dlyclk <= '1';
       wait for 2500 ps;
+      --pragma synthesis_on
       dlyclk <= '0';
     ELSE
       dlyclk <= '0';
+      --pragma synthesis_off
       wait for 10 ns;
+      --pragma synthesis_on
     END IF;
   END process;
   
@@ -76,7 +83,7 @@ BEGIN
         IF PSEN = '1' THEN
           done_count <= to_unsigned(13,4);
           IF PSINCDEC = '1' THEN
-            IF delay_count = PHASE_RES-2 THEN
+            IF delay_count = PHASE_RES-1 THEN
               delay_count <= 0;
             ELSE
               delay_count <= delay_count+1;

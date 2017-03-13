@@ -54,6 +54,7 @@ ARCHITECTURE beh OF phase IS
 BEGIN
 
   wrctrl: process (clk) is
+    VARIABLE Phase_cmd : unsigned(PHASE_BITS-1 DOWNTO 0);
   BEGIN
     IF clk'event AND clk = '1' THEN
       IF rst = '1' THEN
@@ -61,7 +62,14 @@ BEGIN
         Phase_in <= (others => '0');
       ELSE
         IF WrEn = '1' AND PerEn = '1' THEN
-          Phase_in <= unsigned(WData(PHASE_BITS-1 DOWNTO 0));
+          IF ADJUSTABLE = '1' THEN
+            Phase_cmd := unsigned(WData(PHASE_BITS-1 DOWNTO 0));
+            IF Phase_cmd < PHASE_RES THEN
+              Phase_in <= Phase_cmd;
+            ELSE
+              Phase_in <= to_unsigned(PHASE_RES,PHASE_BITS);
+            END IF;
+          END IF;
           Di_in <= unsigned(WData(PHASE_BITS+DELAY_BITS-1 DOWNTO PHASE_BITS));
         END IF;
       END IF;

@@ -19,6 +19,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 LIBRARY tripole_lib;
 USE tripole_lib.ALL;
+USE ieee.numeric_std.all;
 
 
 ARCHITECTURE rtl OF tri_lvl_b_tb IS
@@ -27,7 +28,7 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
 
    -- Internal signal declarations
    SIGNAL Addr        : std_logic_vector(7 DOWNTO 0);
-   SIGNAL clk_100MHz  : std_logic;
+   SIGNAL clk  : std_logic;
    SIGNAL Ctrl        : std_logic_vector(6 DOWNTO 0);
    SIGNAL Data_i      : std_logic_vector(15 DOWNTO 0);
    SIGNAL Data_o      : std_logic_vector(15 DOWNTO 0);
@@ -39,35 +40,53 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
    SIGNAL Fail_Out    : std_logic_vector(0 DOWNTO 0);
    SIGNAL Ilock_fail  : std_logic;
    SIGNAL Switches    : std_logic_vector(0-1 DOWNTO 0);
+   SIGNAL clkB        : std_logic;
+   SIGNAL PSENB       : std_logic;
+   SIGNAL PSINCDECB   : std_logic;
+   SIGNAL PSDONEB     : std_logic;
+   SIGNAL clkC        : std_logic;
+   SIGNAL PSENC       : std_logic;
+   SIGNAL PSINCDECC   : std_logic;
+   SIGNAL PSDONEC     : std_logic;
 
 
    -- Component declarations
    COMPONENT tri_lvl_b
       GENERIC( 
-        N_INTERRUPTS : integer := 1;
-        SW_WIDTH     : integer := 16
+        N_INTERRUPTS : integer                       := 1;
+        SW_WIDTH     : integer                       := 16;
+        BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0008";
+        N_BOARDS     : integer                       := 8
       );
-      PORT (
-         Addr        : IN     std_logic_vector(7 DOWNTO 0);
-         clk_100MHz  : IN     std_logic;
-         Ctrl        : IN     std_logic_vector(6 DOWNTO 0);
-         Ilock_rtn   : IN     std_logic;
-         Switches    : IN     std_logic_vector (SW_WIDTH-1 DOWNTO 0);
-         Data_i      : OUT    std_logic_vector(15 DOWNTO 0);
-         Data_o      : IN     std_logic_vector(15 DOWNTO 0);
-         Fail_Out    : OUT    std_logic_vector(0 DOWNTO 0);
-         Ilock_fail    : OUT    std_logic;
-         Status      : OUT    std_logic_vector(3 DOWNTO 0);
-         tri_pulse_A : OUT    std_logic;
-         tri_pulse_B : OUT    std_logic;
-         tri_pulse_C : OUT    std_logic
+      PORT( 
+        Addr        : IN     std_logic_vector (7 DOWNTO 0);
+        Ctrl        : IN     std_logic_vector (6 DOWNTO 0);
+        Data_o      : IN     std_logic_vector (15 DOWNTO 0);
+        Ilock_rtn   : IN     std_logic;
+        PSDONEB     : IN     std_logic;
+        PSDONEC     : IN     std_logic;
+        Switches    : IN     std_logic_vector (SW_WIDTH-1 DOWNTO 0);
+        clk         : IN     std_logic;
+        clkB        : IN     std_logic;
+        clkC        : IN     std_logic;
+        Data_i      : OUT    std_logic_vector (15 DOWNTO 0);
+        Fail_Out    : OUT    std_logic_vector (0 TO 0);
+        Ilock_fail  : OUT    std_logic;
+        PSENB       : OUT    std_logic;
+        PSENC       : OUT    std_logic;
+        PSINCDECB   : OUT    std_logic;
+        PSINCDECC   : OUT    std_logic;
+        Status      : OUT    std_logic_vector (3 DOWNTO 0);
+        tri_pulse_A : OUT    std_logic;
+        tri_pulse_B : OUT    std_logic;
+        tri_pulse_C : OUT    std_logic
       );
    END COMPONENT;
 
    COMPONENT tri_lvl_b_tester
       PORT (
          Addr        : OUT    std_logic_vector(7 DOWNTO 0);
-         clk_100MHz  : OUT    std_logic;
+         clk         : OUT    std_logic;
          Ctrl        : OUT    std_logic_vector(6 DOWNTO 0);
          Data_i      : IN     std_logic_vector(15 DOWNTO 0);
          Data_o      : OUT    std_logic_vector(15 DOWNTO 0);
@@ -80,51 +99,101 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
          tri_pulse_C : IN     std_logic
       );
    END COMPONENT;
+   COMPONENT simclk
+     GENERIC (
+       CLK_PERIOD : integer := 5000;
+       PHASE_RES  : integer := 280
+     );
+     PORT (
+       PSEN     : IN     std_logic;
+       PSINCDEC : IN     std_logic;
+       PSDONE   : OUT    std_logic;
+       clk      : IN     std_logic;
+       dlyclk   : OUT    std_logic;
+       rst      : IN     std_logic
+     );
+   END COMPONENT simclk;
 
    -- embedded configurations
    -- pragma synthesis_off
    FOR DUT : tri_lvl_b USE ENTITY tripole_lib.tri_lvl_b;
    FOR tester : tri_lvl_b_tester USE ENTITY tripole_lib.tri_lvl_b_tester;
+   FOR ALL : simclk USE ENTITY tripole_lib.simclk;
    -- pragma synthesis_on
 
 BEGIN
 
-         DUT : tri_lvl_b
-            GENERIC MAP (
-              N_INTERRUPTS => 0,
-              SW_WIDTH => 0
-            )
-            PORT MAP (
-               Addr        => Addr,
-               clk_100MHz  => clk_100MHz,
-               Ctrl        => Ctrl,
-               Data_i      => Data_i,
-               Data_o      => Data_o,
-               Switches    => Switches,
-               Status      => Status,
-               Ilock_rtn   => Ilock_rtn,
-               Fail_Out    => Fail_Out,
-               Ilock_fail  => Ilock_fail,
-               tri_pulse_A => tri_pulse_A,
-               tri_pulse_B => tri_pulse_B,
-               tri_pulse_C => tri_pulse_C
-            );
+   DUT : tri_lvl_b
+      GENERIC MAP (
+        N_INTERRUPTS => 0,
+        SW_WIDTH => 0
+      )
+      PORT MAP (
+         Addr        => Addr,
+         clk         => clk,
+         Ctrl        => Ctrl,
+         Data_i      => Data_i,
+         Data_o      => Data_o,
+         Switches    => Switches,
+         Status      => Status,
+         Ilock_rtn   => Ilock_rtn,
+         Fail_Out    => Fail_Out,
+         Ilock_fail  => Ilock_fail,
+         tri_pulse_A => tri_pulse_A,
+         tri_pulse_B => tri_pulse_B,
+         tri_pulse_C => tri_pulse_C,
+         PSENB       => PSENB,
+         PSINCDECB   => PSINCDECB,
+         PSDONEB     => PSDONEB,
+         clkB        => clkB,
+         PSENC       => PSENC,
+         PSINCDECC   => PSINCDECC,
+         PSDONEC     => PSDONEC,
+         clkC        => clkC
+      );
 
-         tester : tri_lvl_b_tester
-            PORT MAP (
-               Addr        => Addr,
-               clk_100MHz  => clk_100MHz,
-               Ctrl        => Ctrl,
-               Data_i      => Data_i,
-               Data_o      => Data_o,
-               Status      => Status,
-               Ilock_rtn   => Ilock_rtn,
-               Fail_Out    => Fail_Out,
-               Ilock_fail  => Ilock_fail,
-               tri_pulse_A => tri_pulse_A,
-               tri_pulse_B => tri_pulse_B,
-               tri_pulse_C => tri_pulse_C
-            );
+   tester : tri_lvl_b_tester
+      PORT MAP (
+         Addr        => Addr,
+         clk         => clk,
+         Ctrl        => Ctrl,
+         Data_i      => Data_i,
+         Data_o      => Data_o,
+         Status      => Status,
+         Ilock_rtn   => Ilock_rtn,
+         Fail_Out    => Fail_Out,
+         Ilock_fail  => Ilock_fail,
+         tri_pulse_A => tri_pulse_A,
+         tri_pulse_B => tri_pulse_B,
+         tri_pulse_C => tri_pulse_C
+      );
 
+  clkgenB : simclk
+    GENERIC MAP (
+      CLK_PERIOD => 5000,
+      PHASE_RES  => 280
+    )
+    PORT MAP (
+      PSEN     => PSENB,
+      PSINCDEC => PSINCDECB,
+      PSDONE   => PSDONEB,
+      clk      => clk,
+      dlyclk   => clkB,
+      rst      => Ctrl(4)
+    );
+
+  clkgenC : simclk
+    GENERIC MAP (
+      CLK_PERIOD => 5000,
+      PHASE_RES  => 280
+    )
+    PORT MAP (
+      PSEN     => PSENC,
+      PSINCDEC => PSINCDECC,
+      PSDONE   => PSDONEC,
+      clk      => clk,
+      dlyclk   => clkC,
+      rst      => Ctrl(4)
+    );
 
 END rtl;

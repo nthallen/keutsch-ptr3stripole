@@ -31,16 +31,26 @@ ARCHITECTURE rtl OF tri_wrap_tb IS
   SIGNAL Data_o      : std_logic_vector(15 DOWNTO 0);
   SIGNAL Status      : std_logic_vector(3 DOWNTO 0);
   SIGNAL Run         : std_logic;
-  SIGNAL RunStatus   : std_logic;
+  SIGNAL Ilock_rtn   : std_logic;
   SIGNAL leds        : std_logic_vector(1 DOWNTO 0);
   SIGNAL tri_pulse_A : std_logic;
   SIGNAL tri_pulse_B : std_logic;
   SIGNAL tri_pulse_C : std_logic;
   SIGNAL clk         : std_logic;
-
+  SIGNAL PSDONEB     : std_logic;
+  SIGNAL PSDONEC     : std_logic;
+  SIGNAL clkB        : std_logic;
+  SIGNAL clkC        : std_logic;
+  SIGNAL PSENB       : std_logic;
+  SIGNAL PSENC       : std_logic;
+  SIGNAL PSINCDECB   : std_logic;
+  SIGNAL PSINCDECC   : std_logic;
 
   -- Component declarations
   COMPONENT tri_wrap
+    GENERIC (
+      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0009"
+    );
     PORT (
       Addr        : IN     std_logic_vector(7 DOWNTO 0);
       Ctrl        : IN     std_logic_vector(6 DOWNTO 0);
@@ -53,7 +63,15 @@ ARCHITECTURE rtl OF tri_wrap_tb IS
       tri_pulse_A : OUT    std_logic;
       tri_pulse_B : OUT    std_logic;
       tri_pulse_C : OUT    std_logic;
-      clk         : IN     std_logic
+      clk         : IN     std_logic;
+      PSDONEB     : IN     std_logic;
+      PSDONEC     : IN     std_logic;
+      clkB        : IN     std_logic;
+      clkC        : IN     std_logic;
+      PSENB       : OUT    std_logic;
+      PSENC       : OUT    std_logic;
+      PSINCDECB   : OUT    std_logic;
+      PSINCDECC   : OUT    std_logic
     );
   END COMPONENT tri_wrap;
 
@@ -65,7 +83,7 @@ ARCHITECTURE rtl OF tri_wrap_tb IS
       Data_o      : OUT    std_logic_vector(15 DOWNTO 0);
       Status      : IN     std_logic_vector(3 DOWNTO 0);
       Run         : IN     std_logic;
-      RunStatus   : OUT    std_logic;
+      Ilock_rtn   : OUT    std_logic;
       leds        : IN     std_logic_vector(1 DOWNTO 0);
       tri_pulse_A : IN     std_logic;
       tri_pulse_B : IN     std_logic;
@@ -73,6 +91,21 @@ ARCHITECTURE rtl OF tri_wrap_tb IS
       clk_100MHz  : OUT    std_logic
     );
   END COMPONENT tri_wrap_tester;
+
+  COMPONENT simclk
+    GENERIC (
+      CLK_PERIOD : integer := 5000;
+      PHASE_RES  : integer := 280
+    );
+    PORT (
+      PSEN     : IN     std_logic;
+      PSINCDEC : IN     std_logic;
+      PSDONE   : OUT    std_logic;
+      clk      : IN     std_logic;
+      dlyclk   : OUT    std_logic;
+      rst      : IN     std_logic
+    );
+  END COMPONENT simclk;
 
   -- embedded configurations
   -- pragma synthesis_off
@@ -90,12 +123,20 @@ BEGIN
         Data_o      => Data_o,
         Status      => Status,
         Ilock_out   => Run,
-        Ilock_rtn   => RunStatus,
+        Ilock_rtn   => Ilock_rtn,
         leds        => leds,
         tri_pulse_A => tri_pulse_A,
         tri_pulse_B => tri_pulse_B,
         tri_pulse_C => tri_pulse_C,
-        clk         => clk
+        clk         => clk,
+        PSDONEB     => PSDONEB,
+        PSDONEC     => PSDONEC,
+        clkB        => clkB,
+        clkC        => clkC,
+        PSENB       => PSENB,
+        PSENC       => PSENC,
+        PSINCDECB   => PSINCDECB,
+        PSINCDECC   => PSINCDECC
       );
 
     tester : tri_wrap_tester
@@ -106,13 +147,41 @@ BEGIN
         Data_o      => Data_o,
         Status      => Status,
         Run         => Run,
-        RunStatus   => RunStatus,
+        Ilock_rtn   => Ilock_rtn,
         leds        => leds,
         tri_pulse_A => tri_pulse_A,
         tri_pulse_B => tri_pulse_B,
         tri_pulse_C => tri_pulse_C,
         clk_100MHz  => clk
       );
+
+  clkgenB : simclk
+    GENERIC MAP (
+      CLK_PERIOD => 5000,
+      PHASE_RES  => 280
+    )
+    PORT MAP (
+      PSEN     => PSENB,
+      PSINCDEC => PSINCDECB,
+      PSDONE   => PSDONEB,
+      clk      => clk,
+      dlyclk   => clkB,
+      rst      => Ctrl(4)
+    );
+
+  clkgenC : simclk
+    GENERIC MAP (
+      CLK_PERIOD => 5000,
+      PHASE_RES  => 280
+    )
+    PORT MAP (
+      PSEN     => PSENC,
+      PSINCDEC => PSINCDECC,
+      PSDONE   => PSDONEC,
+      clk      => clk,
+      dlyclk   => clkC,
+      rst      => Ctrl(4)
+    );
 
 
 END ARCHITECTURE rtl;

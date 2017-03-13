@@ -90,6 +90,11 @@ name "lvl_c"
 duLibraryName "tripole_lib"
 duName "tri_lvl_c"
 elements [
+(GiElement
+name "DELAY_BITS"
+type "integer"
+value "7"
+)
 ]
 mwi 0
 uid 3603,0
@@ -147,19 +152,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "03/10/2017"
+value "03/13/2017"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Mon"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Monday"
 )
 (vvPair
 variable "dd"
-value "10"
+value "13"
 )
 (vvPair
 variable "entity_name"
@@ -187,7 +192,7 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "03/10/2017"
+value "03/13/2017"
 )
 (vvPair
 variable "graphical_source_group"
@@ -199,7 +204,7 @@ value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "13:48:44"
+value "11:10:42"
 )
 (vvPair
 variable "group"
@@ -303,7 +308,7 @@ value "struct"
 )
 (vvPair
 variable "time"
-value "13:48:44"
+value "11:10:42"
 )
 (vvPair
 variable "unit"
@@ -684,7 +689,7 @@ decl (Decl
 n "ExpAddr"
 t "std_logic_vector"
 b "(7 DOWNTO 0)"
-o 21
+o 24
 suid 15,0
 )
 declText (MLText
@@ -702,7 +707,7 @@ uid 332,0
 decl (Decl
 n "ExpWr"
 t "std_logic"
-o 24
+o 27
 suid 18,0
 )
 declText (MLText
@@ -720,7 +725,7 @@ uid 334,0
 decl (Decl
 n "ExpRd"
 t "std_logic"
-o 22
+o 25
 suid 19,0
 )
 declText (MLText
@@ -738,7 +743,7 @@ uid 372,0
 decl (Decl
 n "ExpReset"
 t "std_logic"
-o 23
+o 26
 suid 26,0
 )
 declText (MLText
@@ -845,7 +850,7 @@ uid 508,0
 decl (Decl
 n "clk"
 t "std_logic"
-o 4
+o 8
 suid 40,0
 )
 declText (MLText
@@ -1803,7 +1808,7 @@ uid 1284,0
 decl (Decl
 n "tri_pulse_A"
 t "std_logic"
-o 8
+o 19
 suid 47,0
 )
 declText (MLText
@@ -1822,7 +1827,7 @@ decl (Decl
 n "RData"
 t "std_logic_vector"
 b "(16*N_BOARDS-1 DOWNTO 0)"
-o 27
+o 28
 suid 50,0
 )
 declText (MLText
@@ -1928,7 +1933,7 @@ uid 1747,0
 decl (Decl
 n "tri_pulse_B"
 t "std_logic"
-o 9
+o 20
 suid 55,0
 )
 declText (MLText
@@ -1946,7 +1951,7 @@ uid 1749,0
 decl (Decl
 n "tri_pulse_C"
 t "std_logic"
-o 10
+o 21
 suid 56,0
 )
 declText (MLText
@@ -2157,7 +2162,7 @@ decl (Decl
 n "Data_i"
 t "std_logic_vector"
 b "(15 DOWNTO 0)"
-o 5
+o 11
 suid 80,0
 )
 declText (MLText
@@ -2220,7 +2225,7 @@ decl (Decl
 n "Status"
 t "std_logic_vector"
 b "(3 DOWNTO 0)"
-o 7
+o 18
 suid 81,0
 )
 declText (MLText
@@ -2283,7 +2288,7 @@ decl (Decl
 n "BdIntr"
 t "std_logic_vector"
 b "(N_INTERRUPTS-1 downto 0)"
-o 16
+o 22
 suid 85,0
 i "(others => '0')"
 )
@@ -2347,7 +2352,7 @@ uid 2659,0
 decl (Decl
 n "Ilock_rtn"
 t "std_logic"
-o 32
+o 4
 suid 86,0
 )
 declText (MLText
@@ -2409,7 +2414,7 @@ uid 2839,0
 decl (Decl
 n "Ilock_fail"
 t "std_logic"
-o 25
+o 13
 suid 88,0
 )
 declText (MLText
@@ -2472,7 +2477,7 @@ decl (Decl
 n "Fail_Out"
 t "std_logic_vector"
 b "(0 TO 0)"
-o 33
+o 12
 suid 89,0
 )
 declText (MLText
@@ -2491,7 +2496,7 @@ decl (Decl
 n "Switches"
 t "std_logic_vector"
 b "(SW_WIDTH-1 DOWNTO 0)"
-o 34
+o 7
 suid 90,0
 )
 declText (MLText
@@ -3672,11 +3677,18 @@ uid 3611,0
 va (VaSet
 font "Courier New,8,0"
 )
-xt "-16250,40500,-16250,40500"
+xt "-16250,40500,750,41300"
+st "DELAY_BITS = 7    ( integer )  
+"
 )
 header ""
 )
 elements [
+(GiElement
+name "DELAY_BITS"
+type "integer"
+value "7"
+)
 ]
 )
 viewicon (ZoomableIcon
@@ -3936,7 +3948,7 @@ decl (Decl
 n "ExpAck"
 t "std_logic_vector"
 b "(N_BOARDS-1 DOWNTO 0)"
-o 31
+o 23
 suid 103,0
 )
 declText (MLText
@@ -3954,7 +3966,7 @@ uid 4141,0
 decl (Decl
 n "PSENB"
 t "std_logic"
-o 22
+o 14
 suid 104,0
 )
 declText (MLText
@@ -4016,7 +4028,7 @@ uid 4153,0
 decl (Decl
 n "PSDONEB"
 t "std_logic"
-o 23
+o 5
 suid 105,0
 )
 declText (MLText
@@ -4078,7 +4090,7 @@ uid 4165,0
 decl (Decl
 n "PSINCDECB"
 t "std_logic"
-o 24
+o 16
 suid 106,0
 )
 declText (MLText
@@ -4140,7 +4152,7 @@ uid 4177,0
 decl (Decl
 n "clkB"
 t "std_logic"
-o 25
+o 9
 suid 107,0
 )
 declText (MLText
@@ -4202,7 +4214,7 @@ uid 4189,0
 decl (Decl
 n "PSENC"
 t "std_logic"
-o 26
+o 15
 suid 108,0
 )
 declText (MLText
@@ -4264,7 +4276,7 @@ uid 4201,0
 decl (Decl
 n "PSINCDECC"
 t "std_logic"
-o 27
+o 17
 suid 109,0
 )
 declText (MLText
@@ -4326,7 +4338,7 @@ uid 4213,0
 decl (Decl
 n "PSDONEC"
 t "std_logic"
-o 28
+o 6
 suid 110,0
 )
 declText (MLText
@@ -4388,7 +4400,7 @@ uid 4225,0
 decl (Decl
 n "clkC"
 t "std_logic"
-o 29
+o 10
 suid 111,0
 )
 declText (MLText
@@ -5957,7 +5969,7 @@ tm "BdCompilerDirectivesTextMgr"
 associable 1
 )
 windowSize "0,14,1281,1024"
-viewArea "-67628,427,48351,94819"
+viewArea "-67600,400,48114,94576"
 cachedDiagramExtent "-66000,1000,117650,85000"
 pageSetupInfo (PageSetupInfo
 ptrCmd ""
@@ -5981,7 +5993,7 @@ exportStdPackageRefs 1
 )
 hasePageBreakOrigin 1
 pageBreakOrigin "-68000,0"
-lastUid 4252,0
+lastUid 4317,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -7078,7 +7090,7 @@ decl (Decl
 n "ExpAddr"
 t "std_logic_vector"
 b "(7 DOWNTO 0)"
-o 21
+o 24
 suid 15,0
 )
 )
@@ -7090,7 +7102,7 @@ m 4
 decl (Decl
 n "ExpWr"
 t "std_logic"
-o 24
+o 27
 suid 18,0
 )
 )
@@ -7102,7 +7114,7 @@ m 4
 decl (Decl
 n "ExpRd"
 t "std_logic"
-o 22
+o 25
 suid 19,0
 )
 )
@@ -7114,7 +7126,7 @@ m 4
 decl (Decl
 n "ExpReset"
 t "std_logic"
-o 23
+o 26
 suid 26,0
 )
 )
@@ -7125,7 +7137,7 @@ port (LogicalPort
 decl (Decl
 n "clk"
 t "std_logic"
-o 4
+o 8
 suid 40,0
 )
 )
@@ -7137,7 +7149,7 @@ m 1
 decl (Decl
 n "tri_pulse_A"
 t "std_logic"
-o 8
+o 19
 suid 47,0
 )
 )
@@ -7150,7 +7162,7 @@ decl (Decl
 n "RData"
 t "std_logic_vector"
 b "(16*N_BOARDS-1 DOWNTO 0)"
-o 27
+o 28
 suid 50,0
 )
 )
@@ -7162,7 +7174,7 @@ m 1
 decl (Decl
 n "tri_pulse_B"
 t "std_logic"
-o 9
+o 20
 suid 55,0
 )
 )
@@ -7174,7 +7186,7 @@ m 1
 decl (Decl
 n "tri_pulse_C"
 t "std_logic"
-o 10
+o 21
 suid 56,0
 )
 )
@@ -7223,7 +7235,7 @@ decl (Decl
 n "Data_i"
 t "std_logic_vector"
 b "(15 DOWNTO 0)"
-o 5
+o 11
 suid 80,0
 )
 )
@@ -7236,7 +7248,7 @@ decl (Decl
 n "Status"
 t "std_logic_vector"
 b "(3 DOWNTO 0)"
-o 7
+o 18
 suid 81,0
 )
 )
@@ -7249,7 +7261,7 @@ decl (Decl
 n "BdIntr"
 t "std_logic_vector"
 b "(N_INTERRUPTS-1 downto 0)"
-o 16
+o 22
 suid 85,0
 i "(others => '0')"
 )
@@ -7261,7 +7273,7 @@ port (LogicalPort
 decl (Decl
 n "Ilock_rtn"
 t "std_logic"
-o 32
+o 4
 suid 86,0
 )
 )
@@ -7274,7 +7286,7 @@ m 1
 decl (Decl
 n "Ilock_fail"
 t "std_logic"
-o 25
+o 13
 suid 88,0
 )
 )
@@ -7287,7 +7299,7 @@ decl (Decl
 n "Fail_Out"
 t "std_logic_vector"
 b "(0 TO 0)"
-o 33
+o 12
 suid 89,0
 )
 )
@@ -7299,7 +7311,7 @@ decl (Decl
 n "Switches"
 t "std_logic_vector"
 b "(SW_WIDTH-1 DOWNTO 0)"
-o 34
+o 7
 suid 90,0
 )
 )
@@ -7312,7 +7324,7 @@ decl (Decl
 n "ExpAck"
 t "std_logic_vector"
 b "(N_BOARDS-1 DOWNTO 0)"
-o 31
+o 23
 suid 103,0
 )
 )
@@ -7324,7 +7336,7 @@ m 1
 decl (Decl
 n "PSENB"
 t "std_logic"
-o 22
+o 14
 suid 104,0
 )
 )
@@ -7335,7 +7347,7 @@ port (LogicalPort
 decl (Decl
 n "PSDONEB"
 t "std_logic"
-o 23
+o 5
 suid 105,0
 )
 )
@@ -7347,7 +7359,7 @@ m 1
 decl (Decl
 n "PSINCDECB"
 t "std_logic"
-o 24
+o 16
 suid 106,0
 )
 )
@@ -7358,7 +7370,7 @@ port (LogicalPort
 decl (Decl
 n "clkB"
 t "std_logic"
-o 25
+o 9
 suid 107,0
 )
 )
@@ -7370,7 +7382,7 @@ m 1
 decl (Decl
 n "PSENC"
 t "std_logic"
-o 26
+o 15
 suid 108,0
 )
 )
@@ -7382,7 +7394,7 @@ m 1
 decl (Decl
 n "PSINCDECC"
 t "std_logic"
-o 27
+o 17
 suid 109,0
 )
 )
@@ -7393,7 +7405,7 @@ port (LogicalPort
 decl (Decl
 n "PSDONEC"
 t "std_logic"
-o 28
+o 6
 suid 110,0
 )
 )
@@ -7404,7 +7416,7 @@ port (LogicalPort
 decl (Decl
 n "clkC"
 t "std_logic"
-o 29
+o 10
 suid 111,0
 )
 )
@@ -7462,31 +7474,31 @@ uid 72,0
 )
 *242 (MRCItem
 litem &208
-pos 8
+pos 24
 dimension 20
 uid 443,0
 )
 *243 (MRCItem
 litem &209
-pos 7
+pos 23
 dimension 20
 uid 447,0
 )
 *244 (MRCItem
 litem &210
-pos 6
+pos 22
 dimension 20
 uid 449,0
 )
 *245 (MRCItem
 litem &211
-pos 5
+pos 21
 dimension 20
 uid 451,0
 )
 *246 (MRCItem
 litem &212
-pos 9
+pos 25
 dimension 20
 uid 459,0
 )
@@ -7498,25 +7510,25 @@ uid 511,0
 )
 *248 (MRCItem
 litem &214
-pos 16
+pos 9
 dimension 20
 uid 1287,0
 )
 *249 (MRCItem
 litem &215
-pos 10
+pos 26
 dimension 20
 uid 1542,0
 )
 *250 (MRCItem
 litem &216
-pos 15
+pos 8
 dimension 20
 uid 1940,0
 )
 *251 (MRCItem
 litem &217
-pos 14
+pos 7
 dimension 20
 uid 1942,0
 )
@@ -7540,19 +7552,19 @@ uid 2028,0
 )
 *255 (MRCItem
 litem &221
-pos 13
+pos 6
 dimension 20
 uid 2030,0
 )
 *256 (MRCItem
 litem &222
-pos 12
+pos 5
 dimension 20
 uid 2032,0
 )
 *257 (MRCItem
 litem &223
-pos 11
+pos 27
 dimension 20
 uid 2143,0
 )
@@ -7564,73 +7576,73 @@ uid 2646,0
 )
 *259 (MRCItem
 litem &225
-pos 17
+pos 10
 dimension 20
 uid 2896,0
 )
 *260 (MRCItem
 litem &226
-pos 18
+pos 11
 dimension 20
 uid 2904,0
 )
 *261 (MRCItem
 litem &227
-pos 19
+pos 12
 dimension 20
 uid 2914,0
 )
 *262 (MRCItem
 litem &228
-pos 20
+pos 28
 dimension 20
 uid 3970,0
 )
 *263 (MRCItem
 litem &229
-pos 21
+pos 13
 dimension 20
 uid 4238,0
 )
 *264 (MRCItem
 litem &230
-pos 22
+pos 14
 dimension 20
 uid 4240,0
 )
 *265 (MRCItem
 litem &231
-pos 23
+pos 15
 dimension 20
 uid 4242,0
 )
 *266 (MRCItem
 litem &232
-pos 24
+pos 16
 dimension 20
 uid 4244,0
 )
 *267 (MRCItem
 litem &233
-pos 25
+pos 17
 dimension 20
 uid 4246,0
 )
 *268 (MRCItem
 litem &234
-pos 26
+pos 18
 dimension 20
 uid 4248,0
 )
 *269 (MRCItem
 litem &235
-pos 27
+pos 19
 dimension 20
 uid 4250,0
 )
 *270 (MRCItem
 litem &236
-pos 28
+pos 20
 dimension 20
 uid 4252,0
 )
