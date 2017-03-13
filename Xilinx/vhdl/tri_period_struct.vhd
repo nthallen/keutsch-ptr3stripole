@@ -56,7 +56,7 @@ USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 USE ieee.numeric_std.all;
 
-LIBRARY tripole_lib;
+-- LIBRARY tripole_lib;
 
 ARCHITECTURE struct OF tri_period IS
 
@@ -107,9 +107,9 @@ ARCHITECTURE struct OF tri_period IS
 
   -- Optional embedded configurations
   -- pragma synthesis_off
-  FOR ALL : dither_wq USE ENTITY tripole_lib.dither_wq;
-  FOR ALL : tri_per_ctrl USE ENTITY tripole_lib.tri_per_ctrl;
-  FOR ALL : tri_per_stat USE ENTITY tripole_lib.tri_per_stat;
+-- FOR ALL : dither_wq USE ENTITY tripole_lib.dither_wq;
+-- FOR ALL : tri_per_ctrl USE ENTITY tripole_lib.tri_per_ctrl;
+-- FOR ALL : tri_per_stat USE ENTITY tripole_lib.tri_per_stat;
   -- pragma synthesis_on
 
 

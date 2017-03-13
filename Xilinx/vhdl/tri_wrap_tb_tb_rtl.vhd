@@ -16,7 +16,7 @@ ENTITY tri_wrap_tb IS
 END ENTITY tri_wrap_tb;
 
 
-LIBRARY tripole_lib;
+-- LIBRARY tripole_lib;
 USE tripole_lib.ALL;
 
 

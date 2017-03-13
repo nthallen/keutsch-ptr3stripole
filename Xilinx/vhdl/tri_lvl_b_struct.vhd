@@ -69,7 +69,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
-LIBRARY tripole_lib;
+-- LIBRARY tripole_lib;
 
 ARCHITECTURE struct OF tri_lvl_b IS
 
@@ -164,8 +164,8 @@ ARCHITECTURE struct OF tri_lvl_b IS
 
   -- Optional embedded configurations
   -- pragma synthesis_off
-  FOR ALL : syscon USE ENTITY tripole_lib.syscon;
-  FOR ALL : tri_lvl_c USE ENTITY tripole_lib.tri_lvl_c;
+-- FOR ALL : syscon USE ENTITY tripole_lib.syscon;
+-- FOR ALL : tri_lvl_c USE ENTITY tripole_lib.tri_lvl_c;
   -- pragma synthesis_on
 
 
