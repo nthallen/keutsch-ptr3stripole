@@ -46,6 +46,11 @@ name "DELAY_BITS"
 type "integer"
 value "DELAY_BITS"
 )
+(GiElement
+name "PHASE_RES"
+type "integer"
+value "PHASE_RES"
+)
 ]
 mwi 0
 uid 494,0
@@ -64,6 +69,11 @@ value "'1'"
 name "DELAY_BITS"
 type "integer"
 value "DELAY_BITS"
+)
+(GiElement
+name "PHASE_RES"
+type "integer"
+value "PHASE_RES"
 )
 ]
 mwi 0
@@ -205,19 +215,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "03/10/2017"
+value "03/14/2017"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Tue"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Tuesday"
 )
 (vvPair
 variable "dd"
-value "10"
+value "14"
 )
 (vvPair
 variable "entity_name"
@@ -245,7 +255,7 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "03/10/2017"
+value "03/14/2017"
 )
 (vvPair
 variable "graphical_source_group"
@@ -257,7 +267,7 @@ value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "13:20:22"
+value "20:58:03"
 )
 (vvPair
 variable "group"
@@ -361,7 +371,7 @@ value "struct"
 )
 (vvPair
 variable "time"
-value "13:20:22"
+value "20:58:03"
 )
 (vvPair
 variable "unit"
@@ -1969,9 +1979,11 @@ va (VaSet
 isHidden 1
 font "Courier New,8,0"
 )
-xt "-21000,30500,2000,32100"
+xt "-21000,30500,2000,32900"
 st "ADJUSTABLE = '1'           ( std_logic )  
-DELAY_BITS = DELAY_BITS    ( integer   )  "
+DELAY_BITS = DELAY_BITS    ( integer   )  
+PHASE_RES  = PHASE_RES     ( integer   )  
+"
 )
 header ""
 )
@@ -1985,6 +1997,11 @@ value "'1'"
 name "DELAY_BITS"
 type "integer"
 value "DELAY_BITS"
+)
+(GiElement
+name "PHASE_RES"
+type "integer"
+value "PHASE_RES"
 )
 ]
 )
@@ -2596,9 +2613,11 @@ va (VaSet
 isHidden 1
 font "Courier New,8,0"
 )
-xt "-21000,45500,2000,47100"
+xt "-21000,45500,2000,47900"
 st "ADJUSTABLE = '1'           ( std_logic )  
-DELAY_BITS = DELAY_BITS    ( integer   )  "
+DELAY_BITS = DELAY_BITS    ( integer   )  
+PHASE_RES  = PHASE_RES     ( integer   )  
+"
 )
 header ""
 )
@@ -2612,6 +2631,11 @@ value "'1'"
 name "DELAY_BITS"
 type "integer"
 value "DELAY_BITS"
+)
+(GiElement
+name "PHASE_RES"
+type "integer"
+value "PHASE_RES"
 )
 ]
 )
@@ -9479,8 +9503,8 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "0,0,1281,1010"
-viewArea "-59600,400,54857,93552"
+windowSize "0,0,1282,1010"
+viewArea "-59600,400,54965,93552"
 cachedDiagramExtent "-58000,0,43000,80000"
 pageSetupInfo (PageSetupInfo
 ptrCmd ""
@@ -9504,7 +9528,7 @@ exportStdPackageRefs 1
 )
 hasePageBreakOrigin 1
 pageBreakOrigin "-62000,1000"
-lastUid 1467,0
+lastUid 1544,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -11617,6 +11641,14 @@ value "7"
 )
 uid 1391,0
 )
+*456 (LogGeneric
+generic (GiElement
+name "PHASE_RES"
+type "integer"
+value "280"
+)
+uid 1543,0
+)
 ]
 )
 pdm (PhysicalDM
@@ -11624,7 +11656,7 @@ displayShortBounds 1
 editShortBounds 1
 uid 229,0
 optionalChildren [
-*456 (Sheet
+*457 (Sheet
 sheetRow (SheetRow
 headerVa (MVa
 cellColor "49152,49152,49152"
@@ -11641,37 +11673,43 @@ cellColor "39936,56832,65280"
 fontColor "0,0,0"
 font "Tahoma,10,0"
 )
-emptyMRCItem *457 (MRCItem
+emptyMRCItem *458 (MRCItem
 litem &443
-pos 1
+pos 2
 dimension 20
 )
 uid 231,0
 optionalChildren [
-*458 (MRCItem
+*459 (MRCItem
 litem &444
 pos 0
 dimension 20
 uid 232,0
 )
-*459 (MRCItem
+*460 (MRCItem
 litem &445
 pos 1
 dimension 23
 uid 233,0
 )
-*460 (MRCItem
+*461 (MRCItem
 litem &446
 pos 2
 hidden 1
 dimension 20
 uid 234,0
 )
-*461 (MRCItem
+*462 (MRCItem
 litem &455
 pos 0
 dimension 20
 uid 1392,0
+)
+*463 (MRCItem
+litem &456
+pos 1
+dimension 20
+uid 1544,0
 )
 ]
 )
@@ -11684,43 +11722,43 @@ textAngle 90
 )
 uid 235,0
 optionalChildren [
-*462 (MRCItem
+*464 (MRCItem
 litem &447
 pos 0
 dimension 20
 uid 236,0
 )
-*463 (MRCItem
+*465 (MRCItem
 litem &449
 pos 1
 dimension 50
 uid 237,0
 )
-*464 (MRCItem
+*466 (MRCItem
 litem &450
 pos 2
 dimension 100
 uid 238,0
 )
-*465 (MRCItem
+*467 (MRCItem
 litem &451
 pos 3
 dimension 100
 uid 239,0
 )
-*466 (MRCItem
+*468 (MRCItem
 litem &452
 pos 4
 dimension 50
 uid 240,0
 )
-*467 (MRCItem
+*469 (MRCItem
 litem &453
 pos 5
 dimension 50
 uid 241,0
 )
-*468 (MRCItem
+*470 (MRCItem
 litem &454
 pos 6
 dimension 80

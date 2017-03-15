@@ -95,6 +95,11 @@ name "DELAY_BITS"
 type "integer"
 value "7"
 )
+(GiElement
+name "PHASE_RES"
+type "integer"
+value "PHASE_RES"
+)
 ]
 mwi 0
 uid 3603,0
@@ -152,19 +157,19 @@ value "C:\\Users\\nort.ARP\\Documents\\Exp\\PTR3S\\PTR3Stripole\\HDS\\tripole\\t
 )
 (vvPair
 variable "date"
-value "03/13/2017"
+value "03/14/2017"
 )
 (vvPair
 variable "day"
-value "Mon"
+value "Tue"
 )
 (vvPair
 variable "day_long"
-value "Monday"
+value "Tuesday"
 )
 (vvPair
 variable "dd"
-value "13"
+value "14"
 )
 (vvPair
 variable "entity_name"
@@ -192,7 +197,7 @@ value "nort"
 )
 (vvPair
 variable "graphical_source_date"
-value "03/13/2017"
+value "03/14/2017"
 )
 (vvPair
 variable "graphical_source_group"
@@ -204,7 +209,7 @@ value "NORT-XPS14"
 )
 (vvPair
 variable "graphical_source_time"
-value "11:10:42"
+value "20:58:50"
 )
 (vvPair
 variable "group"
@@ -308,7 +313,7 @@ value "struct"
 )
 (vvPair
 variable "time"
-value "11:10:42"
+value "20:58:50"
 )
 (vvPair
 variable "unit"
@@ -679,8 +684,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,27400,-21000,28200"
-st "SIGNAL WData       : std_logic_vector(15 DOWNTO 0)
-"
+st "SIGNAL WData       : std_logic_vector(15 DOWNTO 0)"
 )
 )
 *13 (Net
@@ -698,8 +702,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,23400,-21500,24200"
-st "SIGNAL ExpAddr     : std_logic_vector(7 DOWNTO 0)
-"
+st "SIGNAL ExpAddr     : std_logic_vector(7 DOWNTO 0)"
 )
 )
 *14 (Net
@@ -716,8 +719,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,25800,-31500,26600"
-st "SIGNAL ExpWr       : std_logic
-"
+st "SIGNAL ExpWr       : std_logic"
 )
 )
 *15 (Net
@@ -734,8 +736,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,24200,-31500,25000"
-st "SIGNAL ExpRd       : std_logic
-"
+st "SIGNAL ExpRd       : std_logic"
 )
 )
 *16 (Net
@@ -752,8 +753,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,25000,-31500,25800"
-st "SIGNAL ExpReset    : std_logic
-"
+st "SIGNAL ExpReset    : std_logic"
 )
 )
 *17 (PortIoOut
@@ -859,8 +859,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,9600,-35000,10400"
-st "clk         : std_logic
-"
+st "clk         : std_logic"
 )
 )
 *20 (SaComponent
@@ -1817,8 +1816,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,18400,-35000,19200"
-st "tri_pulse_A : std_logic
-"
+st "tri_pulse_A : std_logic"
 )
 )
 *47 (Net
@@ -1836,8 +1834,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,26600,-15500,27400"
-st "SIGNAL RData       : std_logic_vector(16*N_BOARDS-1 DOWNTO 0)
-"
+st "SIGNAL RData       : std_logic_vector(16*N_BOARDS-1 DOWNTO 0)"
 )
 )
 *48 (PortIoOut
@@ -1942,8 +1939,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,19200,-35000,20000"
-st "tri_pulse_B : std_logic
-"
+st "tri_pulse_B : std_logic"
 )
 )
 *51 (Net
@@ -1960,8 +1956,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,20000,-35000,20800"
-st "tri_pulse_C : std_logic
-"
+st "tri_pulse_C : std_logic"
 )
 )
 *52 (Net
@@ -1979,8 +1974,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,4800,-25000,5600"
-st "Ctrl        : std_logic_vector(6 DOWNTO 0)
-"
+st "Ctrl        : std_logic_vector(6 DOWNTO 0)"
 )
 )
 *53 (PortIoIn
@@ -2043,8 +2037,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,4000,-25000,4800"
-st "Addr        : std_logic_vector(7 DOWNTO 0)
-"
+st "Addr        : std_logic_vector(7 DOWNTO 0)"
 )
 )
 *55 (PortIoIn
@@ -2107,8 +2100,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,5600,-24500,6400"
-st "Data_o      : std_logic_vector(15 DOWNTO 0)
-"
+st "Data_o      : std_logic_vector(15 DOWNTO 0)"
 )
 )
 *57 (PortIoIn
@@ -2171,8 +2163,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,12000,-24500,12800"
-st "Data_i      : std_logic_vector(15 DOWNTO 0)
-"
+st "Data_i      : std_logic_vector(15 DOWNTO 0)"
 )
 )
 *59 (PortIoOut
@@ -2234,8 +2225,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,17600,-25000,18400"
-st "Status      : std_logic_vector(3 DOWNTO 0)
-"
+st "Status      : std_logic_vector(3 DOWNTO 0)"
 )
 )
 *61 (PortIoOut
@@ -2298,8 +2288,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,21800,-5500,22600"
-st "SIGNAL BdIntr      : std_logic_vector(N_INTERRUPTS-1 downto 0) := (others => '0')
-"
+st "SIGNAL BdIntr      : std_logic_vector(N_INTERRUPTS-1 downto 0) := (others => '0')"
 )
 )
 *63 (PortIoIn
@@ -2361,8 +2350,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,6400,-35000,7200"
-st "Ilock_rtn   : std_logic
-"
+st "Ilock_rtn   : std_logic"
 )
 )
 *65 (PortIoOut
@@ -2423,8 +2411,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,13600,-35000,14400"
-st "Ilock_fail  : std_logic
-"
+st "Ilock_fail  : std_logic"
 )
 )
 *67 (PortIoOut
@@ -2486,8 +2473,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,12800,-27500,13600"
-st "Fail_Out    : std_logic_vector(0 TO 0)
-"
+st "Fail_Out    : std_logic_vector(0 TO 0)"
 )
 )
 *69 (Net
@@ -2505,8 +2491,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,8800,-20500,9600"
-st "Switches    : std_logic_vector(SW_WIDTH-1 DOWNTO 0)
-"
+st "Switches    : std_logic_vector(SW_WIDTH-1 DOWNTO 0)"
 )
 )
 *70 (PortIoIn
@@ -3677,8 +3662,9 @@ uid 3611,0
 va (VaSet
 font "Courier New,8,0"
 )
-xt "-16250,40500,750,41300"
-st "DELAY_BITS = 7    ( integer )  
+xt "-16250,40500,4750,42100"
+st "DELAY_BITS = 7            ( integer )  
+PHASE_RES  = PHASE_RES    ( integer )  
 "
 )
 header ""
@@ -3688,6 +3674,11 @@ elements [
 name "DELAY_BITS"
 type "integer"
 value "7"
+)
+(GiElement
+name "PHASE_RES"
+type "integer"
+value "PHASE_RES"
 )
 ]
 )
@@ -3957,8 +3948,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,22600,-17000,23400"
-st "SIGNAL ExpAck      : std_logic_vector(N_BOARDS-1 DOWNTO 0)
-"
+st "SIGNAL ExpAck      : std_logic_vector(N_BOARDS-1 DOWNTO 0)"
 )
 )
 *112 (Net
@@ -3975,8 +3965,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,14400,-35000,15200"
-st "PSENB       : std_logic
-"
+st "PSENB       : std_logic"
 )
 )
 *113 (PortIoOut
@@ -4037,8 +4026,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,7200,-35000,8000"
-st "PSDONEB     : std_logic
-"
+st "PSDONEB     : std_logic"
 )
 )
 *115 (PortIoIn
@@ -4099,8 +4087,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,16000,-35000,16800"
-st "PSINCDECB   : std_logic
-"
+st "PSINCDECB   : std_logic"
 )
 )
 *117 (PortIoOut
@@ -4161,8 +4148,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,10400,-35000,11200"
-st "clkB        : std_logic
-"
+st "clkB        : std_logic"
 )
 )
 *119 (PortIoIn
@@ -4223,8 +4209,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,15200,-35000,16000"
-st "PSENC       : std_logic
-"
+st "PSENC       : std_logic"
 )
 )
 *121 (PortIoOut
@@ -4285,8 +4270,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,16800,-35000,17600"
-st "PSINCDECC   : std_logic
-"
+st "PSINCDECC   : std_logic"
 )
 )
 *123 (PortIoOut
@@ -4347,8 +4331,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,8000,-35000,8800"
-st "PSDONEC     : std_logic
-"
+st "PSDONEC     : std_logic"
 )
 )
 *125 (PortIoIn
@@ -4409,8 +4392,7 @@ va (VaSet
 font "Courier New,8,0"
 )
 xt "-48000,11200,-35000,12000"
-st "clkC        : std_logic
-"
+st "clkC        : std_logic"
 )
 )
 *127 (PortIoIn
@@ -5968,8 +5950,8 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "0,14,1281,1024"
-viewArea "-67600,400,48114,94576"
+windowSize "0,14,1282,1024"
+viewArea "-67600,400,48224,94576"
 cachedDiagramExtent "-66000,1000,117650,85000"
 pageSetupInfo (PageSetupInfo
 ptrCmd ""
@@ -5993,7 +5975,7 @@ exportStdPackageRefs 1
 )
 hasePageBreakOrigin 1
 pageBreakOrigin "-68000,0"
-lastUid 4317,0
+lastUid 4384,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -7786,6 +7768,14 @@ value "8"
 )
 uid 3026,0
 )
+*295 (LogGeneric
+generic (GiElement
+name "PHASE_RES"
+type "integer"
+value "280"
+)
+uid 4383,0
+)
 ]
 )
 pdm (PhysicalDM
@@ -7793,7 +7783,7 @@ displayShortBounds 1
 editShortBounds 1
 uid 95,0
 optionalChildren [
-*295 (Sheet
+*296 (Sheet
 sheetRow (SheetRow
 headerVa (MVa
 cellColor "49152,49152,49152"
@@ -7810,55 +7800,61 @@ cellColor "39936,56832,65280"
 fontColor "0,0,0"
 font "Tahoma,10,0"
 )
-emptyMRCItem *296 (MRCItem
+emptyMRCItem *297 (MRCItem
 litem &279
-pos 4
+pos 5
 dimension 20
 )
 uid 97,0
 optionalChildren [
-*297 (MRCItem
+*298 (MRCItem
 litem &280
 pos 0
 dimension 20
 uid 98,0
 )
-*298 (MRCItem
+*299 (MRCItem
 litem &281
 pos 1
 dimension 23
 uid 99,0
 )
-*299 (MRCItem
+*300 (MRCItem
 litem &282
 pos 2
 hidden 1
 dimension 20
 uid 100,0
 )
-*300 (MRCItem
+*301 (MRCItem
 litem &291
 pos 0
 dimension 20
 uid 2145,0
 )
-*301 (MRCItem
+*302 (MRCItem
 litem &292
 pos 1
 dimension 20
 uid 2916,0
 )
-*302 (MRCItem
+*303 (MRCItem
 litem &293
 pos 2
 dimension 20
 uid 2924,0
 )
-*303 (MRCItem
+*304 (MRCItem
 litem &294
 pos 3
 dimension 20
 uid 3027,0
+)
+*305 (MRCItem
+litem &295
+pos 4
+dimension 20
+uid 4384,0
 )
 ]
 )
@@ -7871,43 +7867,43 @@ textAngle 90
 )
 uid 101,0
 optionalChildren [
-*304 (MRCItem
+*306 (MRCItem
 litem &283
 pos 0
 dimension 20
 uid 102,0
 )
-*305 (MRCItem
+*307 (MRCItem
 litem &285
 pos 1
 dimension 50
 uid 103,0
 )
-*306 (MRCItem
+*308 (MRCItem
 litem &286
 pos 2
 dimension 100
 uid 104,0
 )
-*307 (MRCItem
+*309 (MRCItem
 litem &287
 pos 3
 dimension 186
 uid 105,0
 )
-*308 (MRCItem
+*310 (MRCItem
 litem &288
 pos 4
 dimension 50
 uid 106,0
 )
-*309 (MRCItem
+*311 (MRCItem
 litem &289
 pos 5
 dimension 50
 uid 107,0
 )
-*310 (MRCItem
+*312 (MRCItem
 litem &290
 pos 6
 dimension 80

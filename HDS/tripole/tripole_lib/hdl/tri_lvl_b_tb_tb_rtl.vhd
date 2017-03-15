@@ -56,7 +56,8 @@ ARCHITECTURE rtl OF tri_lvl_b_tb IS
         N_INTERRUPTS : integer                       := 1;
         SW_WIDTH     : integer                       := 16;
         BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0008";
-        N_BOARDS     : integer                       := 8
+        N_BOARDS     : integer                       := 8;
+        PHASE_RES    : integer                       := 280
       );
       PORT( 
         Addr        : IN     std_logic_vector (7 DOWNTO 0);
@@ -126,7 +127,8 @@ BEGIN
    DUT : tri_lvl_b
       GENERIC MAP (
         N_INTERRUPTS => 0,
-        SW_WIDTH => 0
+        SW_WIDTH => 0,
+        PHASE_RES => 280
       )
       PORT MAP (
          Addr        => Addr,

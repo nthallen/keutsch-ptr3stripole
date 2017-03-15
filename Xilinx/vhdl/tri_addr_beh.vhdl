@@ -35,38 +35,54 @@ END ENTITY tri_addr ;
 
 --
 ARCHITECTURE beh OF tri_addr IS
+  SIGNAL AHiPerEni : std_logic;
+  SIGNAL APhaseEni : std_logic;
+  SIGNAL BHiPerEni : std_logic;
+  SIGNAL BPhaseEni : std_logic;
+  SIGNAL CHiPerEni : std_logic;
+  SIGNAL CPhaseEni : std_logic;
+  SIGNAL CtrlEni   : std_logic;
+  SIGNAL PerEni    : std_logic;
 BEGIN
   Addr_Select : Process (ExpAddr) is
   begin
-    CtrlEn <= '0';
-    PerEn <= '0';
-    AHiPerEn <= '0';
-    APhaseEn <= '0';
-    BHiPerEn <= '0';
-    BPhaseEn <= '0';
-    CHiPerEn <= '0';
-    CPhaseEn <= '0';
+    CtrlEni <= '0';
+    PerEni <= '0';
+    AHiPerEni <= '0';
+    APhaseEni <= '0';
+    BHiPerEni <= '0';
+    BPhaseEni <= '0';
+    CHiPerEni <= '0';
+    CPhaseEni <= '0';
     if ExpAddr = BASE_ADDR then
-      CtrlEn <= '1';
+      CtrlEni <= '1';
     elsif ExpAddr = BASE_ADDR + 1 then
-      PerEn <= '1';
+      PerEni <= '1';
     elsif ExpAddr = BASE_ADDR + 2 then
-      AHiPerEn <= '1';
+      AHiPerEni <= '1';
     elsif ExpAddr = BASE_ADDR + 3 then
-      APhaseEn <= '1';
+      APhaseEni <= '1';
     elsif ExpAddr = BASE_ADDR + 4 then
-      BHiPerEn <= '1';
+      BHiPerEni <= '1';
     elsif ExpAddr = BASE_ADDR + 5 then
-      BPhaseEn <= '1';
+      BPhaseEni <= '1';
     elsif ExpAddr = BASE_ADDR + 6 then
-      CHiPerEn <= '1';
+      CHiPerEni <= '1';
     elsif ExpAddr = BASE_ADDR + 7 then
-      CPhaseEn <= '1';
+      CPhaseEni <= '1';
     end if;
   end process;
   
-  BdEn <= CPhaseEn & CHiPerEn & BPhaseEn & BHiPerEn &
-          APhaseEn & AHiPerEn & PerEn & CtrlEn;
+  AHiPerEn <= AHiPerEni;
+  APhaseEn <= APhaseEni;
+  BHiPerEn <= BHiPerEni;
+  BPhaseEn <= BPhaseEni;
+  CHiPerEn <= CHiPerEni;
+  CPhaseEn <= CPhaseEni;
+  CtrlEn <= CtrlEni;
+  PerEn <= PerEni;
+  BdEn <= CPhaseEni & CHiPerEni & BPhaseEni & BHiPerEni &
+          APhaseEni & AHiPerEni & PerEni & CtrlEni;
   
 END ARCHITECTURE beh;
 

@@ -74,7 +74,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
-LIBRARY tripole_lib;
+-- LIBRARY tripole_lib;
 
 ARCHITECTURE struct OF tri_lvl_c IS
 
@@ -189,11 +189,11 @@ ARCHITECTURE struct OF tri_lvl_c IS
 
   -- Optional embedded configurations
   -- pragma synthesis_off
-  FOR ALL : phaseclk USE ENTITY tripole_lib.phaseclk;
-  FOR ALL : subbus_io USE ENTITY tripole_lib.subbus_io;
-  FOR ALL : tri_addr USE ENTITY tripole_lib.tri_addr;
-  FOR ALL : tri_period USE ENTITY tripole_lib.tri_period;
-  FOR ALL : tri_pulse USE ENTITY tripole_lib.tri_pulse;
+-- FOR ALL : phaseclk USE ENTITY tripole_lib.phaseclk;
+-- FOR ALL : subbus_io USE ENTITY tripole_lib.subbus_io;
+-- FOR ALL : tri_addr USE ENTITY tripole_lib.tri_addr;
+-- FOR ALL : tri_period USE ENTITY tripole_lib.tri_period;
+-- FOR ALL : tri_pulse USE ENTITY tripole_lib.tri_pulse;
   -- pragma synthesis_on
 
 

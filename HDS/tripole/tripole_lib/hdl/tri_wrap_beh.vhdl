@@ -13,7 +13,8 @@ USE ieee.numeric_std.all;
 
 ENTITY tri_wrap IS
     GENERIC (
-      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0009"
+      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0009";
+      PHASE_RES : integer := 280
     );
     PORT (
       Addr        : IN     std_logic_vector(7 DOWNTO 0);
@@ -50,7 +51,8 @@ ARCHITECTURE beh OF tri_wrap IS
       N_INTERRUPTS : integer := 1;
       SW_WIDTH     : integer := 16;
       BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0009";
-      N_BOARDS : integer := 8
+      N_BOARDS : integer := 8;
+      PHASE_RES : integer := 280
     );
     PORT (
       Addr        : IN     std_logic_vector (7 DOWNTO 0);
@@ -83,7 +85,8 @@ BEGIN
       N_INTERRUPTS => 0,
       SW_WIDTH     => 0,
       BUILD_NUMBER => BUILD_NUMBER,
-      N_BOARDS => 8
+      N_BOARDS => 8,
+      PHASE_RES => PHASE_RES
     )
     PORT MAP (
       Addr        => Addr,

@@ -49,7 +49,8 @@ ARCHITECTURE rtl OF tri_wrap_tb IS
   -- Component declarations
   COMPONENT tri_wrap
     GENERIC (
-      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0009"
+      BUILD_NUMBER : std_logic_vector(15 DOWNTO 0) := X"0009";
+      PHASE_RES : integer := 280
     );
     PORT (
       Addr        : IN     std_logic_vector(7 DOWNTO 0);
@@ -116,6 +117,9 @@ ARCHITECTURE rtl OF tri_wrap_tb IS
 BEGIN
 
     DUT : tri_wrap
+      GENERIC MAP (
+        PHASE_RES => 280
+      )
       PORT MAP (
         Addr        => Addr,
         Ctrl        => Ctrl,
