@@ -1,0 +1,20 @@
+QLabel,QDoubleSpinBox, QRadioButton {
+  font-size: 14pt;
+}
+
+QLabel#tmdispvar {
+  border : 1px solid black;
+  min-width: 80px;
+}
+
+QSpinBox, QDoubleSpinBox {
+  min-width: 80px;
+}
+
+QLabel#status {
+  border : 1px solid black;
+}
+
+QLabel#colHeader {
+  font-weight: bold;
+}

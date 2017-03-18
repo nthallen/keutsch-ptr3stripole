@@ -155,11 +155,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="hdl/rf_block.hwdef"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="hw_handoff/rf_block_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="hw_handoff/rf_block.hwh"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block.bmm"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_axi_uartlite_0_0/rf_block_axi_uartlite_0_0.xci">
           <Proxy FileSetName="rf_block_axi_uartlite_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_xbar_0/rf_block_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="hdl/rf_block.vhd"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_lmb_bram_0/rf_block_lmb_bram_0.xci">
           <Proxy FileSetName="rf_block_lmb_bram_0"/>
         </CompFileExtendedInfo>
@@ -167,44 +170,41 @@
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_dlmb_bram_if_cntlr_0/rf_block_dlmb_bram_if_cntlr_0.xci"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_ilmb_v10_0/rf_block_ilmb_v10_0.xci"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_dlmb_v10_0/rf_block_dlmb_v10_0.xci"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_microblaze_0_0/rf_block_microblaze_0_0.xci">
-          <Proxy FileSetName="rf_block_microblaze_0_0"/>
-        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="hdl/rf_block.vhd"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_xbar_0/rf_block_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_microblaze_0_axi_periph_0/rf_block_microblaze_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_axi_gpio_0_4/rf_block_axi_gpio_0_4.xci"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_axi_gpio_0_3/rf_block_axi_gpio_0_3.xci"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_axi_gpio_0_1/rf_block_axi_gpio_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_axi_gpio_0_0/rf_block_axi_gpio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_tri_wrap_0_0/rf_block_tri_wrap_0_0.xci">
           <Proxy FileSetName="rf_block_tri_wrap_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_clk_wiz_2_0/rf_block_clk_wiz_2_0.xci">
           <Proxy FileSetName="rf_block_clk_wiz_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_clk_wiz_1_0/rf_block_clk_wiz_1_0.xci">
-          <Proxy FileSetName="rf_block_clk_wiz_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_axi_gpio_0_4/rf_block_axi_gpio_0_4.xci"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_axi_gpio_0_2/rf_block_axi_gpio_0_2.xci"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_axi_gpio_0_1/rf_block_axi_gpio_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_axi_gpio_0_0/rf_block_axi_gpio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_clk_wiz_0_0/rf_block_clk_wiz_0_0.xci">
           <Proxy FileSetName="rf_block_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_rst_clk_wiz_1_100M_0/rf_block_rst_clk_wiz_1_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_clk_wiz_1_0/rf_block_clk_wiz_1_0.xci">
+          <Proxy FileSetName="rf_block_clk_wiz_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_mdm_1_0/rf_block_mdm_1_0.xci">
           <Proxy FileSetName="rf_block_mdm_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_tri_wrap_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="ip/rf_block_microblaze_0_0/rf_block_microblaze_0_0.xci">
+          <Proxy FileSetName="rf_block_microblaze_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="synth/rf_block_tri_wrap_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="sim/rf_block_tri_wrap_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block.bmm"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_tri_wrap_0_0.dcp"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_tri_wrap_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_tri_wrap_0_0_sim_netlist.v"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_tri_wrap_0_0_stub.vhdl"/>
         <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_tri_wrap_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_tri_wrap_0_0.dcp"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="hdl/rf_block.hwdef"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="hw_handoff/rf_block_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="hw_handoff/rf_block.hwh"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_tri_wrap_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="sim/rf_block_tri_wrap_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="rf_block.bd" FileRelPathName="rf_block_tri_wrap_0_0.xml"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/rf_block/hdl/rf_block_wrapper.vhd">
         <FileInfo>
@@ -385,9 +385,7 @@
     </Run>
     <Run Id="rf_block_tri_wrap_0_0_synth_1" Type="Ft3:Synth" SrcSet="rf_block_tri_wrap_0_0" Part="xc7a35tcpg236-1" ConstrsSet="rf_block_tri_wrap_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/rf_block_tri_wrap_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -404,7 +402,9 @@
         <Step Id="phys_opt_design" EnableStepBool="1"/>
         <Step Id="route_design"/>
         <Step Id="post_route_phys_opt_design" EnableStepBool="1"/>
-        <Step Id="write_bitstream"/>
+        <Step Id="write_bitstream">
+          <Option Id="BinFile">1</Option>
+        </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
@@ -516,9 +516,7 @@
     </Run>
     <Run Id="rf_block_tri_wrap_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="rf_block_tri_wrap_0_0" Description="Default settings for Implementation." SynthRun="rf_block_tri_wrap_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

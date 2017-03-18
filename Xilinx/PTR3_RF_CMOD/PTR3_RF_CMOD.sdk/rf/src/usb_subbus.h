@@ -14,13 +14,15 @@
  * https://www.evernote.com/shard/s361/nl/56411283/4e6b7bd1-8c12-46be-b483-0bbcb3bcaeca
  * and the SUBBUS_FEATURES bitmap (in hex). Values are defined in subbus.h
  * SUBBUS_SUBFUNCTION values relevant here are:
- *  7: Keutsch PTR3
+ *  7: Keutsch PTR3 HVPS
  *  8: Keutsch HCHO BCtr
+ *  9: Keutsch PTR3 RF
  *
  * 1/25/17: I have bumped the BOARD_REV version number to V2.0 due to the
  * addition of the <addr1>|<count>@<addr2> protocol extension
+ *
  */
-#define BOARD_REV                   "V7:178:HCHO BCtr Rev A V2.0"
+#define BOARD_REV                   "V9:178:PTR3 RF Rev B V1.0"
 #define CPU_FREQ                    XPAR_CPU_M_AXI_DP_FREQ_HZ
 #define SUBBUS_CTRL_DEVICE_ID       XPAR_SUBBUS_CTRL_DEVICE_ID
 #define SUBBUS_STATUS_DEVICE_ID     XPAR_SUBBUS_STATUS_DEVICE_ID
